@@ -22,8 +22,6 @@ const MovieApp = () => {
     fetchData();
   }, []);
 
-  // ?
-
   return (
     <>
       <Header />
@@ -36,7 +34,9 @@ const MovieApp = () => {
         >
           {movies.map((movie) => (
             <Grid item xs={2} sm={4} md={4} key={movie.id}>
-              <h3>{movie.title}</h3>
+              <Link href={`/movie/[id]`} as={`/movie/${movie.id}`}>
+                <h3>{movie.title}</h3>
+              </Link>
               {movie.poster_path && (
                 <Link href={`/movie/[id]`} as={`/movie/${movie.id}`}>
                   <img
