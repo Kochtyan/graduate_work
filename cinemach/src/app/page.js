@@ -3,20 +3,22 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
-import { getPopularMovies } from "./api/tmdb";
+// import { getPopularMovies } from "./api/tmdb";
+import { fetchPopularMovies, fetchMovieById } from "./api/kinopoisk";
 
 import Header from "./components/header";
 import Grid from "@mui/material/Grid";
 
 const MovieApp = () => {
-  const [movies, setMovies] = useState([]);
+  const [recentMovies, setRecentMovies] = useState([]);
 
   const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/w500";
 
   useEffect(() => {
     const fetchData = async () => {
-      const popularMovies = await getPopularMovies();
-      setMovies(popularMovies);
+      const popularMovies = await fetchPopularMovies();
+      setRecentMovies(popularMovies.docs);
+      console.log(popularMovies.docs);
     };
 
     fetchData();
@@ -32,17 +34,17 @@ const MovieApp = () => {
           spacing={{ xs: 2, md: 3 }}
           columns={{ xs: 4, sm: 8, md: 12 }}
         >
-          {movies.map((movie) => (
+          {recentMovies.map((movie) => (
             <Grid item xs={2} sm={4} md={4} key={movie.id}>
               <Link href={`/movie/[id]`} as={`/movie/${movie.id}`}>
-                <h3>{movie.title}</h3>
+                <h3>{movie.name}</h3>
               </Link>
-              {movie.poster_path && (
+              {movie.poster && (
                 <Link href={`/movie/[id]`} as={`/movie/${movie.id}`}>
                   <img
-                    src={`${IMAGE_BASE_URL}${movie.poster_path}`}
-                    alt={`Постер ${movie.title}`}
-                    style={{ maxWidth: "100%" }}
+                    src={movie.poster.previewUrl}
+                    alt={`Постер ${movie.name}`}
+                    style={{ maxWidth: "100%", maxHeight: "100%" }}
                   />
                 </Link>
               )}
