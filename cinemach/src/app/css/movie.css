@@ -4,3 +4,10 @@
   align-items: center;
   gap: 20px;
 }
+
+.movie__fast-info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
