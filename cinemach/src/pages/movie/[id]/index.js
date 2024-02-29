@@ -10,6 +10,8 @@ import Grid from "@mui/material/Grid";
 
 import "../../../app/css/movie.css";
 
+import kpLogo from "../../../../src/assets/icon-kp.png";
+
 function Movie() {
   const [movie, setMovie] = useState([]);
 
@@ -46,9 +48,12 @@ function Movie() {
           <Grid item xs={6}>
             <h1>{`${movie.name} ${movie.year ? `(${movie.year})` : ""}`}</h1>
             <div className="movie__ratings">
-              <span>{movie.rating.kp}</span>
-              <span>{movie.rating.imdb}</span>
-              <span>{movie.rating.filmCritics}</span>
+              <span>
+                <img src={kpLogo} alt="" style={{ width: "10px" }} />
+                {movie.rating?.kp}
+              </span>
+              <span>{movie.rating?.imdb}</span>
+              <span>{movie.rating?.filmCritics}</span>
             </div>
           </Grid>
         </Grid>

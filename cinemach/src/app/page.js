@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
-// import { getPopularMovies } from "./api/tmdb";
 import { fetchPopularMovies, fetchMovieById } from "./api/kinopoisk";
 
 import Header from "./components/header";

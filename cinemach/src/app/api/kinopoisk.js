@@ -1,5 +1,4 @@
 const KP_API_KEY = "5ATH9DF-N7J45EJ-N4Y0EWJ-V51T6XV";
-const movieId = "342";
 
 export const fetchPopularMovies = async () => {
   try {
