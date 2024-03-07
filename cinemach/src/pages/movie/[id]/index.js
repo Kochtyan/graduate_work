@@ -133,27 +133,42 @@ function Movie() {
               <p>{movie.description}</p>
             </div>
             <div>
-              Режиссер:
-              {movie &&
-                movie.persons &&
-                movie.persons
-                  .filter((person) => person.enProfession === "director")
-                  .sort((a, b) => a.name.localeCompare(b.name))
-                  .map((director) => (
-                    <span key={director.id}> {director.name}</span>
-                  ))}
+              <span>
+                Режиссер:
+                {movie &&
+                  movie.persons &&
+                  movie.persons
+                    .filter((person) => person.enProfession === "director")
+                    .sort((a, b) => a.name.localeCompare(b.name))
+                    .map((director, index, array) => (
+                      <React.Fragment key={director.id}>
+                        {index > 0 && ", "}
+                        {director.name}
+                        {index === array.length - 1 ? "" : " и "}
+                      </React.Fragment>
+                    ))}
+              </span>
             </div>
-            <div>{`Бюджет: ${movie.budget?.currency}${handleFormattedValue(
-              movie.budget?.value
-            )}`}</div>
-            <div>{`Сборы: ${movie.fees?.world.currency}${handleFormattedValue(
-              movie.fees?.world.value
-            )}`}</div>
             <div>
-              Продюсерские компании:
-              {movie.productionCompanies.map((company, index) => (
-                <span key={index}> {company.name}</span>
-              ))}
+              <span>{`Бюджет: ${movie.budget?.currency}${handleFormattedValue(
+                movie.budget?.value
+              )}`}</span>
+            </div>
+            <div>
+              <span>{`Сборы: ${
+                movie.fees?.world.currency
+              }${handleFormattedValue(movie.fees?.world.value)}`}</span>
+            </div>
+            <div>
+              <span>
+                Продюсерские компании:
+                {movie.productionCompanies.map((company, index) => (
+                  <React.Fragment key={index}>
+                    {index > 0 && ", "}
+                    {company.name}
+                  </React.Fragment>
+                ))}
+              </span>
             </div>
             <div>
               <span>{`Мировая премьера: ${handleformattedDate(
