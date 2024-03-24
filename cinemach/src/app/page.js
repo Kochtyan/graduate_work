@@ -16,8 +16,8 @@ const MovieApp = () => {
   useEffect(() => {
     const fetchData = async () => {
       const popularMovies = await fetchPopularMovies();
-      setRecentMovies(popularMovies.docs);
-      console.log(popularMovies.docs);
+      setRecentMovies(popularMovies?.docs);
+      console.log(popularMovies?.docs);
     };
 
     fetchData();

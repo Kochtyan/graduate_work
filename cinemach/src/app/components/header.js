@@ -12,12 +12,11 @@ function Header() {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
-    const fetchData = async () => {
-      const popularMovies = await getPopularMovies();
-      setMovies(popularMovies);
-    };
-
-    fetchData();
+    // const fetchData = async () => {
+    //   const popularMovies = await getPopularMovies();
+    //   setMovies(popularMovies);
+    // };
+    // fetchData();
   }, []);
 
   return (
@@ -38,7 +37,7 @@ function Header() {
           disableClearable
           sx={{ width: 300 }}
           className="header__search"
-          options={movies.map((movie) => movie.title)}
+          // options={movies.map((movie) => movie.title)}
           renderInput={(params) => (
             <TextField
               {...params}
