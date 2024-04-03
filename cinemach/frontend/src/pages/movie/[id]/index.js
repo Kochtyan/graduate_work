@@ -126,7 +126,7 @@ function Movie() {
     const regExp =
       /^(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:[^/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
 
-    const match = url.match(regExp);
+    const match = url.toString().match(regExp);
 
     if (match) {
       return match[1];
@@ -220,8 +220,8 @@ function Movie() {
             </div>
             <div>
               <span>{`Сборы: ${
-                movie?.fees?.world.currency
-              }${handleFormattedValue(movie?.fees?.world.value)}`}</span>
+                movie?.fees?.world?.currency
+              }${handleFormattedValue(movie?.fees?.world?.value)}`}</span>
             </div>
             {movie?.productionCompanies?.length !== 0 && (
               <div>
