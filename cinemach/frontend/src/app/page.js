@@ -7,27 +7,36 @@ import { fetchPopularMovies, fetchMovieById } from "./api/kinopoisk";
 
 import Header from "./components/header";
 import Grid from "@mui/material/Grid";
+// import { response } from "express";
 
 const MovieApp = () => {
   const [recentMovies, setRecentMovies] = useState([]);
 
+  const [data, setData] = useState(null);
+
   const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/w500";
 
   useEffect(() => {
-    const fetchData = async () => {
-      const popularMovies = await fetchPopularMovies();
-      setRecentMovies(popularMovies?.docs);
-      console.log(popularMovies?.docs);
-    };
+    fetch("/api")
+      .then((response) => response.json())
+      .then((response) => setData(response.message));
 
-    fetchData();
+    // const fetchData = async () => {
+    //   const popularMovies = await fetchPopularMovies();
+    //   setRecentMovies(popularMovies?.docs);
+    //   console.log(popularMovies?.docs);
+    // };
+
+    // fetchData();
   }, []);
 
   return (
     <>
       <Header />
-      <div className="container">
+      <span>{!data ? "nothing" : data}</span>
+      {/* <div className="container">
         <h1>Популярные фильмы</h1>
+        <h2>{data}</h2>
         <Grid
           container
           spacing={{ xs: 2, md: 3 }}
@@ -50,7 +59,7 @@ const MovieApp = () => {
             </Grid>
           ))}
         </Grid>
-      </div>
+      </div> */}
     </>
   );
 };
