@@ -27,9 +27,6 @@ function Header() {
             <li className="header__menu-item">
               <Link href="/">Главная</Link>
             </li>
-            <li className="header__menu-item">
-              <Link href="/actors">Актеры</Link>
-            </li>
           </ul>
         </nav>
         <Autocomplete

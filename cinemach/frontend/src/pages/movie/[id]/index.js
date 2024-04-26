@@ -59,7 +59,6 @@ function Movie() {
         setTrailerUrls(_trailerUrls);
       }
     };
-
     fetchData();
   }, [query.id]);
 

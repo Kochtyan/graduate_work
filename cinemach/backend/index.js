@@ -4,7 +4,7 @@ import cors from "cors";
 import { ApolloServer } from "@apollo/server";
 import { startStandaloneServer } from "@apollo/server/standalone";
 
-const PORT = process.env.PORT || 4444;
+const PORT = process.env.PORT || 4000;
 
 const typeDefs = `#graphql
   # Comments in GraphQL strings (such as this one) start with the hash (#) symbol.
@@ -30,7 +30,7 @@ const books = [
   },
   {
     title: "City of Glass",
-    author: "Paul Auster",
+    author: "Paul Auster123",
   },
 ];
 
@@ -46,7 +46,7 @@ const server = new ApolloServer({
 });
 
 const { url } = await startStandaloneServer(server, {
-  listen: { port: 4000 },
+  listen: { port: 4444 },
 });
 
 const app = Express();

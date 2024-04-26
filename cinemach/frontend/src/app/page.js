@@ -2,9 +2,6 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { useQuery } from "@apollo/client";
-
-import { TEST } from "./apollo/queries";
 
 import { fetchPopularMovies, fetchMovieById } from "./api/kinopoisk";
 
@@ -18,29 +15,18 @@ const MovieApp = () => {
 
   const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/w500";
 
-  const { loading, error, data: dataQuery } = useQuery(TEST);
-
-  // if (loading) return <p>Loading...</p>;
-  // if (error) return <p>Error: {error.message}</p>;
-
   useEffect(() => {
-    fetch("/api")
-      .then((response) => response.json())
-      .then((response) => setData(response.message));
-
     // const fetchData = async () => {
     //   const popularMovies = await fetchPopularMovies();
     //   setRecentMovies(popularMovies?.docs);
     //   console.log(popularMovies?.docs);
     // };
-
     // fetchData();
   }, []);
 
   return (
     <>
       <Header />
-      <span>{!data ? "nothing" : data}</span>
       {/* <div className="container">
         <h1>Популярные фильмы</h1>
         <h2>{data}</h2>
