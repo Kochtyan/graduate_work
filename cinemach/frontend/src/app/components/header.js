@@ -3,9 +3,12 @@ import Link from "next/link";
 
 import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
+// import Button from "@mui/material/Button";
+import CustomButton from "./customButton";
 
 import { getPopularMovies } from "../api/tmdb";
 
+import Logo from "../../../src/assets/logo_cinemach.svg";
 import "../css/header.css";
 
 function Header() {
@@ -25,7 +28,9 @@ function Header() {
         <nav>
           <ul className="header__menu">
             <li className="header__menu-item">
-              <Link href="/">Главная</Link>
+              <Link href="/">
+                <img src={Logo.src} alt="Cinemach" className="header__logo" />
+              </Link>
             </li>
           </ul>
         </nav>
@@ -46,6 +51,9 @@ function Header() {
             />
           )}
         />
+        <div className="header__login">
+          <CustomButton title="Войти" />
+        </div>
       </div>
     </>
   );

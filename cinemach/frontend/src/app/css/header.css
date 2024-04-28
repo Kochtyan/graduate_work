@@ -1,10 +1,15 @@
 .header__container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  margin-top: 20px;
 }
 
 .header__menu {
   display: flex;
   gap: 30px;
+}
+
+.header__logo {
+  width: 205px;
 }
