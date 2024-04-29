@@ -13,11 +13,12 @@
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
     "@mui/material": "^5.15.15",
+    "fslightbox-react": "^1.7.6",
     "graphql": "^16.8.1",
     "next": "14.2.2",
     "react": "^18",
     "react-dom": "^18",
-    "yet-another-react-lightbox": "^3.17.5"
+    "swiper": "^11.1.1"
   },
   "devDependencies": {
     "eslint": "^8",

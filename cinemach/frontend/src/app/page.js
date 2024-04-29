@@ -11,31 +11,26 @@ import Grid from "@mui/material/Grid";
 const MovieApp = () => {
   const [recentMovies, setRecentMovies] = useState([]);
 
-  const [data, setData] = useState(null);
-
-  const IMAGE_BASE_URL = "https://image.tmdb.org/t/p/w500";
-
   useEffect(() => {
-    // const fetchData = async () => {
-    //   const popularMovies = await fetchPopularMovies();
-    //   setRecentMovies(popularMovies?.docs);
-    //   console.log(popularMovies?.docs);
-    // };
-    // fetchData();
+    const fetchData = async () => {
+      const popularMovies = await fetchPopularMovies();
+      setRecentMovies(popularMovies?.docs);
+      console.log(popularMovies?.docs);
+    };
+    fetchData();
   }, []);
 
   return (
     <>
       <Header />
-      {/* <div className="container">
+      <div className="container">
         <h1>Популярные фильмы</h1>
-        <h2>{data}</h2>
         <Grid
           container
           spacing={{ xs: 2, md: 3 }}
           columns={{ xs: 4, sm: 8, md: 12 }}
         >
-          {recentMovies.map((movie) => (
+          {recentMovies?.map((movie) => (
             <Grid item xs={2} sm={4} md={4} key={movie.id}>
               <Link href={`/movie/[id]`} as={`/movie/${movie.id}`}>
                 <h3>{movie.name}</h3>
@@ -52,7 +47,7 @@ const MovieApp = () => {
             </Grid>
           ))}
         </Grid>
-      </div> */}
+      </div>
     </>
   );
 };

@@ -24,7 +24,7 @@ export default function CustomButton({ title }) {
 
   return (
     <ThemeProvider theme={theme}>
-      <Button variant="contained" color="violet">
+      <Button variant="contained" color="violet" className="button">
         {title}
       </Button>
     </ThemeProvider>
