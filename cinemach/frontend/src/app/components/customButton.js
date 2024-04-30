@@ -6,7 +6,7 @@ import {
 } from "@mui/material/styles";
 import Button from "@mui/material/Button";
 
-export default function CustomButton({ title }) {
+export default function CustomButton({ title, onClick, style, disabled }) {
   const violetBase = "#6C29A3";
   const violetMain = alpha(violetBase, 0.7);
 
@@ -24,7 +24,14 @@ export default function CustomButton({ title }) {
 
   return (
     <ThemeProvider theme={theme}>
-      <Button variant="contained" color="violet" className="button">
+      <Button
+        variant="contained"
+        color="violet"
+        className="button"
+        onClick={onClick}
+        style={style}
+        disabled={disabled}
+      >
         {title}
       </Button>
     </ThemeProvider>

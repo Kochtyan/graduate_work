@@ -29,7 +29,7 @@ function Header() {
           </ul>
         </nav>
         <div className="header__login">
-          <CustomButton title="Войти" />
+          <CustomButton title="Войти" style={{ width: "100px" }} />
         </div>
       </div>
     </>
