@@ -32,11 +32,11 @@ const MovieApp = () => {
         >
           {recentMovies?.map((movie) => (
             <Grid item xs={2} sm={4} md={4} key={movie.id}>
-              <Link href={`/movie/[id]`} as={`/movie/${movie.id}`}>
+              <Link href={`/film/[id]`} as={`/film/${movie.id}`}>
                 <h3>{movie.name}</h3>
               </Link>
               {movie.poster && (
-                <Link href={`/movie/[id]`} as={`/movie/${movie.id}`}>
+                <Link href={`/film/[id]`} as={`/film/${movie.id}`}>
                   <img
                     src={movie.poster.previewUrl}
                     alt={`Постер ${movie.name}`}
