@@ -8,16 +8,19 @@ import { fetchPopularMovies, fetchMovieById } from "./api/kinopoisk";
 import Header from "./components/header";
 import Grid from "@mui/material/Grid";
 
+import { popular } from "../app/query_data/queryData";
+
 const MovieApp = () => {
   const [recentMovies, setRecentMovies] = useState([]);
 
   useEffect(() => {
-    const fetchData = async () => {
-      const popularMovies = await fetchPopularMovies();
-      setRecentMovies(popularMovies?.docs);
-      console.log(popularMovies?.docs);
-    };
-    fetchData();
+    // const fetchData = async () => {
+    //   const popularMovies = await fetchPopularMovies();
+    //   setRecentMovies(popularMovies?.docs);
+    //   console.log(popularMovies?.docs);
+    // };
+    // fetchData();
+    const popularMovies = popular;
   }, []);
 
   return (

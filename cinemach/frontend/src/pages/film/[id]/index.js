@@ -6,22 +6,21 @@ import { useRouter } from "next/router";
 
 import { fetchMovieById } from "../../../app/api/kinopoisk";
 
-import Header from "../../../app/components/header";
+import Header from "@/app/components/header";
 import CustomButton from "@/app/components/customButton";
+import CustomList from "@/app/components/customList";
+import CustomSwiper from "@/app/components/customSwiper";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import Rating from "@mui/material/Rating";
 import StarIcon from "@mui/icons-material/Star";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import Divider from "@mui/material/Divider";
 import FsLightbox from "fslightbox-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 
-import "../../../app/css/movie.css";
+import "../../../app/css/film.css";
 import "swiper/css";
 import "swiper/css/pagination";
 
@@ -29,7 +28,7 @@ import kpLogo from "../../../../src/assets/icon-kp.png";
 import imdbLogo from "../../../../src/assets/icon-imdb.png";
 import metacriticLogo from "../../../../src/assets/icon-metacritic.png";
 
-import { data1, data2 } from "../../../app/query_data/queryData";
+import { film1, film2 } from "../../../app/query_data/queryData";
 
 const style = {
   position: "absolute",
@@ -43,28 +42,15 @@ const style = {
   p: 4,
 };
 
-const styleList = {
-  py: 0,
-  width: "100%",
-  maxWidth: 900,
-  borderRadius: 2,
-  border: "1px solid",
-  borderColor: "divider",
-  padding: "10px",
-};
-
 function Movie() {
   const [movie, setMovie] = useState([]);
   const [trailerUrls, setTrailerUrls] = useState([]);
   const [userRating, setUserRating] = useState(null);
   const [userRatingModal, setUserRatingModal] = useState(null);
-  const [displayedFacts, setDisplayedFacts] = useState(3);
 
   const [showVideos, setShowVideos] = useState(false);
   const [showRoles, setShowRoles] = useState(false);
   const [open, setOpen] = useState(false);
-  const [isFranchise, setIsFranchise] = useState(null);
-  const [isFacts, setIsFacts] = useState(null);
 
   const { query } = useRouter();
 
@@ -72,22 +58,10 @@ function Movie() {
     const fetchData = async () => {
       if (query.id) {
         // const movieDetails = await fetchMovieById(query.id);
-        const movieDetails = data2;
+        const movieDetails = film1;
 
         setMovie(movieDetails);
         console.log(movieDetails);
-
-        if (movieDetails.sequelsAndPrequels.length !== 0) {
-          setIsFranchise(true);
-        } else {
-          setIsFranchise(false);
-        }
-
-        if (movieDetails.facts.length !== 0) {
-          setIsFacts(true);
-        } else {
-          setIsFacts(false);
-        }
 
         const _trailerUrls = movieDetails?.videos?.trailers
           .map((vid) => ({
@@ -203,10 +177,6 @@ function Movie() {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
-  const handleShowMoreFacts = () => {
-    setDisplayedFacts((prev) => prev + 10);
-  };
-
   return (
     <>
       <Header />
@@ -214,7 +184,7 @@ function Movie() {
         className="movie__container container"
         style={{ marginBottom: "30px" }}
       >
-        <Grid container spacing={1}>
+        <Grid container spacing={3}>
           <Grid item xs={4}>
             {movie?.poster && (
               <img
@@ -223,11 +193,17 @@ function Movie() {
                 className="movie__poster"
               />
             )}
-            <div style={{ marginTop: "10px" }}>
-              <img style={{ maxWidth: "320px" }} src={movie?.logo?.url} />
-            </div>
-            <div style={{ marginTop: "10px" }}>
-              {trailerUrls.length > 0 && (
+            {movie?.logo && (
+              <div style={{ marginTop: "10px" }}>
+                <img
+                  style={{ width: "320px", maxWidth: "100%" }}
+                  src={movie?.logo?.url}
+                />
+              </div>
+            )}
+
+            {trailerUrls && trailerUrls.length > 0 && (
+              <div style={{ marginTop: "10px" }}>
                 <div>
                   <img
                     src={`https://img.youtube.com/vi/${getYouTubeVideoId(
@@ -242,12 +218,12 @@ function Movie() {
                     sources={trailerUrls.flatMap((url) => url.sources)}
                   />
                 </div>
-              )}
-            </div>
+              </div>
+            )}
           </Grid>
 
-          <Grid item xs={6}>
-            <h1 className="movie__name">{`${movie?.name} ${
+          <Grid item xs={8}>
+            <h1 className="movie__name">{`${movie?.name ?? movie?.enName} ${
               movie?.year ? `(${movie?.year})` : ""
             }`}</h1>
 
@@ -527,85 +503,24 @@ function Movie() {
               <div style={{ textAlign: "center" }}>
                 <CustomButton
                   onClick={() => setShowRoles(!showRoles)}
-                  title={showRoles ? "Показать роли" : "Скрыть роли"}
+                  title={showRoles ? "Скрыть роли" : "Показать роли"}
                 />
               </div>
             </div>
 
-            {isFranchise && (
-              <div style={{ marginTop: "20px" }}>
-                <h3 style={{ marginBottom: "20px" }}>Сиквелы и приквелы</h3>
-
-                <div>
-                  <Swiper
-                    slidesPerView={3}
-                    spaceBetween={30}
-                    pagination={{
-                      clickable: true,
-                    }}
-                    navigation={true}
-                    modules={[Pagination]}
-                    className="mySwiper"
-                    style={{ height: "250px" }}
-                  >
-                    {movie &&
-                      movie?.sequelsAndPrequels &&
-                      movie?.sequelsAndPrequels.map((movie) => (
-                        <SwiperSlide key={movie.id}>
-                          <div className="movie__swiper-slide">
-                            <img
-                              src={movie.poster.url}
-                              alt={movie.name}
-                              style={{ width: "150px", borderRadius: "5px" }}
-                            />
-                            <span
-                              className="movie__swiper-slide-name"
-                              style={{ fontSize: "15px" }}
-                            >
-                              {movie.name}
-                            </span>
-                          </div>
-                        </SwiperSlide>
-                      ))}
-                  </Swiper>
-                </div>
-              </div>
-            )}
+            <CustomSwiper
+              list={movie?.sequelsAndPrequels}
+              type="sequelsAndPrequels"
+            />
+            <CustomSwiper
+              list={movie?.similarMovies}
+              type="similarMovies"
+              style={{ minHeight: "335px" }}
+            />
           </Grid>
 
-          {isFacts && (
-            <div style={{ margin: "20px auto 0 auto" }}>
-              <h3>Факты</h3>
-              <List sx={styleList}>
-                {movie.facts
-                  .filter((fact) => fact.type === "FACT")
-                  .slice(0, displayedFacts)
-                  .map((fact, index) => (
-                    <React.Fragment key={index}>
-                      <ListItem className="movie__list-item">
-                        <p dangerouslySetInnerHTML={{ __html: fact.value }}></p>
-                      </ListItem>
-                      {index !== displayedFacts - 1 && (
-                        <Divider
-                          variant="middle"
-                          component="li"
-                          sx={{
-                            borderBottom: "1px solid rgba(108, 41, 163, 0.5)",
-                          }}
-                        />
-                      )}
-                    </React.Fragment>
-                  ))}
-              </List>
-              {displayedFacts <
-                movie.facts.filter((fact) => fact.type === "FACT").length && (
-                <CustomButton
-                  onClick={handleShowMoreFacts}
-                  title="Показать еще"
-                />
-              )}
-            </div>
-          )}
+          <CustomList list={movie?.facts} type={"FACT"} />
+          <CustomList list={movie?.facts} type={"BLOOPER"} />
         </Grid>
       </div>
 
