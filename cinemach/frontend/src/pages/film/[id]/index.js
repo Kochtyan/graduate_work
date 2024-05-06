@@ -279,7 +279,7 @@ function Movie() {
               </p>
             </div>
 
-            <Grid style={{ marginTop: "30px" }} container spacing={1}>
+            <Grid style={{ margin: "30px 0" }} container spacing={1}>
               <Grid item xs={4}>
                 <span>
                   <b>Слоган:</b>

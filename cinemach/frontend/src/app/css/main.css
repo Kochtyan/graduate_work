@@ -1,0 +1,17 @@
+.main__poster {
+  max-width: 370px;
+  max-height: 540px;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #6c29a3;
+  border-radius: 5px;
+}
+
+.main__name {
+  margin: 8px 0;
+  transition: all 0.3s;
+}
+
+.main__movie-wrapper:hover .main__name {
+  color: rgba(108, 41, 163, 0.5);
+}
