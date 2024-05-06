@@ -1,0 +1,12 @@
+/* .searchInput__textField:hover {
+    border-color: green;
+    outline: none;
+} */
+
+.css-1d3z3hw-MuiOutlinedInput-notchedOutline:hover {
+    border-color: green !important;
+}
+
+.css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root {
+    color: #fff !important;
+}
