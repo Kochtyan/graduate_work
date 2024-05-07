@@ -49,3 +49,28 @@ export const fetchMovieById = async (movieId) => {
     return null;
   }
 };
+
+export const fetchPersonById = async (personId) => {
+  try {
+    const response = await fetch(
+      `https://api.kinopoisk.dev/v1.4/person/${personId}`,
+      {
+        method: "GET",
+        headers: {
+          "X-API-KEY": KP_API_KEY,
+        },
+      }
+    );
+
+    if (!response.ok) {
+      console.error(`Error fetching person by ID: ${response.status}`);
+      return null;
+    }
+
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error("Error fetching person by ID:", error);
+    return null;
+  }
+};

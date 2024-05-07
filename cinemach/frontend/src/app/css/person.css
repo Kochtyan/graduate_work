@@ -1,0 +1,6 @@
+.person__photo {
+  width: 320px;
+  max-width: 100%;
+  border-radius: 5px;
+  box-shadow: 0 20px 50px rgb(0 0 0 / 60%);
+}

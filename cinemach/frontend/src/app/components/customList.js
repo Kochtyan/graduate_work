@@ -67,7 +67,9 @@ export default function CustomList({ list, type }) {
             <List sx={styleList}>
               {list &&
                 list
-                  .filter((fact) => fact.type === type)
+                  .filter((fact) =>
+                    type === undefined ? true : fact.type === type
+                  )
                   .slice(0, displayedFacts)
                   .map((fact, index) => (
                     <React.Fragment key={index}>
