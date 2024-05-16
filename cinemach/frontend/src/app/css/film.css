@@ -36,7 +36,7 @@
 .movie__ratings {
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-end;
   gap: 40px;
   margin-top: 30px;
 }
@@ -46,7 +46,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 5px;
+  gap: 10px;
 }
 
 .movie__description {
@@ -119,7 +119,7 @@
 
 .movie__spoiler {
   filter: blur(8px);
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 .no-blur {

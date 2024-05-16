@@ -3,6 +3,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 import Header from "@/app/components/header";
 import CustomList from "@/app/components/customList";
@@ -12,10 +13,11 @@ import { fetchPersonById } from "../../../app/api/kinopoisk";
 
 import "../../../app/css/person.css";
 
-import { name1, name2 } from "../../../app/query_data/queryData";
+import { name1, name2, name3 } from "../../../app/query_data/queryData";
 
 function Person() {
   const [person, setPerson] = useState([]);
+  const uniqueMovies = [];
 
   const { query } = useRouter();
 
@@ -23,15 +25,15 @@ function Person() {
     const fetchData = async () => {
       if (query.id) {
         // const movieDetails = await fetchPersonById(query.id);
-        const personDetails = name1;
+        const personDetails = name2;
 
         setPerson(personDetails);
         console.log(personDetails);
-        console.log(personDetails.death);
       }
     };
+
     fetchData();
-  }, [query.id]);
+  }, [query.id, person?.movies]);
 
   function formatDate(dateString) {
     const date = new Date(dateString);
@@ -64,12 +66,41 @@ function Person() {
     return heightInCentimeters / 100;
   }
 
+  person?.movies
+    ?.filter(
+      (movie) =>
+        movie.enProfession === "actor" ||
+        movie.enProfession === "director" ||
+        movie.enProfession === "writer" ||
+        movie.enProfession === "composer"
+    )
+    ?.forEach((movie) => {
+      const movieName = movie.name ?? movie.alternativeName;
+      const existingMovie = uniqueMovies.find((m) => m.name === movieName);
+
+      if (existingMovie) {
+        if (movie.rating > existingMovie.rating) {
+          existingMovie.rating = movie.rating;
+        }
+      } else {
+        uniqueMovies.push({
+          name: movieName,
+          rating: movie.rating,
+          id: movie.id,
+        });
+      }
+    });
+
+  uniqueMovies.sort((a, b) => b.rating - a.rating);
+
+  const top5Movies = uniqueMovies.slice(0, 5);
+
   return (
     <>
       <Header />
       <div
         className="movie__container container"
-        style={{ marginBottom: "30px" }}
+        style={{ margin: "30px 0 20px 0" }}
       >
         <Grid container spacing={3}>
           <Grid item xs={4}>
@@ -84,9 +115,9 @@ function Person() {
           <Grid item xs={8}>
             {person?.name ? (
               <>
-                <h1>{person.name}</h1>
+                <h1 className="person__name">{person.name}</h1>
                 <div>
-                  <span>{person?.enName}</span>
+                  <span className="person__enname">{person?.enName}</span>
                 </div>
               </>
             ) : (
@@ -164,6 +195,19 @@ function Person() {
                 </span>
               </Grid>
             </Grid>
+
+            {top5Movies.length > 0 && (
+              <>
+                <h3 style={{ marginBottom: "10px" }}>Лучшие фильмы</h3>
+                {top5Movies.map((movie, index) => (
+                  <div style={{ marginBottom: "10px" }} key={index}>
+                    <Link href={`/film/[id]`} as={`/film/${movie.id}`}>
+                      {movie.name}
+                    </Link>
+                  </div>
+                ))}
+              </>
+            )}
           </Grid>
           <CustomList list={person?.facts} />
         </Grid>

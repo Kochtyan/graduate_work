@@ -4,3 +4,14 @@
   border-radius: 5px;
   box-shadow: 0 20px 50px rgb(0 0 0 / 60%);
 }
+
+.person__name {
+  margin-bottom: 10px;
+  font-weight: 900;
+}
+
+.person__enname {
+  font-family: "Montserrat";
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.6);
+}

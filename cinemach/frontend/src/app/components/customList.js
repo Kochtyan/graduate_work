@@ -57,13 +57,15 @@ export default function CustomList({ list, type }) {
       <Grid item xs={11} style={{ margin: "0 auto" }}>
         {isFacts && (
           <>
-            <h3>
-              {type === "FACT"
-                ? "Факты"
-                : type === "BLOOPER"
-                ? "Ошибки в фильме"
-                : ""}
-            </h3>
+            {type !== undefined && (
+              <h3>
+                {type === "FACT"
+                  ? "Факты"
+                  : type === "BLOOPER"
+                  ? "Ошибки в фильме"
+                  : ""}
+              </h3>
+            )}
             <List sx={styleList}>
               {list &&
                 list

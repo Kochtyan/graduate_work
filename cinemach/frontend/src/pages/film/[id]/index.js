@@ -3,6 +3,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 import { fetchMovieById } from "../../../app/api/kinopoisk";
 
@@ -182,7 +183,7 @@ function Movie() {
       <Header />
       <div
         className="movie__container container"
-        style={{ marginBottom: "30px" }}
+        style={{ margin: "30px 0 20px 0" }}
       >
         <Grid container spacing={3}>
           <Grid item xs={4}>
@@ -257,11 +258,11 @@ function Movie() {
               </span>
               <span className="movie__rating-column">
                 <img src={kpLogo.src} alt="" style={{ width: "25px" }} />
-                {movie?.rating?.kp.toFixed(1)}
+                <span>{movie?.rating?.kp.toFixed(1)}</span>
               </span>
               <span className="movie__rating-column">
-                <img src={imdbLogo.src} alt="" style={{ width: "40px" }} />
-                {movie?.rating?.imdb}
+                <img src={imdbLogo.src} alt="" style={{ width: "50px" }} />
+                <span>{movie?.rating?.imdb}</span>
               </span>
               <span className="movie__rating-column">
                 <img
@@ -269,7 +270,7 @@ function Movie() {
                   alt=""
                   style={{ width: "25px" }}
                 />
-                {movie?.rating?.filmCritics}
+                <span>{movie?.rating?.filmCritics}</span>
               </span>
             </div>
 
@@ -311,7 +312,9 @@ function Movie() {
                       .map((director, index) => (
                         <React.Fragment key={director.id}>
                           {index > 0 && ", "}
-                          {director.name ?? director.enName}
+                          <Link href={`/name/[id]`} as={`/name/${director.id}`}>
+                            {director.name ?? director.enName}
+                          </Link>
                         </React.Fragment>
                       ))
                   ) : (
@@ -335,7 +338,9 @@ function Movie() {
                       .map((writer, index) => (
                         <React.Fragment key={writer.id}>
                           {index > 0 && ", "}
-                          {writer.name ?? writer.enName}
+                          <Link href={`/name/[id]`} as={`/name/${writer.id}`}>
+                            {writer.name ?? writer.enName}
+                          </Link>
                         </React.Fragment>
                       ))
                   ) : (
@@ -359,7 +364,9 @@ function Movie() {
                       .map((producer, index) => (
                         <React.Fragment key={producer.id}>
                           {index > 0 && ", "}
-                          {producer.name ?? producer.enName}
+                          <Link href={`/name/[id]`} as={`/name/${producer.id}`}>
+                            {producer.name ?? producer.enName}
+                          </Link>
                         </React.Fragment>
                       ))
                   ) : (
@@ -383,7 +390,9 @@ function Movie() {
                       .map((composer, index) => (
                         <React.Fragment key={composer.id}>
                           {index > 0 && ", "}
-                          {composer.name ?? composer.enName}
+                          <Link href={`/name/[id]`} as={`/name/${composer.id}`}>
+                            {composer.name ?? composer.enName}
+                          </Link>
                         </React.Fragment>
                       ))
                   ) : (
@@ -482,13 +491,17 @@ function Movie() {
                     .map((actor) => (
                       <SwiperSlide key={actor.id}>
                         <div className="movie__swiper-slide">
-                          <img
-                            src={actor.photo}
-                            alt={actor.name}
-                            className="movie__swiper-slide-photo"
-                          />
+                          <Link href={`/name/[id]`} as={`/name/${actor.id}`}>
+                            <img
+                              src={actor.photo}
+                              alt={actor.name}
+                              className="movie__swiper-slide-photo"
+                            />
+                          </Link>
                           <span className="movie__swiper-slide-name">
-                            {actor.name}
+                            <Link href={`/name/[id]`} as={`/name/${actor.id}`}>
+                              {actor.name}
+                            </Link>
                             {showRoles ? <br /> : ""}
                             {showRoles && (
                               <span className="movie__swiper-slide-role">

@@ -2,7 +2,8 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin: 20px 0;
+  background-color: #0c0c0c;
+  padding: 20px 0;
 }
 
 .header__menu {
