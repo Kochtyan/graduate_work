@@ -7,6 +7,7 @@ import SearchInput from "./searchInput";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
+import SearchIcon from "@mui/icons-material/Search";
 
 import { getPopularMovies } from "../api/tmdb";
 
@@ -66,35 +67,43 @@ const customTheme = (outerTheme) =>
   });
 
 function Header() {
-  const [movies, setMovies] = useState([]);
-
-  const [showRoles, setShowRoles] = useState(false);
-  const [open, setOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [isOpenSearch, setIsOpenSearch] = useState(false);
 
   useEffect(() => {}, []);
 
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const handleOpen = () => setIsOpen(true);
+  const handleClose = () => setIsOpen(false);
+
+  const handleOpenSearch = () => {
+    setIsOpenSearch(true);
+
+    document.documentElement.style.overflow = "hidden";
+  };
+  const handleCloseSearch = () => {
+    setIsOpenSearch(false);
+
+    document.documentElement.style.overflow = "auto";
+  };
 
   const outerTheme = useTheme();
 
   return (
     <>
       <div className="header__container">
-        <nav>
-          <ul className="header__menu">
-            <li className="header__menu-item">
-              <Link href="/">
-                <img src={Logo.src} alt="Cinemach" className="header__logo" />
-              </Link>
-            </li>
-          </ul>
-        </nav>
-        <SearchInput
-          placeholder="Поиск"
-          onChange={(event) => console.log(event.target.value)}
-          onClick={() => console.log("Search clicked")}
-        />
+        <div style={{ flexBasis: "45%" }}>
+          <Link href="/">
+            <img src={Logo.src} alt="Cinemach" className="header__logo" />
+          </Link>
+        </div>
+
+        <div>
+          <SearchIcon
+            className="header__search-logo icon"
+            onClick={handleOpenSearch}
+          />
+        </div>
+
         <div className="header__login">
           <CustomButton
             title="Войти"
@@ -104,8 +113,14 @@ function Header() {
         </div>
       </div>
 
+      <SearchInput
+        placeholder="Поиск"
+        onClickClose={handleCloseSearch}
+        isOpenSearch={isOpenSearch}
+      />
+
       <Modal
-        open={open}
+        open={isOpen}
         onClose={handleClose}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"

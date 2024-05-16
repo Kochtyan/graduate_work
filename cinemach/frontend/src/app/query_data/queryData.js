@@ -8392,3 +8392,1046 @@ export const name3 = {
   createdAt: "2024-04-13T01:36:12.669Z",
   updatedAt: "2024-05-06T12:34:59.287Z",
 };
+
+export const search1 = {
+  docs: [
+    {
+      internalNames: [
+        "Криминальное чтиво",
+        "Pulp Fiction",
+        "Makulatura",
+        "Pulp Fiction: Historky z podsvetia",
+        "Кримiнальне чтиво",
+        "Pulp Fiction - Chronological Cut",
+        "Sund",
+        "parup fikusyon",
+        "पल्प फिक्शन",
+        "Евтини приказни",
+        "μυθοπλασία πολτού",
+        "Sifrut Zolla",
+        "Pulp Fiction - Tarinoita väkivallasta",
+        "Lubene",
+        "Fiction pulpeuse",
+        "黑色追緝令",
+        "危險人物",
+        "Петпарачке приче",
+        "펄프 픽션",
+        "低俗小说",
+        "Tiempos Violentos",
+      ],
+      name: "Криминальное чтиво",
+      alternativeName: "Pulp Fiction",
+      enName: "",
+      year: 1994,
+      genres: [
+        {
+          name: "криминал",
+        },
+        {
+          name: "драма",
+        },
+      ],
+      countries: [
+        {
+          name: "США",
+        },
+      ],
+      releaseYears: [],
+      id: 342,
+      externalId: {
+        imdb: "tt0110912",
+        tmdb: 680,
+        kpHD: "45e8f29f25fe31a59be88301baa5caa1",
+      },
+      names: [
+        {
+          name: "Криминальное чтиво",
+        },
+        {
+          name: "Pulp Fiction",
+        },
+        {
+          name: "Makulatura",
+          language: "GE",
+          type: null,
+        },
+        {
+          name: "Pulp Fiction: Historky z podsvetia",
+          language: "SK",
+          type: null,
+        },
+        {
+          name: "Кримiнальне чтиво",
+          language: "UA",
+          type: null,
+        },
+        {
+          name: "Pulp Fiction - Chronological Cut",
+          language: "US",
+          type: null,
+        },
+        {
+          name: "Sund",
+          language: "SI",
+          type: null,
+        },
+        {
+          name: "parup fikusyon",
+          language: "JP",
+          type: "Romaji",
+        },
+        {
+          name: "पल्प फिक्शन",
+          language: "IN",
+          type: null,
+        },
+        {
+          name: "Евтини приказни",
+          language: "MK",
+          type: null,
+        },
+        {
+          name: "μυθοπλασία πολτού",
+          language: "GR",
+          type: null,
+        },
+        {
+          name: "Sifrut Zolla",
+          language: "IL",
+          type: null,
+        },
+        {
+          name: "Pulp Fiction - Tarinoita väkivallasta",
+          language: "FI",
+          type: null,
+        },
+        {
+          name: "Lubene",
+          language: "LV",
+          type: null,
+        },
+        {
+          name: "Fiction pulpeuse",
+          language: "CA",
+          type: null,
+        },
+        {
+          name: "黑色追緝令",
+          language: "TW",
+          type: null,
+        },
+        {
+          name: "危險人物",
+          language: "HK",
+          type: null,
+        },
+        {
+          name: "Петпарачке приче",
+          language: "RS",
+          type: null,
+        },
+        {
+          name: "펄프 픽션",
+          language: "KR",
+          type: null,
+        },
+        {
+          name: "低俗小说",
+          language: "CN",
+          type: null,
+        },
+        {
+          name: "Tiempos Violentos",
+          language: "AR",
+          type: null,
+        },
+      ],
+      type: "movie",
+      description:
+        "Двое бандитов Винсент Вега и Джулс Винфилд ведут философские беседы в перерывах между разборками и решением проблем с должниками криминального босса Марселласа Уоллеса.\nВ первой истории Винсент проводит незабываемый вечер с женой Марселласа Мией. Во второй Марселлас покупает боксёра Бутча Кулиджа, чтобы тот сдал бой. В третьей истории Винсент и Джулс по нелепой случайности попадают в неприятности.",
+      shortDescription:
+        "Несколько связанных историй из жизни бандитов. Шедевр Квентина Тарантино, который изменил мировое кино",
+      logo: {
+        url: "https://imagetmdb.com/t/p/original/inuYhCBbTof4gw7f9Ized0SQQuW.png",
+      },
+      poster: {
+        url: "https://image.openmoviedb.com/kinopoisk-images/1900788/87b5659d-a159-4224-9bff-d5a5d109a53b/orig",
+        previewUrl:
+          "https://image.openmoviedb.com/kinopoisk-images/1900788/87b5659d-a159-4224-9bff-d5a5d109a53b/x1000",
+      },
+      backdrop: {
+        url: "https://image.openmoviedb.com/kinopoisk-ott-images/224348/2a0000016224ef525aabbc8bfad13709e4a8/orig",
+        previewUrl:
+          "https://image.openmoviedb.com/kinopoisk-ott-images/224348/2a0000016224ef525aabbc8bfad13709e4a8/x1000",
+      },
+      rating: {
+        kp: 8.651,
+        imdb: 8.9,
+        filmCritics: 9.3,
+        russianFilmCritics: 100,
+        await: null,
+      },
+      votes: {
+        kp: 778733,
+        imdb: 2223513,
+        filmCritics: 181,
+        russianFilmCritics: 7,
+        await: 1,
+      },
+      movieLength: 154,
+      internalRating: 8.651,
+      internalVotes: 778733,
+      isSeries: false,
+      ticketsOnSale: false,
+      totalSeriesLength: null,
+      seriesLength: null,
+      ratingMpaa: "r",
+      ageRating: 18,
+      top10: null,
+      top250: 7,
+      typeNumber: 1,
+      status: null,
+    },
+    {
+      internalNames: ["Криминальное чтиво линейное за 60 секунд"],
+      name: "Криминальное чтиво линейное за 60 секунд",
+      alternativeName: "",
+      enName: "",
+      year: 2013,
+      genres: [
+        {
+          name: "короткометражка",
+        },
+        {
+          name: "мультфильм",
+        },
+      ],
+      countries: [
+        {
+          name: "Россия",
+        },
+      ],
+      releaseYears: [],
+      id: 802847,
+      externalId: {
+        kpHD: null,
+      },
+      names: [
+        {
+          name: "Криминальное чтиво линейное за 60 секунд",
+        },
+      ],
+      type: "cartoon",
+      description: "",
+      shortDescription: "",
+      logo: {
+        url: null,
+      },
+      poster: {
+        url: null,
+        previewUrl: null,
+      },
+      backdrop: {
+        url: null,
+        previewUrl: null,
+      },
+      rating: {
+        kp: 5.909,
+        imdb: 0,
+        filmCritics: 0,
+        russianFilmCritics: 0,
+        await: null,
+      },
+      votes: {
+        kp: 188,
+        imdb: 0,
+        filmCritics: 0,
+        russianFilmCritics: 0,
+        await: 2,
+      },
+      movieLength: 1,
+      internalRating: 5.909,
+      internalVotes: 188,
+      isSeries: false,
+      ticketsOnSale: false,
+      totalSeriesLength: null,
+      seriesLength: null,
+      ratingMpaa: null,
+      ageRating: null,
+      top10: null,
+      top250: null,
+      typeNumber: 3,
+      status: null,
+    },
+    {
+      internalNames: [
+        "«Криминальное чтиво» в мгновение ока: Ретроспектива к 10-летию",
+        "«Pulp Fiction» on a Dime: A 10th Anniversary Retrospect",
+      ],
+      name: "«Криминальное чтиво» в мгновение ока: Ретроспектива к 10-летию",
+      alternativeName:
+        "«Pulp Fiction» on a Dime: A 10th Anniversary Retrospect",
+      enName: "",
+      year: 2004,
+      genres: [
+        {
+          name: "документальный",
+        },
+        {
+          name: "короткометражка",
+        },
+      ],
+      countries: [
+        {
+          name: "США",
+        },
+      ],
+      releaseYears: [],
+      id: 299558,
+      externalId: {
+        kpHD: null,
+      },
+      names: [
+        {
+          name: "«Криминальное чтиво» в мгновение ока: Ретроспектива к 10-летию",
+        },
+        {
+          name: "«Pulp Fiction» on a Dime: A 10th Anniversary Retrospect",
+        },
+      ],
+      type: "movie",
+      description: "",
+      shortDescription: "",
+      logo: {
+        url: null,
+      },
+      poster: {
+        url: null,
+        previewUrl: null,
+      },
+      backdrop: {
+        url: null,
+        previewUrl: null,
+      },
+      rating: {
+        kp: 6.048,
+        imdb: 5.3,
+        filmCritics: 0,
+        russianFilmCritics: 0,
+        await: null,
+      },
+      votes: {
+        kp: 106,
+        imdb: 83,
+        filmCritics: 0,
+        russianFilmCritics: 0,
+        await: 0,
+      },
+      movieLength: 20,
+      internalRating: 6.048,
+      internalVotes: 106,
+      isSeries: false,
+      ticketsOnSale: false,
+      totalSeriesLength: null,
+      seriesLength: null,
+      ratingMpaa: null,
+      ageRating: null,
+      top10: null,
+      top250: null,
+      typeNumber: 1,
+      status: null,
+    },
+    {
+      internalNames: ["Криминальное чтиво: Факты", "Pulp Fiction: The Facts"],
+      name: "Криминальное чтиво: Факты",
+      alternativeName: "Pulp Fiction: The Facts",
+      enName: "",
+      year: 2002,
+      genres: [
+        {
+          name: "документальный",
+        },
+        {
+          name: "короткометражка",
+        },
+      ],
+      countries: [
+        {
+          name: "США",
+        },
+      ],
+      releaseYears: [],
+      id: 780499,
+      externalId: {
+        kpHD: null,
+      },
+      names: [
+        {
+          name: "Криминальное чтиво: Факты",
+          language: "RU",
+          type: "Russian title on kinopoisk",
+        },
+        {
+          name: "Pulp Fiction: The Facts",
+          language: null,
+          type: "Original title on kinopoisk",
+        },
+      ],
+      type: "movie",
+      description: "",
+      shortDescription: "",
+      logo: null,
+      poster: {
+        url: null,
+        previewUrl: null,
+      },
+      backdrop: {
+        url: null,
+        previewUrl: null,
+      },
+      rating: {
+        kp: 0,
+        imdb: 6.9,
+        filmCritics: 0,
+        russianFilmCritics: 0,
+        await: 0,
+      },
+      votes: {
+        kp: 49,
+        imdb: 422,
+        filmCritics: 0,
+        russianFilmCritics: 0,
+        await: 0,
+      },
+      movieLength: 31,
+      internalRating: 6.9,
+      internalVotes: 49,
+      isSeries: false,
+      ticketsOnSale: false,
+      totalSeriesLength: null,
+      seriesLength: null,
+      ratingMpaa: null,
+      ageRating: null,
+      top10: null,
+      top250: null,
+      typeNumber: 1,
+      status: null,
+    },
+    {
+      internalNames: ["Criminal Record", "Криминальное прошлое"],
+      name: "Криминальное прошлое",
+      alternativeName: "Criminal Record",
+      enName: "",
+      year: 2024,
+      genres: [
+        {
+          name: "триллер",
+        },
+        {
+          name: "драма",
+        },
+        {
+          name: "криминал",
+        },
+      ],
+      countries: [
+        {
+          name: "Великобритания",
+        },
+        {
+          name: "США",
+        },
+      ],
+      releaseYears: [
+        {
+          start: 2024,
+          end: null,
+        },
+      ],
+      id: 5067601,
+      externalId: {
+        kpHD: null,
+      },
+      names: [
+        {
+          name: "Criminal Record",
+        },
+        {
+          name: "Криминальное прошлое",
+          $set: {
+            language: "RU",
+            type: "Russian title on kinopoisk",
+          },
+        },
+      ],
+      type: "tv-series",
+      description:
+        "В центре Лондона анонимный телефонный звонок побуждает двух блестящих детективов — молодую женщину на начальном этапе карьеры и человека со связями, желающего защитить свое наследие, — начать борьбу за исправление старой судебной ошибки.",
+      shortDescription: "",
+      logo: null,
+      poster: {
+        url: "https://image.openmoviedb.com/kinopoisk-images/10671298/aac04e1f-03cd-42d4-aa2d-7fb014b792a9/orig",
+        previewUrl:
+          "https://image.openmoviedb.com/kinopoisk-images/10671298/aac04e1f-03cd-42d4-aa2d-7fb014b792a9/x1000",
+      },
+      backdrop: {
+        url: null,
+        previewUrl: null,
+      },
+      rating: {
+        kp: 6.779,
+        imdb: 7.1,
+        filmCritics: 0,
+        russianFilmCritics: 0,
+        await: null,
+      },
+      votes: {
+        kp: 1320,
+        imdb: 9451,
+        filmCritics: 0,
+        russianFilmCritics: 0,
+        await: 174,
+      },
+      movieLength: 0,
+      internalRating: 6.779,
+      internalVotes: 1320,
+      isSeries: true,
+      ticketsOnSale: false,
+      totalSeriesLength: null,
+      seriesLength: 50,
+      ratingMpaa: null,
+      ageRating: null,
+      top10: null,
+      top250: null,
+      typeNumber: 2,
+      status: null,
+    },
+    {
+      internalNames: ["Криминальное наследство"],
+      name: "Криминальное наследство",
+      alternativeName: "",
+      enName: "",
+      year: 2014,
+      genres: [
+        {
+          name: "криминал",
+        },
+        {
+          name: "драма",
+        },
+        {
+          name: "боевик",
+        },
+      ],
+      countries: [
+        {
+          name: "Россия",
+        },
+      ],
+      releaseYears: [
+        {
+          start: 2014,
+          end: 2014,
+        },
+      ],
+      id: 842859,
+      externalId: {
+        kpHD: null,
+      },
+      names: [
+        {
+          name: "Криминальное наследство",
+        },
+      ],
+      type: "tv-series",
+      description:
+        "Многие годы тренер по биатлону Борис Ермаков скрывал от семьи неприглядную правду о своей жизни. Когда-то, в лихие девяностые, он был киллером крупной преступной группировки. Однажды прошлое напомнило о себе самым безжалостным образом: преступники похитили младшего сына Бориса — Андрея. Борис должен был вспомнить прежнее ремесло и убить своего бывшего воспитанника, а ныне крупного бизнесмена Струкова. Только вот сам тренер из-за проблем со здоровьем оказался не в состоянии «выполнить заказ», и это пришлось сделать старшему сыну Бориса, Денису…\n\nАндрей вернулся домой, но Денис попал в тюрьму по обвинению в убийстве. Все пошло по плану неизвестного шантажиста, оставившего семье Ермаковых немало вопросов. Сможет ли Денис разобраться во всем, что произошло в его семье, и вычислить человека, который ими манипулирует?",
+      shortDescription: "",
+      logo: {
+        url: null,
+      },
+      poster: {
+        url: "https://image.openmoviedb.com/kinopoisk-images/1600647/1133d3d0-11f1-418b-a1be-084b5384f9b6/orig",
+        previewUrl:
+          "https://image.openmoviedb.com/kinopoisk-images/1600647/1133d3d0-11f1-418b-a1be-084b5384f9b6/x1000",
+      },
+      backdrop: {
+        url: null,
+        previewUrl: null,
+      },
+      rating: {
+        kp: 6.63,
+        imdb: 0,
+        filmCritics: 0,
+        russianFilmCritics: 0,
+        await: null,
+      },
+      votes: {
+        kp: 922,
+        imdb: 0,
+        filmCritics: 0,
+        russianFilmCritics: 0,
+        await: 20,
+      },
+      movieLength: 0,
+      internalRating: 6.63,
+      internalVotes: 922,
+      isSeries: true,
+      ticketsOnSale: false,
+      totalSeriesLength: 160,
+      seriesLength: 40,
+      ratingMpaa: null,
+      ageRating: 16,
+      top10: null,
+      top250: null,
+      typeNumber: 2,
+      status: "completed",
+    },
+    {
+      internalNames: ["Криминальное собеседование", "Criminal Audition"],
+      name: "Криминальное собеседование",
+      alternativeName: "Criminal Audition",
+      enName: "",
+      year: 2019,
+      genres: [
+        {
+          name: "триллер",
+        },
+        {
+          name: "драма",
+        },
+        {
+          name: "комедия",
+        },
+        {
+          name: "детектив",
+        },
+      ],
+      countries: [
+        {
+          name: "Великобритания",
+        },
+      ],
+      releaseYears: [],
+      id: 844862,
+      externalId: {
+        kpHD: "4c0ccb3b0271e607ab5a22ab348baca9",
+      },
+      names: [
+        {
+          name: "Криминальное собеседование",
+          language: "RU",
+          type: "Russian title on kinopoisk",
+        },
+        {
+          name: "Criminal Audition",
+          language: null,
+          type: "Original title on kinopoisk",
+        },
+      ],
+      type: "movie",
+      description:
+        "У одних людей есть деньги. А другие готовы на многое ради этих денег. Спрос рождает предложение. Бывший адвокат и его команда запустили специальную услугу в криминальном мире: они ищут отчаянных и жадных людей, готовых отсидеть за преступления других. Но последнее криминальное собеседование, в котором им придется поучаствовать, за одну ночь обернется адом для трех новых кандидатов.",
+      shortDescription:
+        "Они должны доказать, что достойны сесть в тюрьму за чужие грехи. Камерный британский триллер об играх маньяков",
+      logo: null,
+      poster: {
+        url: "https://image.openmoviedb.com/kinopoisk-images/6201401/0fbb45ca-91f2-4a6f-a8e0-d6bb27eec9aa/orig",
+        previewUrl:
+          "https://image.openmoviedb.com/kinopoisk-images/6201401/0fbb45ca-91f2-4a6f-a8e0-d6bb27eec9aa/x1000",
+      },
+      backdrop: {
+        url: "https://image.openmoviedb.com/kinopoisk-ott-images/223007/2a0000018022b0055e81e593b6a5fd7b5d30/orig",
+        previewUrl:
+          "https://image.openmoviedb.com/kinopoisk-ott-images/223007/2a0000018022b0055e81e593b6a5fd7b5d30/x1000",
+      },
+      rating: {
+        kp: 4.7,
+        imdb: 4.1,
+        filmCritics: 0,
+        russianFilmCritics: 0,
+        await: null,
+      },
+      votes: {
+        kp: 263,
+        imdb: 311,
+        filmCritics: 0,
+        russianFilmCritics: 0,
+        await: 8,
+      },
+      movieLength: 92,
+      internalRating: 4.7,
+      internalVotes: 263,
+      isSeries: false,
+      ticketsOnSale: false,
+      totalSeriesLength: null,
+      seriesLength: null,
+      ratingMpaa: null,
+      ageRating: 18,
+      top10: null,
+      top250: null,
+      typeNumber: 1,
+      status: null,
+    },
+    {
+      internalNames: ["Криминальное видео"],
+      name: "Криминальное видео",
+      alternativeName: "",
+      enName: "",
+      year: 2008,
+      genres: [
+        {
+          name: "боевик",
+        },
+        {
+          name: "драма",
+        },
+        {
+          name: "криминал",
+        },
+        {
+          name: "детектив",
+        },
+      ],
+      countries: [
+        {
+          name: "Россия",
+        },
+      ],
+      releaseYears: [
+        {
+          start: 2008,
+          end: 2008,
+        },
+      ],
+      id: 427842,
+      externalId: {
+        kpHD: null,
+      },
+      names: [
+        {
+          name: "Криминальное видео",
+        },
+      ],
+      type: "tv-series",
+      description:
+        "В жизни главного героя Арсения, существуют две страсти: видеосъемки и расследование преступлений. Камера в его руках фиксирует то, что не способен отметить человеческий глаз. С помощью своего видео-напарника Арсений и его товарищи раскрывают сложные преступления.",
+      shortDescription: "",
+      logo: {
+        url: null,
+      },
+      poster: {
+        url: "https://image.openmoviedb.com/kinopoisk-images/1600647/01b94bbc-958f-4400-8cf2-3357bbd9665b/orig",
+        previewUrl:
+          "https://image.openmoviedb.com/kinopoisk-images/1600647/01b94bbc-958f-4400-8cf2-3357bbd9665b/x1000",
+      },
+      backdrop: {
+        url: null,
+        previewUrl: null,
+      },
+      rating: {
+        kp: 3.179,
+        imdb: 0,
+        filmCritics: 0,
+        russianFilmCritics: 0,
+        await: null,
+      },
+      votes: {
+        kp: 176,
+        imdb: 0,
+        filmCritics: 0,
+        russianFilmCritics: 0,
+        await: 0,
+      },
+      movieLength: 0,
+      internalRating: 3.179,
+      internalVotes: 176,
+      isSeries: true,
+      ticketsOnSale: false,
+      totalSeriesLength: 550,
+      seriesLength: null,
+      ratingMpaa: null,
+      ageRating: 16,
+      top10: null,
+      top250: null,
+      typeNumber: 2,
+      status: "completed",
+    },
+    {
+      internalNames: ["Криминальное танго"],
+      name: "Криминальное танго",
+      alternativeName: "",
+      enName: "",
+      year: 2003,
+      genres: [
+        {
+          name: "комедия",
+        },
+      ],
+      countries: [
+        {
+          name: "Россия",
+        },
+      ],
+      releaseYears: [],
+      id: 411951,
+      externalId: {
+        kpHD: null,
+      },
+      names: [
+        {
+          name: "Криминальное танго",
+        },
+      ],
+      type: "movie",
+      description:
+        "Две старушки-вдовы, соседки по коммунальной квартире узнают из теленовостей о появлении в городе маньяка, который под видом контролера из ЖЭКа проникает в квартиры доверчивых женщин, насилует их и убивает. Проживающая этажом выше гадалка, после устроенного ею в квартире старушек потопа, предсказывает им скорый конец. Одинокие дамы, истосковавшиеся по крепким мужским объятьям, решают устроить напоследок «вечеринку», используя в качестве «разогревающего» средства «молодильное зелье». В самый разгар веселья в дверь их квартиры позвонили...",
+      shortDescription: "",
+      logo: {
+        url: null,
+      },
+      poster: {
+        url: "https://image.openmoviedb.com/kinopoisk-images/1946459/aaaa8aa9-ec81-47e7-a765-1d858954d3e8/orig",
+        previewUrl:
+          "https://image.openmoviedb.com/kinopoisk-images/1946459/aaaa8aa9-ec81-47e7-a765-1d858954d3e8/x1000",
+      },
+      backdrop: {
+        url: null,
+        previewUrl: null,
+      },
+      rating: {
+        kp: 2.793,
+        imdb: 0,
+        filmCritics: 0,
+        russianFilmCritics: 0,
+        await: null,
+      },
+      votes: {
+        kp: 146,
+        imdb: 0,
+        filmCritics: 0,
+        russianFilmCritics: 0,
+        await: 0,
+      },
+      movieLength: 94,
+      internalRating: 2.793,
+      internalVotes: 146,
+      isSeries: false,
+      ticketsOnSale: false,
+      totalSeriesLength: null,
+      seriesLength: null,
+      ratingMpaa: null,
+      ageRating: null,
+      top10: null,
+      top250: null,
+      typeNumber: 1,
+      status: null,
+    },
+    {
+      internalNames: ["Криминальное видео 2"],
+      name: "Криминальное видео 2",
+      alternativeName: "",
+      enName: "",
+      year: 2009,
+      genres: [
+        {
+          name: "боевик",
+        },
+        {
+          name: "детектив",
+        },
+      ],
+      countries: [
+        {
+          name: "Россия",
+        },
+      ],
+      releaseYears: [
+        {
+          start: 2009,
+          end: 2009,
+        },
+      ],
+      id: 430479,
+      externalId: {
+        kpHD: null,
+      },
+      names: [
+        {
+          name: "Криминальное видео 2",
+        },
+      ],
+      type: "tv-series",
+      description:
+        "После службы на флоте Арсений Раевский устраивается работать в уголовный розыск техником-оперативником, то есть - фиксировать на камеру все криминальные происшествия. Получив повышение, Арсений вступает в должность следователя прокуратуры и отбывает на новое место службы, однако с камерой не расстается - его видео-напарник замечает то, что ускользает от человеческих глаз при расследовании кровавых убийств. С первых дней службы на новом месте Арсений сталкивается со всеми прелестями работы «следака»…",
+      shortDescription: "",
+      logo: {
+        url: null,
+      },
+      poster: {
+        url: "https://image.openmoviedb.com/kinopoisk-images/1946459/c0140fe7-399c-4bdf-9e75-130f2380bcda/orig",
+        previewUrl:
+          "https://image.openmoviedb.com/kinopoisk-images/1946459/c0140fe7-399c-4bdf-9e75-130f2380bcda/x1000",
+      },
+      backdrop: {
+        url: null,
+        previewUrl: null,
+      },
+      rating: {
+        kp: 0,
+        imdb: 0,
+        filmCritics: 0,
+        russianFilmCritics: 0,
+        await: 0,
+      },
+      votes: {
+        kp: 84,
+        imdb: 0,
+        filmCritics: 0,
+        russianFilmCritics: 0,
+        await: 2,
+      },
+      movieLength: 0,
+      internalRating: 0,
+      internalVotes: 84,
+      isSeries: true,
+      ticketsOnSale: false,
+      totalSeriesLength: null,
+      seriesLength: 47,
+      ratingMpaa: null,
+      ageRating: 16,
+      top10: null,
+      top250: null,
+      typeNumber: 2,
+      status: "completed",
+    },
+  ],
+  total: 67,
+  limit: 10,
+  page: 1,
+  pages: 7,
+};
+
+export const search2 = {
+  docs: [
+    {
+      id: 25584,
+      name: "Брэд Питт",
+      enName: "Brad Pitt",
+      photo:
+        "https://avatars.mds.yandex.net/get-kinopoisk-image/1777765/7d4eb861-1f80-44da-b75e-7f365d0fc3da/orig",
+      sex: "Мужской",
+      growth: 180,
+      birthday: "1963-12-18T00:00:00.000Z",
+      death: "",
+      age: 60,
+    },
+    {
+      id: 1243708,
+      name: "Брэд Паттон",
+      enName: "Brad Patton",
+      photo:
+        "https://avatars.mds.yandex.net/get-kinopoisk-image/1946459/4ba62180-b095-4913-aea2-42a117920cde/orig",
+      sex: "Мужской",
+      growth: 183,
+      birthday: "1972-08-07T00:00:00.000Z",
+      death: "",
+      age: 51,
+    },
+    {
+      id: 398461,
+      name: "Брэд Петтерс",
+      enName: "Brad Peters",
+      photo: "",
+      sex: "Мужской",
+      growth: 0,
+      birthday: "",
+      death: "",
+      age: 0,
+    },
+    {
+      id: 2843961,
+      name: "Брэд Петтитт",
+      enName: "Brad Pettitt",
+      photo:
+        "https://avatars.mds.yandex.net/get-kinopoisk-image/1777765/7a21ff3e-f6d7-41e4-a231-dcd22dbe49e9/orig",
+      sex: "Мужской",
+      growth: 175,
+      birthday: "",
+      death: "",
+      age: 0,
+    },
+    {
+      id: 1259458,
+      name: "Брэд",
+      enName: "Brad",
+      photo: "",
+      sex: "Мужской",
+      growth: 0,
+      birthday: "",
+      death: "",
+      age: 0,
+    },
+    {
+      id: 2477970,
+      name: "Брэд",
+      enName: "Brad",
+      photo: "",
+      sex: "",
+      growth: 0,
+      birthday: "",
+      death: "",
+      age: 0,
+    },
+    {
+      id: 2448667,
+      name: "Брэд",
+      enName: "Brad",
+      photo: "",
+      sex: "",
+      growth: 0,
+      birthday: "",
+      death: "",
+      age: 0,
+    },
+    {
+      id: 10155650,
+      name: "Брэд Кёртин",
+      enName: "Brad Curtin",
+      photo:
+        "https://avatars.mds.yandex.net/get-kinopoisk-image/1898899/a15e6403-af8a-4928-a31e-89914642e3ef/orig",
+      sex: "Мужской",
+      growth: 0,
+      birthday: "",
+      death: "",
+      age: 0,
+    },
+    {
+      id: 10152459,
+      name: "Брэд Картер",
+      enName: "Brad Carter",
+      photo: "",
+      sex: "Мужской",
+      growth: 0,
+      birthday: "",
+      death: "",
+      age: 0,
+    },
+    {
+      id: 2854426,
+      name: "Брэд Феррелл",
+      enName: "Brad Ferrell",
+      photo:
+        "https://avatars.mds.yandex.net/get-kinopoisk-image/1777765/f3a4c56a-c512-44a5-b395-c8a9188a02a1/orig",
+      sex: "Мужской",
+      growth: 0,
+      birthday: "",
+      death: "",
+      age: 0,
+    },
+  ],
+  total: 1000,
+  limit: 10,
+  page: 1,
+  pages: 100,
+};

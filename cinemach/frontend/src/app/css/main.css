@@ -51,12 +51,9 @@
   background: rgba(108, 41, 163, 0.5);
   border-radius: 5px;
   padding: 3px;
-  color: grey;
-  transition: all 0.3s;
 }
 
 .main__add-to-watchlist-icon:hover {
-  color: #fff;
   background: rgba(108, 41, 163, 0.8);
 }
 

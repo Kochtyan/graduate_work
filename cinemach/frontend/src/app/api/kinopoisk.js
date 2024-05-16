@@ -74,3 +74,53 @@ export const fetchPersonById = async (personId) => {
     return null;
   }
 };
+
+export const fetchSearchMovie = async (query) => {
+  try {
+    const response = await fetch(
+      `https://api.kinopoisk.dev/v1.4/movie/search?page=1&limit=250&query=${query}`,
+      {
+        method: "GET",
+        headers: {
+          "X-API-KEY": KP_API_KEY,
+        },
+      }
+    );
+
+    if (!response.ok) {
+      console.error(`Error fetching query: ${response.status}`);
+      return null;
+    }
+
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error("Error fetching query:", error);
+    return null;
+  }
+};
+
+export const fetchSearchPerson = async (query) => {
+  try {
+    const response = await fetch(
+      `https://api.kinopoisk.dev/v1.4/person/search?page=1&limit=250&query=${query}`,
+      {
+        method: "GET",
+        headers: {
+          "X-API-KEY": KP_API_KEY,
+        },
+      }
+    );
+
+    if (!response.ok) {
+      console.error(`Error fetching query: ${response.status}`);
+      return null;
+    }
+
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error("Error fetching query:", error);
+    return null;
+  }
+};

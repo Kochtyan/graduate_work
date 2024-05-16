@@ -25,7 +25,7 @@ function Person() {
     const fetchData = async () => {
       if (query.id) {
         // const movieDetails = await fetchPersonById(query.id);
-        const personDetails = name2;
+        const personDetails = name1;
 
         setPerson(personDetails);
         console.log(personDetails);

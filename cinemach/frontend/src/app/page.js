@@ -45,7 +45,7 @@ const MovieApp = () => {
   return (
     <>
       <Header />
-      <div className="container" style={{ overflowY: "hidden" }}>
+      <div className="container">
         <h1 style={{ marginBottom: "20px" }}>Популярные фильмы</h1>
         <Grid
           container
@@ -69,13 +69,13 @@ const MovieApp = () => {
                         <div className="main__add-to-watchlist">
                           {watchlistState[movie.id] ? (
                             <BookmarkOutlined
-                              className="main__add-to-watchlist-icon"
+                              className="main__add-to-watchlist-icon icon"
                               sx={{ fontSize: 40 }}
                               onClick={(e) => handleAddToWatchlist(e, movie.id)}
                             />
                           ) : (
                             <Bookmark
-                              className="main__add-to-watchlist-icon"
+                              className="main__add-to-watchlist-icon icon"
                               sx={{ fontSize: 40 }}
                               onClick={(e) => handleAddToWatchlist(e, movie.id)}
                             />
