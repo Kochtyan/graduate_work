@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import Link from "next/link";
 
 import Grid from "@mui/material/Grid";
@@ -26,7 +25,17 @@ export default function CustomQueryList({ list, list2, type }) {
               {list.length !== 0 &&
                 list.map((result, index) => (
                   <>
-                    <Link href={`/film/[id]`} as={`/film/${result.id}`}>
+                    <Link
+                      key={result.id}
+                      href={
+                        result.type == "movie" ? `/film/[id]` : `/series/[id]`
+                      }
+                      as={
+                        result.type == "movie"
+                          ? `/film/${result.id}`
+                          : `/series/${result.id}`
+                      }
+                    >
                       <ListItem className="queryList__item" key={result.id}>
                         <div className="queryList__item-container">
                           <img
