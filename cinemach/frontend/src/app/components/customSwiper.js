@@ -26,7 +26,7 @@ export default function CustomSwiper({ list, type, style }) {
             {type === "sequelsAndPrequels"
               ? "Сиквелы и приквелы"
               : type === "similarMovies"
-              ? "Похожие фильмы"
+              ? "Это может быть вам интересно"
               : ""}
           </h3>
 

@@ -2495,6 +2495,476 @@ export const film2 = {
   },
 };
 
+export const film3 = {
+  id: 1263705,
+  externalId: {
+    kpHD: "462fc2372280cfdf9786d734206a025d",
+  },
+  name: "Еще по одной",
+  alternativeName: "Druk",
+  enName: null,
+  names: [
+    {
+      name: "Еще по одной",
+      language: "RU",
+      type: "Russian title on kinopoisk",
+    },
+    {
+      name: "Druk",
+      language: null,
+      type: "Original title on kinopoisk",
+    },
+  ],
+  type: "movie",
+  typeNumber: 1,
+  year: 2020,
+  description:
+    "В ресторане собираются учитель истории, психологии, музыки и физрук, чтобы отметить 40-летие одного из них. И решают проверить научную теорию о том, что c самого рождения человек страдает от нехватки алкоголя в крови, а чтобы стать по-настоящему счастливым, нужно быть немного нетрезвым. Друзья договариваются наблюдать, как возлияния скажутся на их работе и личной жизни, и устанавливают правила: не пить вечером и по выходным. Казалось бы, что может пойти не так?",
+  shortDescription:
+    "Друзья решают выпивать каждый день, чтобы стать счастливее. Философская алкодрама с Мадсом Миккельсеном",
+  slogan: null,
+  status: null,
+  rating: {
+    kp: 7.554,
+    imdb: 7.7,
+    filmCritics: 7.9,
+    russianFilmCritics: 100,
+    await: null,
+  },
+  votes: {
+    kp: 452098,
+    imdb: 195315,
+    filmCritics: 230,
+    russianFilmCritics: 17,
+    await: 2287,
+  },
+  movieLength: 110,
+  totalSeriesLength: null,
+  seriesLength: null,
+  ratingMpaa: null,
+  ageRating: 18,
+  poster: {
+    url: "https://image.openmoviedb.com/kinopoisk-images/1773646/a575032b-1b9f-4ea4-adf2-a3dd3359acc8/orig",
+    previewUrl:
+      "https://image.openmoviedb.com/kinopoisk-images/1773646/a575032b-1b9f-4ea4-adf2-a3dd3359acc8/x1000",
+  },
+  backdrop: {
+    url: "https://image.openmoviedb.com/kinopoisk-ott-images/1531675/2a000001768f8eb1326d48501d5b9272e119/orig",
+    previewUrl:
+      "https://image.openmoviedb.com/kinopoisk-ott-images/1531675/2a000001768f8eb1326d48501d5b9272e119/x1000",
+  },
+  genres: [
+    {
+      name: "драма",
+    },
+    {
+      name: "комедия",
+    },
+  ],
+  countries: [
+    {
+      name: "Дания",
+    },
+    {
+      name: "Швеция",
+    },
+    {
+      name: "Нидерланды",
+    },
+  ],
+  persons: [
+    {
+      id: 11123,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_11123.jpg",
+      name: "Мадс Миккельсен",
+      enName: "Mads Mikkelsen",
+      description: "Martin",
+      profession: "актеры",
+      enProfession: "actor",
+    },
+    {
+      id: 11138,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_11138.jpg",
+      name: "Томас Бо Ларсен",
+      enName: "Thomas Bo Larsen",
+      description: "Tommy",
+      profession: "актеры",
+      enProfession: "actor",
+    },
+    {
+      id: 2429717,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_2429717.jpg",
+      name: "Магнус Милланг",
+      enName: "Magnus Millang",
+      description: "Nikolaj",
+      profession: "актеры",
+      enProfession: "actor",
+    },
+    {
+      id: 17411,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_17411.jpg",
+      name: "Ларс Ранте",
+      enName: "Lars Ranthe",
+      description: "Peter",
+      profession: "актеры",
+      enProfession: "actor",
+    },
+    {
+      id: 20968,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_20968.jpg",
+      name: "Мария Бонневи",
+      enName: "Maria Bonnevie",
+      description: "Anika",
+      profession: "актеры",
+      enProfession: "actor",
+    },
+    {
+      id: 1199722,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_1199722.jpg",
+      name: "Хелена Рейнгор Нойманн",
+      enName: "Helene Reingaard Neumann",
+      description: "Amalie",
+      profession: "актеры",
+      enProfession: "actor",
+    },
+    {
+      id: 301782,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_301782.jpg",
+      name: "Суссе Вольд",
+      enName: "Susse Wold",
+      description: "Rektor",
+      profession: "актеры",
+      enProfession: "actor",
+    },
+    {
+      id: 3916652,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_3916652.jpg",
+      name: "Магнус Сьёруп",
+      enName: "Magnus Sjørup",
+      description: "Jonas",
+      profession: "актеры",
+      enProfession: "actor",
+    },
+    {
+      id: 6014728,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_6014728.jpg",
+      name: "Силас Корнелиус Ван",
+      enName: "Silas Cornelius Van",
+      description: "Kasper",
+      profession: "актеры",
+      enProfession: "actor",
+    },
+    {
+      id: 3141123,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_3141123.jpg",
+      name: "Альберт Рудбек Линдхардт",
+      enName: "Albert Rudbeck Lindhardt",
+      description: "Sebastian",
+      profession: "актеры",
+      enProfession: "actor",
+    },
+    {
+      id: 1986635,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_1986635.jpg",
+      name: "Сабина Хвиид",
+      enName: "Sabine Hviid",
+      description: null,
+      profession: "художники",
+      enProfession: "designer",
+    },
+    {
+      id: 1988979,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_1988979.jpg",
+      name: "Эллен Ленс",
+      enName: "Ellen Lens",
+      description: null,
+      profession: "художники",
+      enProfession: "designer",
+    },
+    {
+      id: 1988204,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_1988204.jpg",
+      name: "Манон Расмуссен",
+      enName: "Manon Rasmussen",
+      description: null,
+      profession: "художники",
+      enProfession: "designer",
+    },
+    {
+      id: 66464,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_66464.jpg",
+      name: "Томас Винтерберг",
+      enName: "Thomas Vinterberg",
+      description: null,
+      profession: "режиссеры",
+      enProfession: "director",
+    },
+    {
+      id: 2005411,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_2005411.jpg",
+      name: "Янус Биллесков Янсен",
+      enName: "Janus Billeskov Jansen",
+      description: null,
+      profession: "монтажеры",
+      enProfession: "editor",
+    },
+    {
+      id: 2000148,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_2000148.jpg",
+      name: "Анне Эстеруд",
+      enName: "Anne Østerud",
+      description: null,
+      profession: "монтажеры",
+      enProfession: "editor",
+    },
+    {
+      id: 2436537,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_2436537.jpg",
+      name: "Стурла Брандт Грёвлен",
+      enName: "Sturla Brandth Grøvlen",
+      description: null,
+      profession: "операторы",
+      enProfession: "operator",
+    },
+    {
+      id: 3741101,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_3741101.jpg",
+      name: "Каспер Диссинг Нильсен",
+      enName: "Kasper Dissing",
+      description: null,
+      profession: "продюсеры",
+      enProfession: "producer",
+    },
+    {
+      id: 223780,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_223780.jpg",
+      name: "Сиссе Граум Йоргенсен",
+      enName: "Sisse Graum Jørgensen",
+      description: null,
+      profession: "продюсеры",
+      enProfession: "producer",
+    },
+    {
+      id: 1880650,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_1880650.jpg",
+      name: "Джессика Балак",
+      enName: "Jessica Balac",
+      description: null,
+      profession: "продюсеры",
+      enProfession: "producer",
+    },
+    {
+      id: 57256,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_57256.jpg",
+      name: "Карен Бентзон",
+      enName: "Karen Bentzon",
+      description: null,
+      profession: "продюсеры",
+      enProfession: "producer",
+    },
+    {
+      id: 2964454,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_2964454.jpg",
+      name: "Александр Хорлин",
+      enName: null,
+      description: null,
+      profession: "актеры дубляжа",
+      enProfession: "voice_actor",
+    },
+    {
+      id: 1159780,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_1159780.jpg",
+      name: "Александр Груздев",
+      enName: null,
+      description: null,
+      profession: "актеры дубляжа",
+      enProfession: "voice_actor",
+    },
+    {
+      id: 3399668,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_3399668.jpg",
+      name: "Сергей Пономарёв",
+      enName: null,
+      description: null,
+      profession: "актеры дубляжа",
+      enProfession: "voice_actor",
+    },
+    {
+      id: 266167,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_266167.jpg",
+      name: "Алексей Войтюк",
+      enName: null,
+      description: null,
+      profession: "актеры дубляжа",
+      enProfession: "voice_actor",
+    },
+    {
+      id: 1234051,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_1234051.jpg",
+      name: "Анастасия Лапина",
+      enName: null,
+      description: null,
+      profession: "актеры дубляжа",
+      enProfession: "voice_actor",
+    },
+    {
+      id: 66464,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_66464.jpg",
+      name: "Томас Винтерберг",
+      enName: "Thomas Vinterberg",
+      description: null,
+      profession: "редакторы",
+      enProfession: "writer",
+    },
+    {
+      id: 1094266,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_1094266.jpg",
+      name: "Тобиас Линдхольм",
+      enName: "Tobias Lindholm",
+      description: null,
+      profession: "редакторы",
+      enProfession: "writer",
+    },
+  ],
+  premiere: {
+    country: null,
+    cinema: null,
+    bluray: null,
+    dvd: null,
+  },
+  watchability: {
+    items: [
+      {
+        name: "Okko",
+        logo: {
+          url: "https://avatars.mds.yandex.net/get-ott/239697/7713e586-17d1-42d1-ac62-53e9ef1e70c3/orig",
+        },
+        url: "https://okko.tv/movie/druk?utm_medium=referral&utm_source=yandex_search&utm_campaign=new_search_feed",
+      },
+      {
+        name: "Иви",
+        logo: {
+          url: "https://avatars.mds.yandex.net/get-ott/2419418/0dfd1724-848f-4725-9160-abc571f41c11/orig",
+        },
+        url: "https://www.ivi.ru/watch/417250?utm_source=yandex&utm_medium=wizard",
+      },
+      {
+        name: "START",
+        logo: {
+          url: "https://avatars.mds.yandex.net/get-ott/239697/1a632675-0d99-4268-bd5e-d5f3dd800174/orig",
+        },
+        url: "https://start.ru/watch/eshche-po-odnoy?utm_source=kinopoisk&utm_medium=feed_watch&utm_campaign=eshche-po-odnoy",
+      },
+      {
+        name: "KION",
+        logo: {
+          url: "https://avatars.mds.yandex.net/get-ott/239697/daeb142e-3ecc-4bb2-9bff-4827996643ab/orig",
+        },
+        url: "https://kion.ru/video/movie/311647479?utm_source=yandex&utm_medium=organic&utm_campaign=wizard",
+      },
+      {
+        name: "PREMIER",
+        logo: {
+          url: "https://avatars.mds.yandex.net/get-ott/239697/0f86e907-9531-47e9-87bd-5101a08d4e30/orig",
+        },
+        url: "https://premier.one/show/20310?utm_source=yandex&utm_medium=yandex_feed_search&utm_campaign=yandex_feed",
+      },
+      {
+        name: "Wink",
+        logo: {
+          url: "https://avatars.mds.yandex.net/get-ott/1672343/54096cbe-cc3b-41c9-8e44-990ebbca8d61/orig",
+        },
+        url: "https://wink.ru/media_items/111314317?utm_source=yandex&utm_medium=koldunschick&utm_content=name",
+      },
+      {
+        name: "viju",
+        logo: {
+          url: "https://avatars.mds.yandex.net/get-ott/224348/8b10c84b-e1bb-4493-9bc4-6ee56554403a/orig",
+        },
+        url: "https://viju.ru/filmy/esche-po-odnoy?utm_campaign=yandex_content_integration&utm_medium=affiliate&utm_source=yandex",
+      },
+      {
+        name: "Смотрёшка",
+        logo: {
+          url: "https://avatars.mds.yandex.net/get-ott/236744/c88e652e-2eb1-472d-b636-a266364dbf58/orig",
+        },
+        url: "https://smotreshka.tv/archive/608616d35b3522ea624ed917?utm_source=yandex_search&utm_campaign=yandex_feed&utm_content=archiv_april",
+      },
+      {
+        name: "Большое ТВ",
+        logo: {
+          url: "https://avatars.mds.yandex.net/get-ott/2439731/17c7ebcf-41aa-48b6-9366-621a85f1307a/orig",
+        },
+        url: "https://bolshoe.tv/promo/web/movie/41375?segment=yandex_feed&group=peoples&utm_medium=ya_feed&utm_campaign=ya_feed_41375",
+      },
+      {
+        name: "24ТВ",
+        logo: {
+          url: "https://avatars.mds.yandex.net/get-ott/2439731/85e83b8d-1159-4781-bad5-ce0a809b3843/orig",
+        },
+        url: "https://24h.tv/contents/2020-druk-568771415323443218",
+      },
+      {
+        name: "Kinopoisk HD",
+        logo: {
+          url: "https://yastatic.net/s3/kinopoisk-frontend/hd-www/release/apple-touch-icon-180x180.png",
+        },
+        url: "https://hd.kinopoisk.ru/?rt=462fc2372280cfdf9786d734206a025d",
+      },
+    ],
+  },
+  top10: null,
+  top250: null,
+  isSeries: false,
+  audience: [
+    {
+      count: 338186,
+      country: "Россия",
+    },
+  ],
+  ticketsOnSale: false,
+  lists: [
+    "popular-films",
+    "hearing_impairment",
+    "ozvucheno_kubik_v_kube",
+    "oscar_winners_2021",
+    "oscar-foreign-language-film",
+    "european-film-award-best-film",
+    "hd",
+  ],
+  networks: null,
+  createdAt: "2024-04-13T01:37:00.555Z",
+  updatedAt: "2024-05-31T01:00:44.258Z",
+};
+
 export const popular = [
   {
     id: 4635111,
@@ -9434,4 +9904,2056 @@ export const search2 = {
   limit: 10,
   page: 1,
   pages: 100,
+};
+
+export const series1 = {
+  status: "completed",
+  externalId: {
+    imdb: "tt0386676",
+    tmdb: 2316,
+    kpHD: "4fe23535fd81fe708268cd0e32565388",
+  },
+  rating: {
+    kp: 8.65,
+    imdb: 9,
+    filmCritics: 0,
+    russianFilmCritics: 0,
+    await: null,
+  },
+  votes: {
+    kp: 215955,
+    imdb: 713973,
+    filmCritics: 0,
+    russianFilmCritics: 1,
+    await: 0,
+  },
+  backdrop: {
+    url: "https://image.openmoviedb.com/kinopoisk-ott-images/374297/2a0000016ac513059f08edc60bd8a01a6904/orig",
+    previewUrl:
+      "https://image.openmoviedb.com/kinopoisk-ott-images/374297/2a0000016ac513059f08edc60bd8a01a6904/x1000",
+  },
+  images: {
+    framesCount: 200,
+  },
+  productionCompanies: [],
+  spokenLanguages: [
+    {
+      name: "English",
+      nameEn: "English",
+    },
+  ],
+  id: 253245,
+  type: "tv-series",
+  name: "Офис",
+  description:
+    "Сериал о трудовых буднях небольшого регионального офиса крупной компании, обитатели которого целыми днями должны терпеть закидоны своего непутевого босса.",
+  distributors: {
+    distributor: null,
+    distributorRelease: "Флагман-Трейд",
+  },
+  premiere: {
+    world: "2005-03-24T00:00:00.000Z",
+    russia: "2008-07-15T00:00:00.000Z",
+    dvd: "2009-11-17T00:00:00.000Z",
+  },
+  slogan: "Комедия для тех, у кого босс - идиот",
+  year: 2005,
+  poster: {
+    url: "https://image.openmoviedb.com/kinopoisk-images/1599028/7bbd225f-e6db-4326-b600-1ac294cf9d99/orig",
+    previewUrl:
+      "https://image.openmoviedb.com/kinopoisk-images/1599028/7bbd225f-e6db-4326-b600-1ac294cf9d99/x1000",
+  },
+  facts: [
+    {
+      value:
+        "Первый сезон был снят в настоящем офисе. В течение второго сезона NBC переместила съемки в специальную студию, копирующую окружающую среду первого сезона, включая мемориальные доски и свидетельства, висящие на стенах.",
+      type: "FACT",
+      spoiler: false,
+    },
+    {
+      value:
+        "Для каждого эпизода сериала был написан подробный сценарий, но актерам всегда предоставляли возможность импровизировать.",
+      type: "FACT",
+      spoiler: false,
+    },
+    {
+      value:
+        'У четырёх актёров второго плана имена совпадают с именами своих персонажей: Анджела Мартин (<a href="/name/541542/" class="all">Анджела Кинси</a>), Оскар Мартинес (<a href="/name/31051/" class="all">Оскар Нунез</a>), Филлис Вэнс (<a href="/name/725075/" class="all">Филлис Смит</a>) и Крид Брэттон (<a href="/name/120857/" class="all">Крид Брэттон</a>).',
+      type: "FACT",
+      spoiler: false,
+    },
+    {
+      value:
+        "Часть показанных в кадре брендов известных торговых марок создатели сериала использовали как размещение товара в рекламных целях. Однако значительная часть показанных товаров попала в кадр вне контрактов с производителями — авторы брали продукты, которые подчеркивали бы характеры героев.",
+      type: "FACT",
+      spoiler: false,
+    },
+    {
+      value:
+        "Компьютеры на съёмочной площадке офиса подключены к интернету. Актёры утверждают, что когда во время съёмок находятся за кадром, то часто читают свою электронную почту и просто бродят по интернету.",
+      type: "FACT",
+      spoiler: false,
+    },
+    {
+      value:
+        'На роль Майкла Скотта рассматривались <a href="/name/12591/" class="all">Пол Джаматти</a>, <a href="/name/26538/" class="all">Мартин Шорт</a>, <a href="/name/8810/" class="all">Хэнк Азария</a> и <a href="/name/11846/" class="all">Боб Оденкёрк</a>. <a href="/name/7243/" class="all">Рэйн Уилсон</a> (Дуайт) также проходил кастинг на роль Скотта, но режиссерам роль Дуайта показалась для него более подходящей.',
+      type: "FACT",
+      spoiler: false,
+    },
+    {
+      value:
+        "Dunder Mifflin — компания, на которую работают сотрудники офиса — вымышленная.",
+      type: "FACT",
+      spoiler: false,
+    },
+    {
+      value:
+        "В отличие от остальных ситкомов, «Офис» снят несколькими камерами в форме документального фильма.",
+      type: "FACT",
+      spoiler: false,
+    },
+    {
+      value:
+        "Удаленные сцены и серии логически не вычеркивают из общей повествовательной линии — их иногда включают в повторах, чтобы дополнить эпизод. Также не вошедшие в ТВ-версию кадры и серии создатели в качестве эксперимента сделали доступными в онлайн версии, на официальном сайте телеканала.",
+      type: "FACT",
+      spoiler: false,
+    },
+    {
+      value:
+        'Четыре исполнителя главных ролей родом из штата Массачусетс: <a href="/name/32312/" class="all">Стив Карелл</a> (Майкл Скотт), <a href="/name/394931/" class="all">Джон Красински</a> (Джим Халперт), <a href="/name/1078278/" class="all">Б.Дж. Новак</a> (Райан Ховард) и <a href="/name/1959782/" class="all">Минди Калинг</a> (Келли Капур). Приглашённая <a href="/name/30058/" class="all">Нэнси Карелл</a> (Кэрол Стиллс), жена Стива Карелла, также из штата Массачусетс.',
+      type: "FACT",
+      spoiler: false,
+    },
+    {
+      value:
+        '<a href="/name/394931/" class="all">Джон Красински</a> и <a href="/name/1078278/" class="all">Б.Дж. Новак</a> вместе учились в одной школе, Newton South High School, в городе Ньютон штата Массачусетс. Оба закончили обучение в 1997 году.',
+      type: "FACT",
+      spoiler: false,
+    },
+    {
+      value:
+        '<a href="/name/585865/" class="all">Брайан Баумгартнер</a> (Кевин) и <a href="/name/466032/" class="all">Эд Хелмс</a> (Энди) оба закончили школу Westminster в Атланте, Джорджия.',
+      type: "FACT",
+      spoiler: false,
+    },
+    {
+      value:
+        'Некоторые кадры из вступительного ролика, в частности съёмка здания, сделаны <a href="/name/394931/" class="all">Джоном Красински</a> с его друзьями из личного джипа. В это время Джон уже получил роль и готовился к съёмкам.',
+      type: "FACT",
+      spoiler: false,
+    },
+    {
+      value:
+        '<a href="/name/32312/" class="all">Стив Карелл</a> посмотрел всего несколько минут британской версии сериала и остановился, так как не хотел подражать игре <a href="/name/5306/" class="all">Рики Джервэйса</a> в роли управляющего. С другой стороны, Джон Красински с упоением просмотрел весь оригинал.',
+      type: "FACT",
+      spoiler: false,
+    },
+    {
+      value:
+        "Здание Бумаги Пенн из вступительного ролика расположено на авеню Миффлин, в Скрентоне, Пенсильвания. Откуда, вероятно, и пришло название вымышленной компании «Дандер Миффлин».",
+      type: "FACT",
+      spoiler: false,
+    },
+    {
+      value:
+        "Главную заставку офиса спародировали в мультсериале «Симпсоны» в 22 сезоне 4 серии, а в «Американский папаша!» — 6 сезон 18 серия.",
+      type: "FACT",
+      spoiler: false,
+    },
+    {
+      value:
+        "В ранних эпизодах операторские группы были ограничены прежде всего пространством офиса, но поскольку показ расширился, были включены линии личной жизни героев, и камеры взяли вездесущую, даже навязчивую функцию — сделать всю жизнь персонажа доступной зрителю. Камеры начинают сопровождать героев из офиса и к их домам.",
+      type: "FACT",
+      spoiler: true,
+    },
+    {
+      value:
+        'В сериале часто упоминается, что персонажи Филлис Лапин Вэнс и Майкл Скотт одного возраста и раньше учились в одном университете. На самом деле <a href="/name/725075/" class="all">Филлис Смит</a> на 11 лет старше <a href="/name/32312/" class="all">Стива Карелла</a>.',
+      type: "FACT",
+      spoiler: true,
+    },
+    {
+      value:
+        "Паб Бедного Ричарда, бар, который часто упоминается в сериале — самый настоящий бар в южном Скрентоне. Там находится кегельбан «South Side Lanes».",
+      type: "FACT",
+      spoiler: true,
+    },
+    {
+      value:
+        'Некоторые актёры главных и второстепенных ролей написали сценарии к нескольким эпизодам. <a href="/name/1078278/" class="all">Б.Дж. Новак</a> (Райан), <a href="/name/694731/" class="all">Пол Либерштейн</a> (Тоби) и <a href="/name/1959782/" class="all">Минди Калинг</a> (Келли) написали 12 из 28 эпизодов первого и второго сезонов. Либерштейн самостоятельно написал эпизод «Деньги» из четвёртого сезона. <a href="/name/32312/" class="all">Стив Карелл</a> написал два эпизода: «Ночь казино» и «Наука Выживать». <a href="/name/1081484/" class="all">Майкл Шур</a>, автор сценария двадцати эпизодов, исполняет роль кузена Дуайта, Моза Шрута.',
+      type: "FACT",
+      spoiler: true,
+    },
+  ],
+  genres: [
+    {
+      name: "комедия",
+    },
+  ],
+  countries: [
+    {
+      name: "США",
+    },
+  ],
+  seasonsInfo: [
+    {
+      number: 1,
+      episodesCount: 6,
+    },
+    {
+      number: 2,
+      episodesCount: 22,
+    },
+    {
+      number: 3,
+      episodesCount: 25,
+    },
+    {
+      number: 4,
+      episodesCount: 19,
+    },
+    {
+      number: 5,
+      episodesCount: 28,
+    },
+    {
+      number: 6,
+      episodesCount: 26,
+    },
+    {
+      number: 7,
+      episodesCount: 27,
+    },
+    {
+      number: 8,
+      episodesCount: 24,
+    },
+    {
+      number: 9,
+      episodesCount: 27,
+    },
+  ],
+  persons: [
+    {
+      id: 32312,
+      photo: "https://st.kp.yandex.net/images/actor_iphone/iphone360_32312.jpg",
+      name: "Стив Карелл",
+      enName: "Steve Carell",
+      description: "Michael Scott",
+      profession: "актеры",
+      enProfession: "actor",
+    },
+    {
+      id: 7243,
+      photo: "https://st.kp.yandex.net/images/actor_iphone/iphone360_7243.jpg",
+      name: "Рэйн Уилсон",
+      enName: "Rainn Wilson",
+      description: "Dwight Schrute",
+      profession: "актеры",
+      enProfession: "actor",
+    },
+    {
+      id: 394931,
+      photo:
+        "https://st.kp.yandex.net/images/actor_iphone/iphone360_394931.jpg",
+      name: "Джон Красински",
+      enName: "John Krasinski",
+      description: "Jim Halpert",
+      profession: "актеры",
+      enProfession: "actor",
+    },
+    {
+      id: 12869,
+      photo: "https://st.kp.yandex.net/images/actor_iphone/iphone360_12869.jpg",
+      name: "Дженна Фишер",
+      enName: "Jenna Fischer",
+      description: "Pam Beesly",
+      profession: "актеры",
+      enProfession: "actor",
+    },
+    {
+      id: 466032,
+      photo:
+        "https://st.kp.yandex.net/images/actor_iphone/iphone360_466032.jpg",
+      name: "Эд Хелмс",
+      enName: "Ed Helms",
+      description: "Andy Bernard",
+      profession: "актеры",
+      enProfession: "actor",
+    },
+    {
+      id: 541542,
+      photo:
+        "https://st.kp.yandex.net/images/actor_iphone/iphone360_541542.jpg",
+      name: "Анджела Кинси",
+      enName: "Angela Kinsey",
+      description: "Angela Martin",
+      profession: "актеры",
+      enProfession: "actor",
+    },
+    {
+      id: 1959782,
+      photo:
+        "https://st.kp.yandex.net/images/actor_iphone/iphone360_1959782.jpg",
+      name: "Минди Кейлинг",
+      enName: "Mindy Kaling",
+      description: "Kelly Kapoor",
+      profession: "актеры",
+      enProfession: "actor",
+    },
+    {
+      id: 1078278,
+      photo:
+        "https://st.kp.yandex.net/images/actor_iphone/iphone360_1078278.jpg",
+      name: "Б.Дж. Новак",
+      enName: "B.J. Novak",
+      description: "Ryan Howard",
+      profession: "актеры",
+      enProfession: "actor",
+    },
+    {
+      id: 583874,
+      photo:
+        "https://st.kp.yandex.net/images/actor_iphone/iphone360_583874.jpg",
+      name: "Крэйг Робинсон",
+      enName: "Craig Robinson",
+      description: "Darryl Philbin",
+      profession: "актеры",
+      enProfession: "actor",
+    },
+    {
+      id: 1481287,
+      photo:
+        "https://st.kp.yandex.net/images/actor_iphone/iphone360_1481287.jpg",
+      name: "Элли Кемпер",
+      enName: "Ellie Kemper",
+      description: "Erin Hannon",
+      profession: "актеры",
+      enProfession: "actor",
+    },
+    {
+      id: 2000750,
+      photo:
+        "https://st.kp.yandex.net/images/actor_iphone/iphone360_2000750.jpg",
+      name: "Мэтт Флинн",
+      enName: "Matt Flynn",
+      description: null,
+      profession: "художники",
+      enProfession: "designer",
+    },
+    {
+      id: 3263036,
+      photo:
+        "https://st.kp.yandex.net/images/actor_iphone/iphone360_3263036.jpg",
+      name: "Ивонн Гарнье-Хэцки",
+      enName: "Yvonne Garnier-Hackl",
+      description: null,
+      profession: "художники",
+      enProfession: "designer",
+    },
+    {
+      id: 1989264,
+      photo:
+        "https://st.kp.yandex.net/images/actor_iphone/iphone360_1989264.jpg",
+      name: "Алисия Рэйкрафт",
+      enName: "Alysia Raycraft",
+      description: null,
+      profession: "художники",
+      enProfession: "designer",
+    },
+    {
+      id: 1997881,
+      photo:
+        "https://st.kp.yandex.net/images/actor_iphone/iphone360_1997881.jpg",
+      name: "Кэри Беннетт",
+      enName: "Carey Bennett",
+      description: null,
+      profession: "художники",
+      enProfession: "designer",
+    },
+    {
+      id: 991624,
+      photo:
+        "https://st.kp.yandex.net/images/actor_iphone/iphone360_991624.jpg",
+      name: "Пол Фиг",
+      enName: "Paul Feig",
+      description: null,
+      profession: "режиссеры",
+      enProfession: "director",
+    },
+    {
+      id: 1046772,
+      photo:
+        "https://st.kp.yandex.net/images/actor_iphone/iphone360_1046772.jpg",
+      name: "Рэндолл Айнхорн",
+      enName: "Randall Einhorn",
+      description: null,
+      profession: "режиссеры",
+      enProfession: "director",
+    },
+    {
+      id: 81089,
+      photo: "https://st.kp.yandex.net/images/actor_iphone/iphone360_81089.jpg",
+      name: "Кен Куопис",
+      enName: "Ken Kwapis",
+      description: null,
+      profession: "режиссеры",
+      enProfession: "director",
+    },
+    {
+      id: 542555,
+      photo:
+        "https://st.kp.yandex.net/images/actor_iphone/iphone360_542555.jpg",
+      name: "Грег Дэниелс",
+      enName: "Greg Daniels",
+      description: null,
+      profession: "режиссеры",
+      enProfession: "director",
+    },
+    {
+      id: 1891537,
+      photo:
+        "https://st.kp.yandex.net/images/actor_iphone/iphone360_1891537.jpg",
+      name: "Дэвид Роджерс",
+      enName: "David Rogers",
+      description: null,
+      profession: "монтажеры",
+      enProfession: "editor",
+    },
+    {
+      id: 1742202,
+      photo:
+        "https://st.kp.yandex.net/images/actor_iphone/iphone360_1742202.jpg",
+      name: "Клер Скэнлон",
+      enName: "Claire Scanlon",
+      description: null,
+      profession: "монтажеры",
+      enProfession: "editor",
+    },
+    {
+      id: 737108,
+      photo:
+        "https://st.kp.yandex.net/images/actor_iphone/iphone360_737108.jpg",
+      name: "Дин Холлэнд",
+      enName: "Dean Holland",
+      description: null,
+      profession: "монтажеры",
+      enProfession: "editor",
+    },
+    {
+      id: 2348748,
+      photo:
+        "https://st.kp.yandex.net/images/actor_iphone/iphone360_2348748.jpg",
+      name: "Роб Барнетт",
+      enName: "Rob Burnett",
+      description: null,
+      profession: "монтажеры",
+      enProfession: "editor",
+    },
+    {
+      id: 252809,
+      photo:
+        "https://st.kp.yandex.net/images/actor_iphone/iphone360_252809.jpg",
+      name: "Мэттью Сон",
+      enName: "Matt Sohn",
+      description: null,
+      profession: "операторы",
+      enProfession: "operator",
+    },
+    {
+      id: 1046772,
+      photo:
+        "https://st.kp.yandex.net/images/actor_iphone/iphone360_1046772.jpg",
+      name: "Рэндолл Айнхорн",
+      enName: "Randall Einhorn",
+      description: null,
+      profession: "операторы",
+      enProfession: "operator",
+    },
+    {
+      id: 232383,
+      photo:
+        "https://st.kp.yandex.net/images/actor_iphone/iphone360_232383.jpg",
+      name: "Сара Леви",
+      enName: "Sarah Levy",
+      description: null,
+      profession: "операторы",
+      enProfession: "operator",
+    },
+    {
+      id: 584703,
+      photo:
+        "https://st.kp.yandex.net/images/actor_iphone/iphone360_584703.jpg",
+      name: "Питер Смоклер",
+      enName: "Peter Smokler",
+      description: null,
+      profession: "операторы",
+      enProfession: "operator",
+    },
+    {
+      id: 542555,
+      photo:
+        "https://st.kp.yandex.net/images/actor_iphone/iphone360_542555.jpg",
+      name: "Грег Дэниелс",
+      enName: "Greg Daniels",
+      description: null,
+      profession: "продюсеры",
+      enProfession: "producer",
+    },
+    {
+      id: 5306,
+      photo: "https://st.kp.yandex.net/images/actor_iphone/iphone360_5306.jpg",
+      name: "Рики Джервэйс",
+      enName: "Ricky Gervais",
+      description: null,
+      profession: "продюсеры",
+      enProfession: "producer",
+    },
+    {
+      id: 1081481,
+      photo:
+        "https://st.kp.yandex.net/images/actor_iphone/iphone360_1081481.jpg",
+      name: "Стивен Мерчант",
+      enName: "Stephen Merchant",
+      description: null,
+      profession: "продюсеры",
+      enProfession: "producer",
+    },
+    {
+      id: 4541602,
+      photo:
+        "https://st.kp.yandex.net/images/actor_iphone/iphone360_4541602.jpg",
+      name: "Бен Силверман",
+      enName: "Ben Silverman",
+      description: null,
+      profession: "продюсеры",
+      enProfession: "producer",
+    },
+    {
+      id: 290228,
+      photo:
+        "https://st.kp.yandex.net/images/actor_iphone/iphone360_290228.jpg",
+      name: "Вячеслав Баранов",
+      enName: null,
+      description: null,
+      profession: "актеры дубляжа",
+      enProfession: "voice_actor",
+    },
+    {
+      id: 1040432,
+      photo:
+        "https://st.kp.yandex.net/images/actor_iphone/iphone360_1040432.jpg",
+      name: "Денис Беспалый",
+      enName: null,
+      description: null,
+      profession: "актеры дубляжа",
+      enProfession: "voice_actor",
+    },
+    {
+      id: 1646298,
+      photo:
+        "https://st.kp.yandex.net/images/actor_iphone/iphone360_1646298.jpg",
+      name: "Олег Вирозуб",
+      enName: null,
+      description: null,
+      profession: "актеры дубляжа",
+      enProfession: "voice_actor",
+    },
+    {
+      id: 304568,
+      photo:
+        "https://st.kp.yandex.net/images/actor_iphone/iphone360_304568.jpg",
+      name: "Нина Тобилевич",
+      enName: null,
+      description: null,
+      profession: "актеры дубляжа",
+      enProfession: "voice_actor",
+    },
+    {
+      id: 290512,
+      photo:
+        "https://st.kp.yandex.net/images/actor_iphone/iphone360_290512.jpg",
+      name: "Ольга Сирина",
+      enName: null,
+      description: null,
+      profession: "актеры дубляжа",
+      enProfession: "voice_actor",
+    },
+    {
+      id: 3995129,
+      photo:
+        "https://st.kp.yandex.net/images/actor_iphone/iphone360_3995129.jpg",
+      name: "Дэниэл Чун",
+      enName: "Daniel Chun",
+      description: null,
+      profession: "редакторы",
+      enProfession: "writer",
+    },
+    {
+      id: 1959782,
+      photo:
+        "https://st.kp.yandex.net/images/actor_iphone/iphone360_1959782.jpg",
+      name: "Минди Кейлинг",
+      enName: "Mindy Kaling",
+      description: null,
+      profession: "редакторы",
+      enProfession: "writer",
+    },
+    {
+      id: 3529230,
+      photo:
+        "https://st.kp.yandex.net/images/actor_iphone/iphone360_3529230.jpg",
+      name: "Кэролайн Уильямс",
+      enName: "Caroline Williams",
+      description: null,
+      profession: "редакторы",
+      enProfession: "writer",
+    },
+    {
+      id: 694731,
+      photo:
+        "https://st.kp.yandex.net/images/actor_iphone/iphone360_694731.jpg",
+      name: "Пол Либерштейн",
+      enName: "Paul Lieberstein",
+      description: null,
+      profession: "редакторы",
+      enProfession: "writer",
+    },
+    {
+      id: 2009545,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_2009545.jpg",
+      name: "Майкл Дж. Галленберг",
+      enName: "Michael G. Gallenberg",
+      description: null,
+      profession: "художники",
+      enProfession: "designer",
+    },
+    {
+      id: 181722,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_181722.jpg",
+      name: "Дональд Ли Харрис",
+      enName: "Donald Lee Harris",
+      description: null,
+      profession: "художники",
+      enProfession: "designer",
+    },
+  ],
+  lists: [
+    "ozvucheno_kubik_v_kube",
+    "series-top250",
+    "100_greatest_TVseries",
+    "popular-series",
+  ],
+  typeNumber: 2,
+  alternativeName: "The Office",
+  enName: "The Office (U.S.)",
+  names: [
+    {
+      name: "Офис",
+    },
+    {
+      name: "The Office",
+    },
+    {
+      name: "Vida de Escritório",
+      language: "BR",
+      type: null,
+    },
+    {
+      name: "O Escritório",
+      language: "BR",
+      type: null,
+    },
+    {
+      name: "美版办公室",
+      language: "CN",
+      type: null,
+    },
+    {
+      name: "The Office (US) – Das Büro",
+      language: "DE",
+      type: null,
+    },
+    {
+      name: "آفیس",
+      language: "IR",
+      type: null,
+    },
+    {
+      name: "The Office US",
+      language: "IT",
+      type: null,
+    },
+    {
+      name: "The Office (U.S.)",
+      language: "IT",
+      type: null,
+    },
+    {
+      name: "The Office (U.S.)",
+      language: "US",
+      type: null,
+    },
+    {
+      name: "The Office (US) Extended Superfan Cut",
+      language: "US",
+      type: null,
+    },
+    {
+      name: "The Office: An American Workplace",
+      language: "US",
+      type: "original name",
+    },
+    {
+      name: "The Office: Superfan Episodes",
+      language: "US",
+      type: "title for extended cut",
+    },
+  ],
+  budget: {},
+  color: "#D3D2C8",
+  shortDescription:
+    "Скучающие от безделья клерки пытаются ужиться с безумным боссом. Виртуозный ситком про рабочие будни",
+  movieLength: null,
+  ratingMpaa: null,
+  technology: {
+    hasImax: false,
+    has3D: false,
+  },
+  ticketsOnSale: false,
+  updatedAt: "2024-05-26T00:01:58.837Z",
+  similarMovies: [
+    {
+      id: 251568,
+      name: "Клиника",
+      enName: null,
+      alternativeName: "Scrubs",
+      type: "tv-series",
+      poster: {
+        url: "https://avatars.mds.yandex.net/get-kinopoisk-image/1946459/4f0c84e5-6dcd-4253-ab6d-c070af4f71c0/orig",
+        previewUrl:
+          "https://avatars.mds.yandex.net/get-kinopoisk-image/1946459/4f0c84e5-6dcd-4253-ab6d-c070af4f71c0/x1000",
+      },
+    },
+    {
+      id: 455368,
+      name: "Парки и зоны отдыха",
+      enName: null,
+      alternativeName: "Parks and Recreation",
+      type: "tv-series",
+      poster: {
+        url: "https://avatars.mds.yandex.net/get-kinopoisk-image/1599028/6e4c6b17-a074-4020-9246-e57e91c57dc6/orig",
+        previewUrl:
+          "https://avatars.mds.yandex.net/get-kinopoisk-image/1599028/6e4c6b17-a074-4020-9246-e57e91c57dc6/x1000",
+      },
+    },
+    {
+      id: 386715,
+      name: "Компьютерщики",
+      enName: null,
+      alternativeName: "The IT Crowd",
+      type: "tv-series",
+      poster: {
+        url: "https://avatars.mds.yandex.net/get-kinopoisk-image/1629390/5b6a4b73-b80f-42cb-beba-ecdeba06e8cb/orig",
+        previewUrl:
+          "https://avatars.mds.yandex.net/get-kinopoisk-image/1629390/5b6a4b73-b80f-42cb-beba-ecdeba06e8cb/x1000",
+      },
+    },
+    {
+      id: 161046,
+      name: "Клава, давай!",
+      enName: null,
+      alternativeName: "Less Than Perfect",
+      type: "tv-series",
+      poster: {
+        url: "https://avatars.mds.yandex.net/get-kinopoisk-image/4486362/f8ab0300-492a-4e34-9e87-69a82d3f22f4/orig",
+        previewUrl:
+          "https://avatars.mds.yandex.net/get-kinopoisk-image/4486362/f8ab0300-492a-4e34-9e87-69a82d3f22f4/x1000",
+      },
+    },
+    {
+      id: 258550,
+      name: "Офис",
+      enName: null,
+      alternativeName: "The Office",
+      type: "tv-series",
+      poster: {
+        url: "https://avatars.mds.yandex.net/get-kinopoisk-image/1600647/91df4c8b-81dd-4bbd-8159-1024182b5da8/orig",
+        previewUrl:
+          "https://avatars.mds.yandex.net/get-kinopoisk-image/1600647/91df4c8b-81dd-4bbd-8159-1024182b5da8/x1000",
+      },
+    },
+    {
+      id: 6049,
+      name: "Офисное пространство",
+      enName: null,
+      alternativeName: "Office Space",
+      type: "movie",
+      poster: {
+        url: "https://avatars.mds.yandex.net/get-kinopoisk-image/1946459/f3056810-ee60-48c9-a1cf-9d41a1b09c2b/orig",
+        previewUrl:
+          "https://avatars.mds.yandex.net/get-kinopoisk-image/1946459/f3056810-ee60-48c9-a1cf-9d41a1b09c2b/x1000",
+      },
+    },
+    {
+      id: 471825,
+      name: "Сообщество",
+      enName: null,
+      alternativeName: "Community",
+      type: "tv-series",
+      poster: {
+        url: "https://avatars.mds.yandex.net/get-kinopoisk-image/1629390/0513f3e4-0e04-4ae9-a95e-c2679100d6d6/orig",
+        previewUrl:
+          "https://avatars.mds.yandex.net/get-kinopoisk-image/1629390/0513f3e4-0e04-4ae9-a95e-c2679100d6d6/x1000",
+      },
+    },
+    {
+      id: 277569,
+      name: "Задержка в развитии",
+      enName: null,
+      alternativeName: "Arrested Development",
+      type: "tv-series",
+      poster: {
+        url: "https://avatars.mds.yandex.net/get-kinopoisk-image/1704946/6e0a219d-5a75-4573-8fcc-89ef1d849c94/orig",
+        previewUrl:
+          "https://avatars.mds.yandex.net/get-kinopoisk-image/1704946/6e0a219d-5a75-4573-8fcc-89ef1d849c94/x1000",
+      },
+    },
+    {
+      id: 472329,
+      name: "Американская семейка",
+      enName: null,
+      alternativeName: "Modern Family",
+      type: "tv-series",
+      poster: {
+        url: "https://avatars.mds.yandex.net/get-kinopoisk-image/1898899/c6dc37dc-b0db-4780-b53f-ba520b0780d2/orig",
+        previewUrl:
+          "https://avatars.mds.yandex.net/get-kinopoisk-image/1898899/c6dc37dc-b0db-4780-b53f-ba520b0780d2/x1000",
+      },
+    },
+    {
+      id: 714102,
+      name: "Бруклин 9-9",
+      enName: null,
+      alternativeName: "Brooklyn Nine-Nine",
+      type: "tv-series",
+      poster: {
+        url: "https://avatars.mds.yandex.net/get-kinopoisk-image/4303601/ff2b9073-a7c2-4aee-a411-828cccdb85e2/orig",
+        previewUrl:
+          "https://avatars.mds.yandex.net/get-kinopoisk-image/4303601/ff2b9073-a7c2-4aee-a411-828cccdb85e2/x1000",
+      },
+    },
+  ],
+  fees: {
+    world: {},
+    russia: {},
+    usa: {},
+  },
+  sequelsAndPrequels: [
+    {
+      id: 258550,
+      name: "Офис",
+      enName: "The Office",
+      alternativeName: "The Office",
+      type: "remake",
+      poster: {
+        url: "https://st.kp.yandex.net/images/film_big/258550.jpg",
+        previewUrl:
+          "https://st.kp.yandex.net/images/film_iphone/iphone360_258550.jpg",
+      },
+    },
+  ],
+  ageRating: 18,
+  logo: {
+    url: "https://avatars.mds.yandex.net/get-ott/2385704/2a0000016e043b4793e173b39744ee414fa1/orig",
+  },
+  watchability: {
+    items: [],
+  },
+  releaseYears: [
+    {
+      start: 2005,
+      end: 2013,
+    },
+  ],
+  top10: null,
+  top250: 3,
+  deletedAt: null,
+  isSeries: true,
+  seriesLength: 22,
+  totalSeriesLength: null,
+  networks: null,
+  videos: {
+    trailers: [
+      {
+        url: "https://www.youtube.com/embed/LHOtME2DL4g",
+        name: "The Office Trailer (2017)",
+        site: "youtube",
+        type: "TRAILER",
+      },
+      {
+        url: "https://www.youtube.com/embed/LHOtME2DL4g",
+        name: "The Office Trailer (2017)",
+        site: "youtube",
+        type: "TRAILER",
+      },
+    ],
+  },
+};
+
+export const series2 = {
+  status: null,
+  externalId: {
+    imdb: "tt4574334",
+    tmdb: 66732,
+    kpHD: null,
+  },
+  rating: {
+    kp: 8.367,
+    imdb: 8.7,
+    filmCritics: 0,
+    russianFilmCritics: 95,
+    await: null,
+  },
+  votes: {
+    kp: 512161,
+    imdb: 1339432,
+    filmCritics: 0,
+    russianFilmCritics: 20,
+    await: 664,
+  },
+  backdrop: {
+    url: null,
+    previewUrl: null,
+  },
+  images: {
+    postersCount: 86,
+    backdropsCount: 67,
+    framesCount: 177,
+  },
+  productionCompanies: [
+    {
+      name: "21 Laps Entertainment",
+      url: "https://www.themoviedb.org/t/p/original/9YJrHYlcfHtwtulkFMAies3aFEl.png",
+      previewUrl:
+        "https://www.themoviedb.org/t/p/w500/9YJrHYlcfHtwtulkFMAies3aFEl.png",
+    },
+  ],
+  spokenLanguages: [
+    {
+      name: "English",
+      nameEn: "English",
+    },
+  ],
+  id: 915196,
+  type: "tv-series",
+  name: "Очень странные дела",
+  description:
+    "1980-е годы, тихий провинциальный американский городок. Благоприятное течение местной жизни нарушает загадочное исчезновение подростка по имени Уилл. Выяснить обстоятельства дела полны решимости родные мальчика и местный шериф, также события затрагивают лучшего друга Уилла – Майка. Он начинает собственное расследование. Майк уверен, что близок к разгадке, и теперь ему предстоит оказаться в эпицентре ожесточенной битвы потусторонних сил.",
+  distributors: {
+    distributor: null,
+    distributorRelease: null,
+  },
+  premiere: {
+    world: "2016-07-11T00:00:00.000Z",
+    digital: "2016-07-15T00:00:00.000Z",
+  },
+  slogan: "The world is turning upside down. (Season 1)",
+  year: 2016,
+  poster: {
+    url: "https://image.openmoviedb.com/kinopoisk-images/4303601/4639b97f-1ff6-4f63-b7f6-02ea1a14f553/orig",
+    previewUrl:
+      "https://image.openmoviedb.com/kinopoisk-images/4303601/4639b97f-1ff6-4f63-b7f6-02ea1a14f553/x1000",
+  },
+  facts: [
+    {
+      value:
+        'Первоначально братья Дафферы хотели сделать ремейк фильма &#171;<a href="/film/94983/" class="all">Оно</a>&#187; <a href="/name/24263/" class="all">Стивена Кинга</a>, но позже передумали. Когда они решили создать &#171;Очень странные дела&#187;, в сериале осталось очень много отсылок к работам писателя.',
+      type: "FACT",
+      spoiler: false,
+    },
+    {
+      value:
+        'Официальный постер для сериала был создан Кайлом Ламбертом. Он был выполнен в стиле, напоминающем работы известного художника <a href="/name/619027/" class="all">Дрю Струзана</a>, который разработал официальные плакаты для фильмов &laquo;<a href="/film/333/" class="all">Звёздные войны: Эпизод 4 &#8211; Новая надежда</a>&raquo; (1977), &laquo;Индианы Джонса&raquo;, &laquo;<a href="/film/476/" class="all">Назад в будущее</a>&raquo; (1985), &laquo;<a href="/film/544/" class="all">Инопланетянина</a>&raquo; (1982) и многих других.',
+      type: "FACT",
+      spoiler: false,
+    },
+    {
+      value:
+        'В одном из интервью на NPR братья Даффер похвалили <a href="/name/3418485/" class="all">Милли Бобби Браун</a>, как чрезвычайно одаренную актрису, и сказали, что она умеет приспосабливать свою игру для различных позиций объективов или камер, чего не умеет большинство детей-актёров. Но они также сказали, что бывали случаи на съемочной площадке, когда они всё же вспоминали, что актриса была просто маленькой девочкой. Например, однажды она появилась на съемочной площадке просто с ног до головы покрытая блестками, на что просто ответила: &#171;Понятия не имею, откуда они взялись&#187;. На смывание этих блёсток ушло около 45 минут.',
+      type: "FACT",
+      spoiler: false,
+    },
+    {
+      value:
+        "Согласно сообщению художественного отдела, трейлер шерифа Хоппера стоил всего 1 доллар.",
+      type: "FACT",
+      spoiler: false,
+    },
+    {
+      value:
+        'Голос <a href="/name/3920951/" class="all">Гейтена Матараццо</a> изменился настолько сильно к концу съемок, что звуковая команда не смогла использовать его для дополнительной записи диалога.',
+      type: "FACT",
+      spoiler: false,
+    },
+    {
+      value:
+        'Транспортные средства отделения полиции Хокинс и униформа идентичны тем, которые используются в &laquo;<a href="/film/396/" class="all">Челюстях</a>&raquo; и &laquo;<a href="/film/8153/" class="all">Челюстях 2</a>&raquo;. Это касается цвета формы начальника полиции, которого там сыграл <a href="/name/14533/" class="all">Рой Шайдер</a>, треугольного шеврона, а также бежевого внедорожника, на котором он ездил. Полицейские в сериале тоже носят форму синего цвета и шляпы, как их коллеги в фильмах франшизы &laquo;Челюсти&raquo;.',
+      type: "FACT",
+      spoiler: false,
+    },
+    {
+      value:
+        'Актрисы-близнецы, сыгравшие Холли Уиллер, это те же девочки, которые играли Джудит в &laquo;<a href="/film/508161/" class="all">Ходячих мертвецах</a>&raquo; (2010).',
+      type: "FACT",
+      spoiler: false,
+    },
+    {
+      value:
+        "Медицинское состояние Дастина называется ключично-черепной дизостоз – наследственное заболевание, при котором отмечается аномальное развитие костей черепа и воротниковой зоны, а также задержка в прорезывании молочных и постоянных зубов.",
+      type: "FACT",
+      spoiler: false,
+    },
+    {
+      value:
+        'Логотип сериала напоминает шрифт, используемый на обложках оригинальных изданий <a href="/name/24263/" class="all">Стивена Кинга</a> 80-х годов, в частности &#171;Куджо&#187; и &#171;Кристины&#187;.',
+      type: "FACT",
+      spoiler: false,
+    },
+    {
+      value:
+        "По данным Dragon Magazine Демогоргон считается самым сильным злодеем. Он известен как Принц-демон Бездны, постоянно меняющейся плоскости хаотического зла.",
+      type: "FACT",
+      spoiler: false,
+    },
+    {
+      value:
+        'Сцены у карьера были сняты в том же месте, что и некоторые эпизоды в &laquo;<a href="/film/719608/" class="all">Основных принципах добра</a>&raquo; (2016) &#8211; ещё одном фильме от Netflix.',
+      type: "FACT",
+      spoiler: false,
+    },
+    {
+      value:
+        'В одном из интервью братья Дафферы признались, что также их вдохновило аниме &laquo;<a href="/film/256079/" class="all">Эльфийская песнь</a>&raquo;, которое в свою очередь было вдохновлено другим классическим аниме — <a href="/film/8224/" class="all">"Акира"</a>.',
+      type: "FACT",
+      spoiler: false,
+    },
+    {
+      value:
+        'Образ патрульного О&#8217;Бэннона является отсылкой к сценаристу &#171;<a href="/film/386/" class="all">Чужого</a>&#187; (1979) и &#171;<a href="/film/31729/" class="all">Тёмной звезды</a>&#187; (1974).',
+      type: "FACT",
+      spoiler: false,
+    },
+    {
+      value:
+        'Когда к <a href="/name/9329/" class="all">Вайноне Райдер</a> обратились с предложением принять участие в этом проекте кабельной сети Netflix, выяснилось, что она совершенный профан в области развития современных методов коммуникации и вещания и не имеет ни малейшего представления о том, что такое потоковое мультимедиа.',
+      type: "FACT",
+      spoiler: false,
+    },
+    {
+      value:
+        '<a href="/name/9329/" class="all">Вайнона Райдер</a> играет мать пропавшего ребенка. В 1994 году на экраны вышел фильм <a href="/name/47361/" class="all">Джиллиан Армстронг</a> <a href="/film/4568/" class="all">"Маленькие женщины</a>", одну из главных ролей в котором исполнила Райдер. Актриса посвятила этот фильм Полли Ханне Клаас, девочке из её родного города Петалума в штате Калифорния, которую похитили и зверски убили. Райдер тогда посулила 200 000 долларов за любую информацию, которая может помочь в розыске девочки. Актриса и по сей день принимает деятельное участие в работе "Фонда имени Полли Клаас по предотвращению похищения и поиску пропавших детей".',
+      type: "FACT",
+      spoiler: false,
+    },
+    {
+      value:
+        'Сцену в карьере в эпизоде &laquo;Глава вторая. Чудачка на Мэйпл Стрит&raquo; снимали там же, где проходили съёмки эпизода &laquo;Братки&raquo; сериала &laquo;<a href="/film/508161/" class="all">Ходячие мертвецы</a>&raquo;.',
+      type: "FACT",
+      spoiler: false,
+    },
+    {
+      value:
+        "В качестве музыкального сопровождения выбрана электронная музыка, напоминающая творчество немецкой группы Tangerine Dream, а в некоторых сценах звучат отрывки из композиций этой группы. В сцене у бассейна в первом эпизоде можно услышать композицию из альбома Green Desert (1986, запись сделана в 1973).",
+      type: "FACT",
+      spoiler: false,
+    },
+    {
+      value:
+        'На роль Майка рассматривался только один кандидат — <a href="/name/3423339/" class="all">Финн Вулфард</a>, однако с его участием в проекте возникли проблемы из-за занятости актёра в съёмках ремейка фильма &laquo;<a href="/film/453397/" class="all">Оно</a>&raquo; (2017). Так вышло, однако, что съёмки очередной экранизации романа &laquo;Оно&raquo; отложили на год из-за случившихся накладок, и актёр сумел совместить участие в обоих проектах.',
+      type: "FACT",
+      spoiler: false,
+    },
+    {
+      value:
+        'В нескольких эпизодах на экране появляется постер к фильму &laquo;<a href="/film/8366/" class="all">Нечто</a>&raquo; (1982) <a href="/name/36434/" class="all">Джона Карпентера</a>, к которому авторы сериала испытывают искреннее уважение. Постер к этому же фильму можно увидеть в картине &laquo;<a href="/film/273302/" class="all">Мгла</a>&raquo; (<a href="/name/24262/" class="all">Фрэнк Дарабонт</a>, 2007), снятой по мотивам повести <a href="/name/24263/" class="all">Стивена Кинга</a> о чудовищах, появляющихся из тумана.',
+      type: "FACT",
+      spoiler: false,
+    },
+    {
+      value:
+        'В знак уважения к фильмам 1980-х годов авторы сериала назвали Джима Хоппера по имени одного из персонажей фантастического боевика <a href="/name/20953/" class="all">Джона Мактирнана</a> &laquo;<a href="/film/6303/" class="all">Хищник</a>&raquo;. Именно пропавшую группу Джима Хоппера пытаются отыскать в джунглях <a href="/name/6264/" class="all">Арнольд Шварценеггер</a> и его команда.',
+      type: "FACT",
+      spoiler: false,
+    },
+    {
+      value:
+        'Отсылкой к классическому фильму ужасов <a href="/name/9940/" class="all">Сэма Рэйми</a> &laquo;<a href="/film/2894/" class="all">Зловещие мертвецы</a>&raquo; (1981) стали несколько раз повторённые кадры сериала, на которых показан дом Байерсов с качелями на заднем плане.',
+      type: "FACT",
+      spoiler: false,
+    },
+    {
+      value:
+        'Огромное влияние на авторов сериала оказали фильмы конца 1970-х и 1980-х годов — в особенности работы <a href="/name/22260/" class="all">Стивена Спилберга</a> <a href="/film/552/" class="all">"Близкие контакты третьей степени"</a> (1977), <a href="/film/544/" class="all">"Инопланетянин</a>&raquo; (1982) и <a href="/film/7116/" class="all">"Полтергейст</a>&raquo; (<a href="/name/19068/" class="all">Тоуб Хупер</a>, 1982). В последнем случае Спилберг выступил в качестве продюсера и одного из авторов сценария.',
+      type: "FACT",
+      spoiler: false,
+    },
+    {
+      value:
+        'Патологоанатома в 4-м эпизоде играет <a href="/name/31245/" class="all">Шон Леви</a>, режиссёр этого эпизода и исполнительный продюсер сериала.',
+      type: "FACT",
+      spoiler: false,
+    },
+    {
+      value:
+        'В действительности <a href="/name/3418485/" class="all">Милли Бобби Браун</a> терпеть не может вафли Eggo фирмы Kellog Company.',
+      type: "FACT",
+      spoiler: false,
+    },
+    {
+      value:
+        'Во время кастинга и съёмок <a href="/name/3418485/" class="all">Милли Бобби Браун</a>, которая играет девочку по прозвищу Оди, или Одиннадцать, было 11 лет.',
+      type: "FACT",
+      spoiler: false,
+    },
+    {
+      value:
+        '<a href="/name/9329/" class="all">Вайнона Райдер</a> и <a href="/name/11066/" class="all">Мэттью Модайн</a> уже снимались вместе в клипе на композицию <a href="/name/139936/" class="all">Роя Орбисона</a> (1936-1988) A Love So Beautiful.',
+      type: "FACT",
+      spoiler: false,
+    },
+    {
+      value:
+        'Название сериала даётся большими буквами — одно слово расположено под другим, причём нижняя часть первой и последней буквы верхнего слова немного &laquo;заходит&raquo; на уровень нижнего слова. Именно так неоднократно оформлялись обложки произведений <a href="/name/24263/" class="all">Стивена Кинга</a>.',
+      type: "FACT",
+      spoiler: false,
+    },
+    {
+      value:
+        '<a href="/name/9329/" class="all">Вайнона Райдер</a> создала внешний вид Джойс, основываясь на персонаже <a href="/name/23100/" class="all">Мэрил Стрип</a> в фильме «<a href="/film/1898/" class="all">Силквуд</a>»  (1983).',
+      type: "FACT",
+      spoiler: false,
+    },
+    {
+      value:
+        "В первом сезоне бюджет серии в среднем составил около 6 миллионов долларов. Во втором около 8 миллионов.",
+      type: "FACT",
+      spoiler: false,
+    },
+    {
+      value:
+        '<a href="/name/3920951/" class="all">Гейтен Матеррацо</a> был первым актёром, прошедшим кастинг.',
+      type: "FACT",
+      spoiler: false,
+    },
+    {
+      value: "Автомобиль Джонатана — Ford Galaxie 500, 1971 года выпуска.",
+      type: "FACT",
+      spoiler: false,
+    },
+    {
+      value:
+        'Патрульный, охраняющий морг, читает &#171;Куджо&#187;, роман 1981 года <a href="/name/24263/" class="all">Стивена Кинга</a>. Это одна из многочисленных отсылок к произведениям Кинга в телесериале.',
+      type: "FACT",
+      spoiler: true,
+    },
+    {
+      value: "У Оди, Уилла и Сары Хоппер есть одинаковая плюшевая игрушка-лев.",
+      type: "FACT",
+      spoiler: true,
+    },
+    {
+      value:
+        'Маленькие белые хлопья, летающие в атмосфере на Обратной стороне (последний эпизод), напоминают те, что были в лесу в фантастическом фильме «<a href="/film/2617/" class="all">Легенда</a>» <a href="/name/10015/" class="all">Ридли Скотта</a> (1985).',
+      type: "FACT",
+      spoiler: true,
+    },
+    {
+      value:
+        '<a href="/name/11066/" class="all">Мэттью Модайн</a> в одном из интервью сказал, что персонаж доктора Бреннера был описан в клетчатой рубашке и джинсах. Актёр работал в тесном контакте с братьями Даффер, поэтому сумел переделать внешний вид героя, например, его волосы уложены, как у <a href="/name/156471/" class="all">Роберта Шоу</a> в фильме «<a href="/film/9970/" class="all">Битва в Арденнах</a>», а идеальный костюм сидит, как на <a href="/name/154898/" class="all">Кэри Гранте</a> в киноленте «<a href="/film/343/" class="all">На север через северо-запад</a>».',
+      type: "FACT",
+      spoiler: true,
+    },
+    {
+      value:
+        "Во время похорон Уилла звучит композиция Elegia с альбома Low-Life (1985) британской электроник-рок-группы New Order.",
+      type: "FACT",
+      spoiler: true,
+    },
+    {
+      value:
+        'Из всех отсылок к произведениям <a href="/name/24263/" class="all">Стивена Кинга</a> самой откровенной является сцена в пятом эпизоде &laquo;The Flea and the Acrobat&raquo; ("Блоха и акробат"), где мальчишки долго идут по железнодорожным путям. Аналогичная сюжетная линия занимает центральное место в фильме &laquo;<a href="/film/498/" class="all">Останься со мной</a>&raquo; <a href="/name/5899/" class="all">Роба Райнера</a> (1986), снятом по повести Кинга &laquo;Тело&raquo; (1982).',
+      type: "FACT",
+      spoiler: true,
+    },
+    {
+      value:
+        "По сценарию у Холли Уилер в 1-м сезоне нет ни одной реплики. Авторы сериала сами дали этому персонажу произнести слово &laquo;Да&raquo; в паре сцен.",
+      type: "FACT",
+      spoiler: true,
+    },
+    {
+      value:
+        'В 1988 году <a href="/name/52391/" class="all">Отомо Кацухиро</a> снял аниме &laquo;<a href="/film/8224/" class="all">Акира</a>&raquo;, где детей со сверхъестественными способностями называют по номерам, которые вытатуированы у каждого на руке, — как в случае с Одиннадцатью, или Оди. Девочка бежит из лаборатории и в какой-то момент вступает в схватку с охранниками — то же самое происходило с главным героем аниме.',
+      type: "FACT",
+      spoiler: true,
+    },
+    {
+      value:
+        "В 3-м эпизоде сериала выясняется, что доктор Бреннер прежде занимался проектом &laquo;MK Ультра&raquo;. Это кодовое название реально существовавшей секретной программы ЦРУ (начало 1950-х — конец 1960-х годов), имевшей целью поиск и изучение средств манипулирования сознанием.",
+      type: "FACT",
+      spoiler: true,
+    },
+    {
+      value:
+        "Сцену в эпизоде &laquo;Глава седьмая. Ванная&raquo;, в которой Хоппер врывается в автобус, чтобы спасти детей, сняли так, чтобы придать герою сходство с Индианой Джонсом.",
+      type: "FACT",
+      spoiler: true,
+    },
+    {
+      value:
+        'На протяжении всего первого сезона Стив Харрингтон (Стив) носит точно такую же обувь, как Марти МакФлай из фильма «<a href="/film/476/" class="all">Назад в будущее</a>» (1985).',
+      type: "FACT",
+      spoiler: true,
+    },
+    {
+      value:
+        'Персонаж Нэнси — это дань уважения к фильму &#171;<a href="/film/5198/" class="all">Кошмар на улице Вязов</a>&#187;. Она так же одевается и носит такую же причёску. Кроме того, она также договаривается с Джонатаном об установке ловушки для чудовища. Это напоминает финал разборок Нэнси с Фредди Крюгером.',
+      type: "FACT",
+      spoiler: true,
+    },
+    {
+      value:
+        'В сцене, где Джойс и Джим идут по Обратной стороне в специальных костюмах, Джим исследует нечто похожее на большое яйцо, которое раскрывается и светится жёлтым цветом. Это явная отсылка к аналогичной сцене в фильме &#171;<a href="/film/386/" class="all">Чужой</a>&#187;.',
+      type: "FACT",
+      spoiler: true,
+    },
+    {
+      value:
+        'В сцене одного из флэшбэков Джойс показывает сыну билеты на фильм &laquo;<a href="/film/7116/" class="all">Полтергейст</a>&raquo; (<a href="/name/19068/" class="all">Тоуб Хупер</a>, 1982). Впоследствии Джойс будет общаться с Уиллом, когда тот окажется на &laquo;обратной стороне&raquo;, так же, как в этом фильме общались Кэрол Энн с матерью. Они использовали для общения телевизор, тогда как Уилл использует включающиеся и выключающиеся лампочки.',
+      type: "FACT",
+      spoiler: true,
+    },
+    {
+      value:
+        'Тайная правительственная организация, открывшая портал в другое измерение и впустившая безликое чудовище в наш мир, в качестве прикрытия носит невинное название Hawkins Power and Light, или HPL. Такие же инициалы были у писателя <a href="/name/83626/" class="all">Говарда Филлипса Лавкрафта</a> (1890-1937), в произведениях которого фигурируют чудовища из других измерений, как, например, в рассказе &laquo;Зов Ктулху&raquo; (1928).',
+      type: "FACT",
+      spoiler: true,
+    },
+    {
+      value:
+        'Кавер группы <a href="/name/1225590/" class="all">The Bangles</a> на композицию Hazy Shade of Winter начинает играть, когда похищают Барбару. Первые строки текста &laquo;Время, смотри, что со мной произошло...&raquo; служат предупреждением о том, что её забросило на &laquo;обратную сторону&raquo; — в затянутый дымкой мир, созданный разрывом пространственно-временного континуума.',
+      type: "FACT",
+      spoiler: true,
+    },
+    {
+      value:
+        'Есть в сериале несколько отсылок к произведениям <a href="/name/32384/" class="all">Дж. Р.Р. Толкина </a>- эпопее &laquo;Властелин Колец&raquo; и повести &laquo;Хоббит&raquo;. Это, например, лес, в котором, как опасаются персонажи, потеряется Уилл. Он носит название Лихолесье. Во вселенной &laquo;Властелина Колец&raquo; это место играет значительную роль.',
+      type: "FACT",
+      spoiler: true,
+    },
+    {
+      value:
+        'Пароль для входа в &laquo;Замок Байерсов&raquo; — &laquo;Радагаст&raquo;. Это отсылка к кинотрилогии &laquo;Хоббит&raquo; и к произведениям <a href="/name/32384/" class="all">Дж.Р.Р. Толкина</a>, так зовут одного из магов.',
+      type: "FACT",
+      spoiler: true,
+    },
+    {
+      value:
+        "В фильме можно увидеть отсылки к вселенной Silent Hill, например: мрачная &laquo;обратная сторона&raquo;, отзеркаливающая реальность, белые хлопья в воздухе, похожие на пепел, &laquo;портал&raquo; в стене. Семья Майка носит фамилию Wheeler, такую же носит герой игры &laquo;Silent Hill. Homecoming&raquo; Джеймс. Фамилию Гиллеспи, играющую важную роль в Silent Hill, произносит шериф в 1 сезоне: &laquo;Сова атаковала голову Элеонор Гиллеспи, приняв её причёску за гнездо.&raquo; Кроме того, образ Оди похож на Алессу Гиллеспи — обе имеют телекинетические способности, большую часть жизни провели в больнице, откуда затем сбегали.",
+      type: "FACT",
+      spoiler: true,
+    },
+    {
+      value:
+        "В 6-й серии первого сезона герой Дэвида Харбора перечисляет различные организации, которые могут следить за ним. Также он упоминает Аль-Каида. Но данная группировка была сформирована только в 1988 году, в то время как события в сериале происходят в 1983-м.",
+      type: "BLOOPER",
+      spoiler: true,
+    },
+    {
+      value:
+        "Пистолет Beretta 92FS, которым вооружен военный полицейский в пятом эпизоде, поступил на вооружение Армии США только в 1985 году, тогда как действие сериала происходит в начале 1980-х. Также правительственные агенты и военные полицейские вооружены пистолетом-пулеметом HK MP5 в варианте MP5K-PDW, который был разработан только в 1991-м.",
+      type: "BLOOPER",
+      spoiler: true,
+    },
+    {
+      value:
+        "Некоторые автомобили, использующиеся в сериале, произведены после 1983 года. Например джип Джима Хоппера — 1985 Chevrolet Blazer, а автомобиль полиции Хоукинса — 1984 Dodge Diplomat.",
+      type: "BLOOPER",
+      spoiler: true,
+    },
+  ],
+  genres: [
+    {
+      name: "ужасы",
+    },
+    {
+      name: "фантастика",
+    },
+    {
+      name: "фэнтези",
+    },
+    {
+      name: "триллер",
+    },
+    {
+      name: "драма",
+    },
+    {
+      name: "детектив",
+    },
+  ],
+  countries: [
+    {
+      name: "США",
+    },
+  ],
+  seasonsInfo: [
+    {
+      number: 1,
+      episodesCount: 8,
+    },
+    {
+      number: 2,
+      episodesCount: 9,
+    },
+    {
+      number: 3,
+      episodesCount: 8,
+    },
+    {
+      number: 4,
+      episodesCount: 9,
+    },
+    {
+      number: 5,
+      episodesCount: 8,
+    },
+  ],
+  persons: [
+    {
+      id: 9329,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_9329.jpg",
+      name: "Вайнона Райдер",
+      enName: "Winona Ryder",
+      description: "Joyce Byers",
+      profession: "актеры",
+      enProfession: "actor",
+    },
+    {
+      id: 544909,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_544909.jpg",
+      name: "Дэвид Харбор",
+      enName: "David Harbour",
+      description: "Jim Hopper",
+      profession: "актеры",
+      enProfession: "actor",
+    },
+    {
+      id: 3423339,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_3423339.jpg",
+      name: "Финн Вулфхард",
+      enName: "Finn Wolfhard",
+      description: "Mike Wheeler",
+      profession: "актеры",
+      enProfession: "actor",
+    },
+    {
+      id: 3920951,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_3920951.jpg",
+      name: "Гейтен Матараццо",
+      enName: "Gaten Matarazzo",
+      description: "Dustin Henderson",
+      profession: "актеры",
+      enProfession: "actor",
+    },
+    {
+      id: 2963991,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_2963991.jpg",
+      name: "Калеб Маклафлин",
+      enName: "Caleb McLaughlin",
+      description: "Lucas Sinclair",
+      profession: "актеры",
+      enProfession: "actor",
+    },
+    {
+      id: 1614578,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_1614578.jpg",
+      name: "Наталия Дайер",
+      enName: "Natalia Dyer",
+      description: "Nancy Wheeler",
+      profession: "актеры",
+      enProfession: "actor",
+    },
+    {
+      id: 3706776,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_3706776.jpg",
+      name: "Чарли Хитон",
+      enName: "Charlie Heaton",
+      description: "Jonathan Byers",
+      profession: "актеры",
+      enProfession: "actor",
+    },
+    {
+      id: 3851729,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_3851729.jpg",
+      name: "Джо Кири",
+      enName: "Joe Keery",
+      description: "Steve Harrington",
+      profession: "актеры",
+      enProfession: "actor",
+    },
+    {
+      id: 3418485,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_3418485.jpg",
+      name: "Милли Бобби Браун",
+      enName: "Millie Bobby Brown",
+      description: "Eleven",
+      profession: "актеры",
+      enProfession: "actor",
+    },
+    {
+      id: 3747227,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_3747227.jpg",
+      name: "Ноа Шнапп",
+      enName: "Noah Schnapp",
+      description: "Will Byers",
+      profession: "актеры",
+      enProfession: "actor",
+    },
+    {
+      id: 4216021,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_4216021.jpg",
+      name: "Майкл Стейн",
+      enName: "Michael Stein",
+      description: null,
+      profession: "композиторы",
+      enProfession: "composer",
+    },
+    {
+      id: 4216020,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_4216020.jpg",
+      name: "Кайл Диксон",
+      enName: "Kyle Dixon",
+      description: null,
+      profession: "композиторы",
+      enProfession: "composer",
+    },
+    {
+      id: 1821872,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_1821872.jpg",
+      name: "Крис Трухильо",
+      enName: "Chris Trujillo",
+      description: null,
+      profession: "художники",
+      enProfession: "designer",
+    },
+    {
+      id: 1821872,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_1821872.jpg",
+      name: "Крис Трухильо",
+      enName: "Chris Trujillo",
+      description: null,
+      profession: "художники",
+      enProfession: "designer",
+    },
+    {
+      id: 2371171,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_2371171.jpg",
+      name: "Шон Бреннан",
+      enName: "Sean Brennan",
+      description: null,
+      profession: "художники",
+      enProfession: "designer",
+    },
+    {
+      id: 4457708,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_4457708.jpg",
+      name: "Джон Сноу",
+      enName: "John Snow",
+      description: null,
+      profession: "художники",
+      enProfession: "designer",
+    },
+    {
+      id: 677511,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_677511.jpg",
+      name: "Мэтт Даффер",
+      enName: "Matt Duffer",
+      description: null,
+      profession: "режиссеры",
+      enProfession: "director",
+    },
+    {
+      id: 677512,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_677512.jpg",
+      name: "Росс Даффер",
+      enName: "Ross Duffer",
+      description: null,
+      profession: "режиссеры",
+      enProfession: "director",
+    },
+    {
+      id: 31245,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_31245.jpg",
+      name: "Шон Леви",
+      enName: "Shawn Levy",
+      description: null,
+      profession: "режиссеры",
+      enProfession: "director",
+    },
+    {
+      id: 23951,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_23951.jpg",
+      name: "Эндрю Стэнтон",
+      enName: "Andrew Stanton",
+      description: null,
+      profession: "режиссеры",
+      enProfession: "director",
+    },
+    {
+      id: 1986037,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_1986037.jpg",
+      name: "Дин Зиммерман",
+      enName: "Dean Zimmerman",
+      description: null,
+      profession: "монтажеры",
+      enProfession: "editor",
+    },
+    {
+      id: 2362298,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_2362298.jpg",
+      name: "Нэт Фуллер",
+      enName: "Nat Fuller",
+      description: null,
+      profession: "монтажеры",
+      enProfession: "editor",
+    },
+    {
+      id: 63450,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_63450.jpg",
+      name: "Кевин Д. Росс",
+      enName: "Kevin D. Ross",
+      description: null,
+      profession: "монтажеры",
+      enProfession: "editor",
+    },
+    {
+      id: 4738917,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_4738917.jpg",
+      name: "Кэтрин Нараньо",
+      enName: "Katheryn Naranjo",
+      description: null,
+      profession: "монтажеры",
+      enProfession: "editor",
+    },
+    {
+      id: 622897,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_622897.jpg",
+      name: "Тим Айвз",
+      enName: "Tim Ives",
+      description: null,
+      profession: "операторы",
+      enProfession: "operator",
+    },
+    {
+      id: 3028080,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_3028080.jpg",
+      name: "Калеб Хейманн",
+      enName: "Caleb Heymann",
+      description: null,
+      profession: "операторы",
+      enProfession: "operator",
+    },
+    {
+      id: 1939903,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_1939903.jpg",
+      name: "Тод Кэмпбелл",
+      enName: "Tod Campbell",
+      description: null,
+      profession: "операторы",
+      enProfession: "operator",
+    },
+    {
+      id: 1788908,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_1788908.jpg",
+      name: "Лачлан Милн",
+      enName: "Lachlan Milne",
+      description: null,
+      profession: "операторы",
+      enProfession: "operator",
+    },
+    {
+      id: 677511,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_677511.jpg",
+      name: "Мэтт Даффер",
+      enName: "Matt Duffer",
+      description: null,
+      profession: "продюсеры",
+      enProfession: "producer",
+    },
+    {
+      id: 677512,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_677512.jpg",
+      name: "Росс Даффер",
+      enName: "Ross Duffer",
+      description: null,
+      profession: "продюсеры",
+      enProfession: "producer",
+    },
+    {
+      id: 31245,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_31245.jpg",
+      name: "Шон Леви",
+      enName: "Shawn Levy",
+      description: null,
+      profession: "продюсеры",
+      enProfession: "producer",
+    },
+    {
+      id: 2916599,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_2916599.jpg",
+      name: "Дэн Коэн",
+      enName: "Dan Cohen",
+      description: null,
+      profession: "продюсеры",
+      enProfession: "producer",
+    },
+    {
+      id: 1641154,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_1641154.jpg",
+      name: "Татьяна Шитова",
+      enName: null,
+      description: null,
+      profession: "актеры дубляжа",
+      enProfession: "voice_actor",
+    },
+    {
+      id: 1040432,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_1040432.jpg",
+      name: "Денис Беспалый",
+      enName: null,
+      description: null,
+      profession: "актеры дубляжа",
+      enProfession: "voice_actor",
+    },
+    {
+      id: 5383894,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_5383894.jpg",
+      name: "Тихон Ефименко",
+      enName: null,
+      description: null,
+      profession: "актеры дубляжа",
+      enProfession: "voice_actor",
+    },
+    {
+      id: 3264714,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_3264714.jpg",
+      name: "Прохор Тесленко",
+      enName: null,
+      description: null,
+      profession: "актеры дубляжа",
+      enProfession: "voice_actor",
+    },
+    {
+      id: 3920022,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_3920022.jpg",
+      name: "Владимир Войтюк",
+      enName: null,
+      description: null,
+      profession: "актеры дубляжа",
+      enProfession: "voice_actor",
+    },
+    {
+      id: 6496397,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_6496397.jpg",
+      name: null,
+      enName: "Caitlin Schneiderhan",
+      description: null,
+      profession: "редакторы",
+      enProfession: "writer",
+    },
+    {
+      id: 3428811,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_3428811.jpg",
+      name: "Джастин Добл",
+      enName: "Justin Doble",
+      description: null,
+      profession: "редакторы",
+      enProfession: "writer",
+    },
+    {
+      id: 466024,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_466024.jpg",
+      name: "Кертис Гуинн",
+      enName: "Curtis Gwinn",
+      description: null,
+      profession: "редакторы",
+      enProfession: "writer",
+    },
+    {
+      id: 1055398,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_1055398.jpg",
+      name: "Джессика Мекленбёрг",
+      enName: "Jessica Mecklenburg",
+      description: null,
+      profession: "редакторы",
+      enProfession: "writer",
+    },
+  ],
+  lists: [
+    "best_tvseries_2022_editorialchoice",
+    "series-top250",
+    "100_greatest_TVseries",
+    "popular-series",
+  ],
+  typeNumber: 2,
+  alternativeName: "Stranger Things",
+  enName: "Stranger Things",
+  names: [
+    {
+      name: "Очень странные дела",
+    },
+    {
+      name: "Stranger Things",
+    },
+    {
+      name: "Bagulhos Sinistros",
+      language: "BR",
+      type: null,
+    },
+    {
+      name: "怪奇物语",
+      language: "CN",
+      type: "剧情 / 恐怖 / 奇幻",
+    },
+    {
+      name: "უცნაური საქმეები",
+      language: "GE",
+      type: null,
+    },
+    {
+      name: "Παράξενα Πράγματα",
+      language: "GR",
+      type: null,
+    },
+    {
+      name: "اتفاقات عجیب",
+      language: "IR",
+      type: null,
+    },
+    {
+      name: "ストレンジャー・シングス",
+      language: "JP",
+      type: null,
+    },
+    {
+      name: "기묘한 이야기",
+      language: "KR",
+      type: null,
+    },
+    {
+      name: "Чудни Нешта",
+      language: "MK",
+      type: null,
+    },
+    {
+      name: "Странные вещи",
+      language: "RU",
+      type: null,
+    },
+    {
+      name: "Крайне странные события",
+      language: "RU",
+      type: null,
+    },
+    {
+      name: "Загадочные события",
+      language: "RU",
+      type: null,
+    },
+    {
+      name: "Zvláštne veci",
+      language: "SK",
+      type: null,
+    },
+    {
+      name: "Tuhaf Şeyler",
+      language: "TR",
+      type: null,
+    },
+    {
+      name: "Загадкові справи",
+      language: "UA",
+      type: null,
+    },
+    {
+      name: "Дивні дива 2",
+      language: "UA",
+      type: "season 2 title",
+    },
+    {
+      name: "Дивні дива 3",
+      language: "UA",
+      type: "season 3 title",
+    },
+    {
+      name: "Stranger Things: Keményebb leckék",
+      language: "HU",
+      type: "Alternative title",
+    },
+    {
+      name: "Stranger Things 2",
+      language: "US",
+      type: "season 2",
+    },
+    {
+      name: "Stranger Things 3",
+      language: "US",
+      type: "season 3",
+    },
+    {
+      name: "Stranger Things 4",
+      language: "US",
+      type: "season 4",
+    },
+  ],
+  fees: {
+    world: {},
+    russia: {},
+    usa: {},
+  },
+  updatedAt: "2024-05-26T00:01:58.837Z",
+  movieLength: null,
+  ratingMpaa: null,
+  shortDescription: null,
+  technology: {
+    hasImax: false,
+    has3D: false,
+  },
+  ticketsOnSale: false,
+  similarMovies: [
+    {
+      id: 517433,
+      name: "Супер 8",
+      enName: null,
+      alternativeName: "Super 8",
+      type: "movie",
+      poster: {
+        url: "https://avatars.mds.yandex.net/get-kinopoisk-image/1777765/c2547831-b2fa-4cce-a58d-7af08ece53a5/orig",
+        previewUrl:
+          "https://avatars.mds.yandex.net/get-kinopoisk-image/1777765/c2547831-b2fa-4cce-a58d-7af08ece53a5/x1000",
+      },
+    },
+    {
+      id: 453397,
+      name: "Оно",
+      enName: null,
+      alternativeName: "It",
+      type: "movie",
+      poster: {
+        url: "https://avatars.mds.yandex.net/get-kinopoisk-image/1629390/34653c61-8b9a-4ba4-8057-6c81d70c71ed/orig",
+        previewUrl:
+          "https://avatars.mds.yandex.net/get-kinopoisk-image/1629390/34653c61-8b9a-4ba4-8057-6c81d70c71ed/x1000",
+      },
+    },
+    {
+      id: 84358,
+      name: "Твин Пикс",
+      enName: null,
+      alternativeName: "Twin Peaks",
+      type: "tv-series",
+      poster: {
+        url: "https://avatars.mds.yandex.net/get-kinopoisk-image/1629390/47878732-6abb-4c27-b6ce-70ffc29b201f/orig",
+        previewUrl:
+          "https://avatars.mds.yandex.net/get-kinopoisk-image/1629390/47878732-6abb-4c27-b6ce-70ffc29b201f/x1000",
+      },
+    },
+    {
+      id: 1032606,
+      name: "Тьма",
+      enName: null,
+      alternativeName: "Dark",
+      type: "tv-series",
+      poster: {
+        url: "https://avatars.mds.yandex.net/get-kinopoisk-image/6201401/a3083748-bfab-410f-a223-8d355f4b0c95/orig",
+        previewUrl:
+          "https://avatars.mds.yandex.net/get-kinopoisk-image/6201401/a3083748-bfab-410f-a223-8d355f4b0c95/x1000",
+      },
+    },
+    {
+      id: 544,
+      name: "Инопланетянин",
+      enName: null,
+      alternativeName: "E.T. the Extra-Terrestrial",
+      type: "movie",
+      poster: {
+        url: "https://avatars.mds.yandex.net/get-kinopoisk-image/1629390/df360301-084a-4eec-90ab-7954b143de18/orig",
+        previewUrl:
+          "https://avatars.mds.yandex.net/get-kinopoisk-image/1629390/df360301-084a-4eec-90ab-7954b143de18/x1000",
+      },
+    },
+    {
+      id: 77046,
+      name: "Секретные материалы",
+      enName: null,
+      alternativeName: "The X Files",
+      type: "tv-series",
+      poster: {
+        url: "https://avatars.mds.yandex.net/get-kinopoisk-image/1898899/3d1c84c2-bac2-4451-b617-4a9bc72164a1/orig",
+        previewUrl:
+          "https://avatars.mds.yandex.net/get-kinopoisk-image/1898899/3d1c84c2-bac2-4451-b617-4a9bc72164a1/x1000",
+      },
+    },
+    {
+      id: 498,
+      name: "Останься со мной",
+      enName: null,
+      alternativeName: "Stand by Me",
+      type: "movie",
+      poster: {
+        url: "https://avatars.mds.yandex.net/get-kinopoisk-image/1900788/e87570f4-723a-4da6-80be-9ac0b77bf390/orig",
+        previewUrl:
+          "https://avatars.mds.yandex.net/get-kinopoisk-image/1900788/e87570f4-723a-4da6-80be-9ac0b77bf390/x1000",
+      },
+    },
+    {
+      id: 94983,
+      name: "Оно",
+      enName: null,
+      alternativeName: "It",
+      type: "tv-series",
+      poster: {
+        url: "https://avatars.mds.yandex.net/get-kinopoisk-image/6201401/ed51e058-9f35-4481-ab2f-06db67368c23/orig",
+        previewUrl:
+          "https://avatars.mds.yandex.net/get-kinopoisk-image/6201401/ed51e058-9f35-4481-ab2f-06db67368c23/x1000",
+      },
+    },
+    {
+      id: 78871,
+      name: "Сайлент Хилл",
+      enName: null,
+      alternativeName: "Silent Hill",
+      type: "movie",
+      poster: {
+        url: "https://avatars.mds.yandex.net/get-kinopoisk-image/1599028/dd86fcf8-fd55-4020-901a-202df623214c/orig",
+        previewUrl:
+          "https://avatars.mds.yandex.net/get-kinopoisk-image/1599028/dd86fcf8-fd55-4020-901a-202df623214c/x1000",
+      },
+    },
+    {
+      id: 1045081,
+      name: "Лето 84",
+      enName: null,
+      alternativeName: "Summer of 84",
+      type: "movie",
+      poster: {
+        url: "https://avatars.mds.yandex.net/get-kinopoisk-image/4774061/99f64c31-e687-4f01-9813-ac05c1af1fdc/orig",
+        previewUrl:
+          "https://avatars.mds.yandex.net/get-kinopoisk-image/4774061/99f64c31-e687-4f01-9813-ac05c1af1fdc/x1000",
+      },
+    },
+  ],
+  sequelsAndPrequels: [],
+  ageRating: 16,
+  logo: {
+    url: "https://imagetmdb.com/t/p/original/bEwnnnFg9WOOKtXxc3eRu2SjqPb.png",
+  },
+  imagesInfo: {
+    framesCount: 177,
+  },
+  budget: {},
+  watchability: {
+    items: [],
+  },
+  releaseYears: [
+    {
+      start: 2016,
+      end: null,
+    },
+  ],
+  top10: null,
+  top250: 118,
+  deletedAt: null,
+  isSeries: true,
+  seriesLength: 60,
+  totalSeriesLength: null,
+  networks: {
+    items: [
+      {
+        name: "Netflix",
+      },
+    ],
+  },
+  videos: {
+    trailers: [
+      {
+        url: "https://www.youtube.com/embed/PX6KNzyQfZM",
+        name: "Русский трейлер",
+        site: "youtube",
+        type: "TRAILER",
+      },
+      {
+        url: "https://www.youtube.com/embed/PX6KNzyQfZM",
+        name: "Русский трейлер",
+        site: "youtube",
+        type: "TRAILER",
+      },
+      {
+        url: "https://www.youtube.com/embed/mnd7sFt5c3A",
+        name: "Trailer 1",
+        site: "youtube",
+        type: "TRAILER",
+      },
+      {
+        url: "https://www.youtube.com/embed/b9EkMc79ZSU",
+        name: "Official Final Trailer",
+        site: "youtube",
+        type: "TRAILER",
+      },
+    ],
+  },
 };

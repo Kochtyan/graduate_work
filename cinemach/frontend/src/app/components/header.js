@@ -8,13 +8,12 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import SearchIcon from "@mui/icons-material/Search";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 
 import { getPopularMovies } from "../api/tmdb";
 
 import Logo from "../../../src/assets/logo-cinemach.svg";
 import "../css/header.css";
-
-import { createTheme, ThemeProvider, useTheme } from "@mui/material/styles";
 
 const style = {
   position: "absolute",
@@ -22,49 +21,12 @@ const style = {
   left: "50%",
   transform: "translate(-50%, -50%)",
   width: 400,
-  bgcolor: "#5a5a5a",
-  border: "2px solid #000",
+  bgcolor: "#111",
+  border: "2px solid #6C29A3",
+  borderRadius: "5px",
   boxShadow: 24,
   p: 4,
 };
-
-const customTheme = (outerTheme) =>
-  createTheme({
-    palette: {
-      mode: outerTheme.palette.mode,
-    },
-    components: {
-      MuiTextField: {
-        styleOverrides: {
-          root: {
-            "--TextField-brandBorderColor": "#E0E3E7",
-            "--TextField-brandBorderHoverColor": "#B2BAC2",
-            "--TextField-brandBorderFocusedColor": "#6F7E8C",
-            "& label.Mui-focused": {
-              color: "var(--TextField-brandBorderFocusedColor)",
-            },
-          },
-        },
-      },
-
-      MuiInput: {
-        styleOverrides: {
-          root: {
-            "&::before": {
-              borderBottom: "2px solid var(--TextField-brandBorderColor)",
-            },
-            "&:hover:not(.Mui-disabled, .Mui-error):before": {
-              borderBottom: "2px solid var(--TextField-brandBorderHoverColor)",
-            },
-            "&.Mui-focused:after": {
-              borderBottom:
-                "2px solid var(--TextField-brandBorderFocusedColor)",
-            },
-          },
-        },
-      },
-    },
-  });
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -85,8 +47,6 @@ function Header() {
 
     document.documentElement.style.overflow = "auto";
   };
-
-  const outerTheme = useTheme();
 
   return (
     <>
@@ -126,31 +86,84 @@ function Header() {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <Typography variant="h6" component="h2">
-            Войти
-          </Typography>
-          <Typography sx={{ mt: 2 }} style={{ textAlign: "center" }}>
-            <TextField
-              id="outlined-helperText"
-              label="Логин"
-              placeholder="Ваш логин"
-            />
-          </Typography>
-          <Typography sx={{ mt: 2 }} style={{ textAlign: "center" }}>
-            <ThemeProvider theme={customTheme(outerTheme)}>
-              <TextField
-                id="outlined-helperText"
-                label="Пароль"
-                placeholder="Ваш пароль"
-                InputProps={{
-                  style: { color: "white", borderColor: "white" },
-                }}
-              />
-            </ThemeProvider>
-          </Typography>
-          <Typography sx={{ mt: 2 }} style={{ textAlign: "right" }}>
-            <CustomButton title="Войти на сайт" />
-          </Typography>
+          <Tabs>
+            <TabList>
+              <Tab style={{ marginRight: "20px" }}>
+                <Typography variant="h6" component="h2">
+                  Войти
+                </Typography>
+              </Tab>
+              <Tab>
+                <Typography variant="h6" component="h2">
+                  Регистрация
+                </Typography>
+              </Tab>
+            </TabList>
+
+            <TabPanel>
+              <Typography sx={{ mt: 2 }} style={{ textAlign: "center" }}>
+                <TextField
+                  id="outlined-helperText"
+                  label="Логин"
+                  placeholder="Ваш логин"
+                  InputProps={{
+                    style: {
+                      color: "white",
+                      background: "#1a1a1a",
+                    },
+                  }}
+                />
+              </Typography>
+              <Typography sx={{ mt: 2 }} style={{ textAlign: "center" }}>
+                <TextField
+                  id="outlined-helperText"
+                  label="Пароль"
+                  placeholder="Ваш пароль"
+                  InputProps={{
+                    style: { color: "white", background: "#1a1a1a" },
+                  }}
+                />
+              </Typography>
+              <Typography sx={{ mt: 2 }} style={{ textAlign: "right" }}>
+                <CustomButton title="Войти на сайт" />
+              </Typography>
+            </TabPanel>
+            <TabPanel>
+              <Typography sx={{ mt: 2 }} style={{ textAlign: "center" }}>
+                <TextField
+                  id="outlined-helperText"
+                  label="Email"
+                  placeholder="Ваш email"
+                  InputProps={{
+                    style: { color: "white", background: "#1a1a1a" },
+                  }}
+                />
+              </Typography>
+              <Typography sx={{ mt: 2 }} style={{ textAlign: "center" }}>
+                <TextField
+                  id="outlined-helperText"
+                  label="Логин"
+                  placeholder="Ваш логин"
+                  InputProps={{
+                    style: { color: "white", background: "#1a1a1a" },
+                  }}
+                />
+              </Typography>
+              <Typography sx={{ mt: 2 }} style={{ textAlign: "center" }}>
+                <TextField
+                  id="outlined-helperText"
+                  label="Пароль"
+                  placeholder="Ваш пароль"
+                  InputProps={{
+                    style: { color: "white", background: "#1a1a1a" },
+                  }}
+                />
+              </Typography>
+              <Typography sx={{ mt: 2 }} style={{ textAlign: "right" }}>
+                <CustomButton title="Зарегистрироваться" />
+              </Typography>
+            </TabPanel>
+          </Tabs>
         </Box>
       </Modal>
     </>
