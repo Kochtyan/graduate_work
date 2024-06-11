@@ -1,5 +1,8 @@
+"use client";
+
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { useSession, signIn, signOut } from "next-auth/react";
 
 import TextField from "@mui/material/TextField";
 import CustomButton from "./customButton";
@@ -31,6 +34,9 @@ const style = {
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [isOpenSearch, setIsOpenSearch] = useState(false);
+
+  const session = useSession();
+  console.log(session);
 
   useEffect(() => {}, []);
 
@@ -64,12 +70,22 @@ function Header() {
           />
         </div>
 
+        {session?.data && <Link href="/profile">Профиль</Link>}
+
         <div className="header__login">
-          <CustomButton
-            title="Войти"
-            onClick={handleOpen}
-            style={{ width: "100px" }}
-          />
+          {session?.data ? (
+            <CustomButton
+              title="Выйти"
+              onClick={() => signOut({ callbackUrl: "/" })}
+              style={{ width: "100px" }}
+            />
+          ) : (
+            <CustomButton
+              title="Войти"
+              onClick={() => signIn()}
+              style={{ width: "100px" }}
+            />
+          )}
         </div>
       </div>
 
