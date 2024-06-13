@@ -71,8 +71,8 @@ app.get("/users/:id", async (req, res) => {
 });
 
 app.post("/user", async (req, res) => {
-  const { name, surname, patronymic, login, password, email } = req.body;
-  const user = await addUser(name, surname, patronymic, login, password, email);
+  const { name, surname, login, password, email } = req.body;
+  const user = await addUser(name, surname, login, password, email);
   res.status(201).send(user);
 });
 

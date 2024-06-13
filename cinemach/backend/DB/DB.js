@@ -22,17 +22,10 @@ export async function getUser(id) {
   return row[0];
 }
 
-export async function addUser(
-  name,
-  surname,
-  patronymic,
-  login,
-  password,
-  email
-) {
+export async function addUser(name, surname, login, password, email) {
   const [result] = await pool.query(
-    `INSERT INTO Users (Name, Surname, Patronymic, Login, Password, Email) VALUES (?, ?, ?, ?, ?, ?)`,
-    [name, surname, patronymic, login, password, email]
+    `INSERT INTO Users (Name, Surname, Login, Password, Email) VALUES (?, ?, ?, ?, ?)`,
+    [name, surname, login, password, email]
   );
 
   const id = result.insertId;
