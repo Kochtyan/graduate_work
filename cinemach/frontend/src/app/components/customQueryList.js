@@ -11,7 +11,7 @@ import imdbLogo from "../../assets/icon-imdb.svg";
 import "../css/header.css";
 import "react-tabs/style/react-tabs.css";
 
-export default function CustomQueryList({ list, list2, type }) {
+export default function CustomQueryList({ list, list2 }) {
   return (
     <>
       <Grid className="queryList__container" item xs={11}>

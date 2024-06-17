@@ -3,11 +3,17 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
+import { getServerSession } from "next-auth/next";
+import { authOptions } from "../../api/auth/[...nextauth]";
 import Link from "next/link";
+
+import { useQuery } from "@apollo/client";
+import { MOVIE } from "@/app/apollo/queries";
 
 import { fetchMovieById } from "../../../app/api/kinopoisk";
 
 import Header from "@/app/components/header";
+import Loader from "@/app/components/loader";
 import CustomButton from "@/app/components/customButton";
 import CustomList from "@/app/components/customList";
 import CustomSwiper from "@/app/components/customSwiper";
@@ -27,7 +33,7 @@ import metacriticLogo from "../../../../src/assets/icon-metacritic.png";
 
 import { film1, film2 } from "../../../app/query_data/queryData";
 
-function Movie() {
+function Movie({ session }) {
   const [movie, setMovie] = useState([]);
   const [trailerUrls, setTrailerUrls] = useState([]);
   const [userRating, setUserRating] = useState(null);
@@ -36,14 +42,35 @@ function Movie() {
   const [showVideos, setShowVideos] = useState(false);
   const [showRoles, setShowRoles] = useState(false);
   const [open, setOpen] = useState(false);
+  const [errorQuery, setErrorQuery] = useState("");
 
   const { query } = useRouter();
+
+  const { loading, error, data } = useQuery(MOVIE, {
+    variables: {
+      userId: parseInt(session?.user?.id),
+      movieId: parseInt(query.id),
+    },
+  });
+
+  const getYouTubeVideoId = (url) => {
+    const regExp =
+      /^(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:[^/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
+
+    const match = url.toString().match(regExp);
+
+    if (match) {
+      return match[1];
+    }
+
+    return null;
+  };
 
   useEffect(() => {
     const fetchData = async () => {
       if (query.id) {
-        // const movieDetails = await fetchMovieById(query.id);
-        const movieDetails = film1;
+        //const movieDetails = await fetchMovieById(query.id);
+        const movieDetails = film2;
 
         setMovie(movieDetails);
         console.log(movieDetails);
@@ -70,8 +97,22 @@ function Movie() {
         setTrailerUrls(_trailerUrls);
       }
     };
+
+    if (data && data.movie.rating) {
+      setUserRating(data.movie.rating);
+      setUserRatingModal(data.movie.rating);
+    }
+
+    if (error) {
+      setErrorQuery(`Ошибка: ${error.message}`);
+    }
+
     fetchData();
-  }, [query.id]);
+  }, [query.id, data]);
+
+  if (loading) {
+    return <Loader />;
+  }
 
   const handleMinutesToHours = (minutes) => {
     const hours = Math.floor(minutes / 60);
@@ -93,6 +134,8 @@ function Movie() {
     } else if (remainingMinutes % 10 >= 2 && remainingMinutes % 10 <= 4) {
       minutesLabel = "минуты";
     } else if (remainingMinutes % 10 >= 5 && remainingMinutes % 10 <= 20) {
+      minutesLabel = "минут";
+    } else {
       minutesLabel = "минут";
     }
 
@@ -132,19 +175,6 @@ function Movie() {
     const year = date.getFullYear();
 
     return `${day} ${month} ${year}`;
-  };
-
-  const getYouTubeVideoId = (url) => {
-    const regExp =
-      /^(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:[^/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
-
-    const match = url.toString().match(regExp);
-
-    if (match) {
-      return match[1];
-    }
-
-    return null;
   };
 
   const handleRatingChange = (event, newValue) => {
@@ -260,6 +290,7 @@ function Movie() {
                 <span>{movie?.rating?.filmCritics}</span>
               </span>
             </div>
+            {errorQuery && <span>{errorQuery}</span>}
 
             <div className="movie__description">
               <p>
@@ -534,6 +565,16 @@ function Movie() {
       />
     </>
   );
+}
+
+export async function getServerSideProps(context) {
+  const session = await getServerSession(context.req, context.res, authOptions);
+
+  return {
+    props: {
+      session,
+    },
+  };
 }
 
 export default Movie;

@@ -1,13 +1,14 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { getProviders, signIn } from "next-auth/react";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 import { useLazyQuery } from "@apollo/client";
 import { LOGIN } from "@/app/apollo/queries";
 
+import Loader from "@/app/components/loader";
 import CustomButton from "@/app/components/customButton";
 
 import "../../app/css/auth.css";
@@ -21,8 +22,13 @@ const SignIn = ({ providers }) => {
 
   const [Login, { loading, error, data }] = useLazyQuery(LOGIN);
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error: {error.message}</p>;
+  useEffect(() => {
+    if (error) {
+      setErrorQuery(`Ошибка: ${error.message}`);
+    }
+  }, [error]);
+
+  if (loading) return <Loader />;
 
   const handleSubmit = async (e) => {
     e.preventDefault();

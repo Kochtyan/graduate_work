@@ -5,6 +5,8 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 
+import { fetchMovieById } from "@/app/api/kinopoisk";
+
 import Header from "@/app/components/header";
 import CustomButton from "@/app/components/customButton";
 import CustomList from "@/app/components/customList";
@@ -23,7 +25,7 @@ import kpLogo from "../../../../src/assets/icon-kp.png";
 import imdbLogo from "../../../../src/assets/icon-imdb.png";
 import metacriticLogo from "../../../../src/assets/icon-metacritic.png";
 
-import { series1, series2 } from "../../../app/query_data/queryData";
+import { series1, series2, series3 } from "../../../app/query_data/queryData";
 
 function Series() {
   const [series, setSeries] = useState([]);
@@ -41,7 +43,7 @@ function Series() {
     const fetchData = async () => {
       if (query.id) {
         // const seriesDetails = await fetchMovieById(query.id);
-        const seriesDetails = series1;
+        const seriesDetails = series3;
 
         setSeries(seriesDetails);
         console.log(seriesDetails);
@@ -91,6 +93,8 @@ function Series() {
     } else if (remainingMinutes % 10 >= 2 && remainingMinutes % 10 <= 4) {
       minutesLabel = "минуты";
     } else if (remainingMinutes % 10 >= 5 && remainingMinutes % 10 <= 20) {
+      minutesLabel = "минут";
+    } else {
       minutesLabel = "минут";
     }
 
@@ -290,8 +294,10 @@ function Series() {
               </Grid>
               <Grid item xs={8}>
                 <span>
-                  {series?.seasonsInfo && (
+                  {series?.seasonsInfo ? (
                     <span>{series.seasonsInfo.length}</span>
+                  ) : (
+                    <span>1</span>
                   )}
                 </span>
               </Grid>

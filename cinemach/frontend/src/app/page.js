@@ -7,6 +7,7 @@ import Link from "next/link";
 import { fetchPopularMovies, fetchMovieById } from "./api/kinopoisk";
 
 import Header from "./components/header";
+import Loader from "./components/loader";
 import Grid from "@mui/material/Grid";
 import Bookmark from "@mui/icons-material/BookmarkBorderOutlined";
 import BookmarkOutlined from "@mui/icons-material/BookmarkAddedOutlined";
@@ -22,15 +23,24 @@ const MovieApp = () => {
   const [recentMovies, setRecentMovies] = useState([]);
   const [watchlistState, setWatchlistState] = useState({});
 
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     // const fetchData = async () => {
-    //   const popularMovies = await fetchPopularMovies();
-    //   setRecentMovies(popularMovies?.docs);
-    //   console.log(popularMovies?.docs);
+    //   try {
+    //     const popularMovies = await fetchPopularMovies();
+    //     setRecentMovies(popularMovies?.docs);
+    //     console.log(popularMovies?.docs);
+    //   } catch (error) {
+    //     console.error("Ошибка при загрузке популярных фильмов:", error);
+    //   } finally {
+    //     setLoading(false);
+    //   }
     // };
     // fetchData();
     console.log(popular);
     setRecentMovies(popular);
+    setLoading(false);
   }, []);
 
   const handleAddToWatchlist = (e, movieId) => {
@@ -42,11 +52,15 @@ const MovieApp = () => {
     }));
   };
 
+  if (loading) {
+    return <Loader />;
+  }
+
   return (
     <>
       <Header />
       <div className="container">
-        <h1 style={{ marginBottom: "20px" }}>Популярные фильмы</h1>
+        <h1 style={{ marginBottom: "20px" }}>Сейчас популярно</h1>
         <Grid
           container
           spacing={{ xs: 2, md: 7 }}
@@ -58,7 +72,16 @@ const MovieApp = () => {
               <div className="main__movie-wrapper">
                 {movie?.poster && (
                   <div className="main__movie-poster-wrapper">
-                    <Link href={`/film/[id]`} as={`/film/${movie?.id}`}>
+                    <Link
+                      href={
+                        movie.type == "movie" ? `/film/[id]` : `/series/[id]`
+                      }
+                      as={
+                        movie.type == "movie"
+                          ? `/film/${movie.id}`
+                          : `/series/${movie.id}`
+                      }
+                    >
                       <img
                         src={movie?.poster?.previewUrl}
                         alt={`Постер ${movie?.name}`}
@@ -107,7 +130,14 @@ const MovieApp = () => {
                     </Link>
                   </div>
                 )}
-                <Link href={`/film/[id]`} as={`/film/${movie?.id}`}>
+                <Link
+                  href={movie.type == "movie" ? `/film/[id]` : `/series/[id]`}
+                  as={
+                    movie.type == "movie"
+                      ? `/film/${movie.id}`
+                      : `/series/${movie.id}`
+                  }
+                >
                   <h3 className="main__name">{movie?.name}</h3>
                   <span
                     style={{ color: "rgba(255, 255, 255, 0.6)" }}

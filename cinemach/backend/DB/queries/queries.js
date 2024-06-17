@@ -32,3 +32,12 @@ export async function Login(email, password) {
     email: user.email,
   };
 }
+
+export async function getMovie(userId, movieId) {
+  const [row] = await pool.query(
+    "SELECT * FROM movies WHERE user_id = ? AND movie_id = ?",
+    [userId, movieId]
+  );
+
+  return row.length > 0 ? row[0] : null;
+}

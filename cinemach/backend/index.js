@@ -5,7 +5,7 @@ import { ApolloServer } from "@apollo/server";
 import { startStandaloneServer } from "@apollo/server/standalone";
 
 import { getUsers, getUser } from "./DB/queries/queries.js";
-import { addUser } from "./DB/mutations/mutations.js";
+import { addUser, setRating } from "./DB/mutations/mutations.js";
 import { typeDefs } from "./graphql/schema/typeDefs.js";
 import { resolvers } from "./graphql/resolvers/resolvers.js";
 
@@ -40,6 +40,12 @@ app.post("/user", async (req, res) => {
   const { name, surname, login, password, email } = req.body;
   const user = await addUser(name, surname, login, password, email);
   res.status(201).send(user);
+});
+
+app.post("/rating", async (req, res) => {
+  const { userId, movieId, rating } = req.body;
+  const movie = await setRating(userId, movieId, rating);
+  res.status(201).send(movie);
 });
 
 app.use((err, req, res, next) => {

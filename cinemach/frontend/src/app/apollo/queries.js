@@ -27,3 +27,11 @@ export const LOGIN = gql`
     }
   }
 `;
+
+export const MOVIE = gql`
+  query ($userId: ID!, $movieId: ID!) {
+    movie(userId: $userId, movieId: $movieId) {
+      rating
+    }
+  }
+`;

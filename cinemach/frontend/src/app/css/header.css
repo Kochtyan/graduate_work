@@ -11,13 +11,13 @@
 }
 
 .header__search-container {
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .queryList__container {
-width: 80%;
-margin: 0 auto 20px;
-padding-top: 20px;
+  width: 80%;
+  margin: 0 auto 20px !important;
+  padding-top: 20px;
 }
 
 .queryList__list {
@@ -30,7 +30,7 @@ padding-top: 20px;
 .queryList__item {
   padding-top: 15px;
   padding-bottom: 15px;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 .queryList__item:hover {

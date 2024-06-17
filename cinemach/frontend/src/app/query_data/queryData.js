@@ -11957,3 +11957,341 @@ export const series2 = {
     ],
   },
 };
+
+export const series3 = {
+  id: 4635111,
+  externalId: {
+    kpHD: "355fa1f85dd44ba59a6646669d4bf45e",
+  },
+  name: "Внутри убийцы",
+  alternativeName: null,
+  names: [
+    {
+      name: "Внутри убийцы",
+      language: "RU",
+      type: "Russian title on kinopoisk",
+    },
+  ],
+  type: "tv-series",
+  typeNumber: 2,
+  year: 2024,
+  description:
+    "Профайлер Зоя Волгина — лучшая в своем деле: сцены преступлений буквально оживают у нее перед глазами. Именно Зою и специального сотрудника Следственного комитета Тимофея Волоха привлекают к новому расследованию: в Петербурге неизвестный душитель бальзамирует тела своих жертв, превращая их в статуи. Его «почерк» Зое знаком — много лет назад она уже сталкивалась с очень похожим человеком.",
+  shortDescription:
+    "Профайлер вступает в дуэль с маньяком. По мотивам мирового бестселлера Майка Омера ",
+  slogan: null,
+  status: "completed",
+  rating: {
+    kp: 7.414,
+    imdb: 0,
+    filmCritics: 0,
+    russianFilmCritics: 0,
+    await: null,
+  },
+  votes: {
+    kp: 489778,
+    imdb: 0,
+    filmCritics: 0,
+    russianFilmCritics: 0,
+    await: 43095,
+  },
+  movieLength: null,
+  totalSeriesLength: null,
+  seriesLength: 50,
+  ratingMpaa: null,
+  ageRating: 18,
+  poster: {
+    url: "https://image.openmoviedb.com/kinopoisk-images/4483445/178bf968-4255-4ec6-b693-2f240539265d/orig",
+    previewUrl:
+      "https://image.openmoviedb.com/kinopoisk-images/4483445/178bf968-4255-4ec6-b693-2f240539265d/x1000",
+  },
+  backdrop: {
+    url: "https://image.openmoviedb.com/kinopoisk-ott-images/1648503/2a0000018d82d0ff28412f7e35982c993f30/orig",
+    previewUrl:
+      "https://image.openmoviedb.com/kinopoisk-ott-images/1648503/2a0000018d82d0ff28412f7e35982c993f30/x1000",
+  },
+  genres: [
+    {
+      name: "детектив",
+    },
+    {
+      name: "триллер",
+    },
+  ],
+  countries: [
+    {
+      name: "Россия",
+    },
+  ],
+  persons: [
+    {
+      id: 4173230,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_4173230.jpg",
+      name: "Анастасия Евграфова",
+      enName: null,
+      description: "Зоя Волгина",
+      profession: "актеры",
+      enProfession: "actor",
+    },
+    {
+      id: 1775081,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_1775081.jpg",
+      name: "Тихон Жизневский",
+      enName: null,
+      description: "Тимофей Волох",
+      profession: "актеры",
+      enProfession: "actor",
+    },
+    {
+      id: 1627511,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_1627511.jpg",
+      name: "Яна Сексте",
+      enName: null,
+      description: "Шеф Самара",
+      profession: "актеры",
+      enProfession: "actor",
+    },
+    {
+      id: 171589,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_171589.jpg",
+      name: "Сергей Шакуров",
+      enName: null,
+      description: "Дед Никола",
+      profession: "актеры",
+      enProfession: "actor",
+    },
+    {
+      id: 4498242,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_4498242.jpg",
+      name: "Дарья Коныжева",
+      enName: null,
+      description: "Александра",
+      profession: "актеры",
+      enProfession: "actor",
+    },
+    {
+      id: 3647298,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_3647298.jpg",
+      name: "Сергей Гилев",
+      enName: null,
+      description: "Кирилл Львов",
+      profession: "актеры",
+      enProfession: "actor",
+    },
+    {
+      id: 6313586,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_6313586.jpg",
+      name: "Вероника Мохирева",
+      enName: null,
+      description: "Лили",
+      profession: "актеры",
+      enProfession: "actor",
+    },
+    {
+      id: 5821258,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_5821258.jpg",
+      name: "Анастасия Красовская",
+      enName: null,
+      description: "Ника",
+      profession: "актеры",
+      enProfession: "actor",
+    },
+    {
+      id: 3412634,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_3412634.jpg",
+      name: "Диана Енакаева",
+      enName: null,
+      description: "Зоя в юности",
+      profession: "актеры",
+      enProfession: "actor",
+    },
+    {
+      id: 84751,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_84751.jpg",
+      name: "Александр Резалин",
+      enName: null,
+      description: "Доктор Сафразьян",
+      profession: "актеры",
+      enProfession: "actor",
+    },
+    {
+      id: 3691160,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_3691160.jpg",
+      name: "Райан Оттер",
+      enName: null,
+      description: null,
+      profession: "композиторы",
+      enProfession: "composer",
+    },
+    {
+      id: 2003424,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_2003424.jpg",
+      name: "Эдуард Галкин",
+      enName: null,
+      description: null,
+      profession: "художники",
+      enProfession: "designer",
+    },
+    {
+      id: 2421043,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_2421043.jpg",
+      name: "Елена Дронова",
+      enName: null,
+      description: null,
+      profession: "художники",
+      enProfession: "designer",
+    },
+    {
+      id: 1078306,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_1078306.jpg",
+      name: "Владимир Мирзоев",
+      enName: null,
+      description: null,
+      profession: "режиссеры",
+      enProfession: "director",
+    },
+    {
+      id: 2703650,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_2703650.jpg",
+      name: "Александр Амиров",
+      enName: null,
+      description: null,
+      profession: "монтажеры",
+      enProfession: "editor",
+    },
+    {
+      id: 3083913,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_3083913.jpg",
+      name: "Василий Григолюнас",
+      enName: null,
+      description: null,
+      profession: "операторы",
+      enProfession: "operator",
+    },
+    {
+      id: 3695595,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_3695595.jpg",
+      name: "Владимир Маслов",
+      enName: null,
+      description: null,
+      profession: "продюсеры",
+      enProfession: "producer",
+    },
+    {
+      id: 3060547,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_3060547.jpg",
+      name: "Михаил Китаев",
+      enName: null,
+      description: null,
+      profession: "продюсеры",
+      enProfession: "producer",
+    },
+    {
+      id: 5126937,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_5126937.jpg",
+      name: "Ольга Филипук",
+      enName: null,
+      description: null,
+      profession: "продюсеры",
+      enProfession: "producer",
+    },
+    {
+      id: 10134948,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_10134948.jpg",
+      name: "Ася Гладковская",
+      enName: null,
+      description: null,
+      profession: "продюсеры",
+      enProfession: "producer",
+    },
+    {
+      id: 1078306,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_1078306.jpg",
+      name: "Владимир Мирзоев",
+      enName: null,
+      description: null,
+      profession: "редакторы",
+      enProfession: "writer",
+    },
+    {
+      id: 6975427,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_6975427.jpg",
+      name: "Анастасия Мирзоева",
+      enName: null,
+      description: null,
+      profession: "редакторы",
+      enProfession: "writer",
+    },
+    {
+      id: 6559965,
+      photo:
+        "https://image.openmoviedb.com/kinopoisk-st-images//actor_iphone/iphone360_6559965.jpg",
+      name: "Майк Омер",
+      enName: "Mike Omer",
+      description: null,
+      profession: "редакторы",
+      enProfession: "writer",
+    },
+  ],
+  premiere: {
+    country: null,
+    world: null,
+    russia: null,
+    cinema: null,
+    bluray: null,
+    dvd: null,
+  },
+  releaseYears: [
+    {
+      start: 2024,
+      end: 2024,
+    },
+  ],
+  top10: null,
+  top250: null,
+  isSeries: true,
+  ticketsOnSale: false,
+  lists: ["popular-series", "hd"],
+  networks: {
+    items: [
+      {
+        name: "Кинопоиск",
+      },
+    ],
+  },
+  createdAt: "2024-04-13T01:37:01.778Z",
+  updatedAt: "2024-06-16T20:03:01.183Z",
+  watchability: {
+    items: [
+      {
+        name: "Kinopoisk HD",
+        logo: {
+          url: "https://yastatic.net/s3/kinopoisk-frontend/hd-www/release/apple-touch-icon-180x180.png",
+        },
+        url: "https://hd.kinopoisk.ru/?rt=355fa1f85dd44ba59a6646669d4bf45e",
+      },
+    ],
+  },
+};
