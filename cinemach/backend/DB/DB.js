@@ -12,23 +12,4 @@ const pool = mysql
   })
   .promise();
 
-export async function getUsers() {
-  const [rows] = await pool.query("SELECT * FROM Users");
-  return rows;
-}
-
-export async function getUser(id) {
-  const [row] = await pool.query(`SELECT * FROM Users WHERE id = ?`, [id]);
-  return row[0];
-}
-
-export async function addUser(name, surname, login, password, email) {
-  const [result] = await pool.query(
-    `INSERT INTO Users (Name, Surname, Login, Password, Email) VALUES (?, ?, ?, ?, ?)`,
-    [name, surname, login, password, email]
-  );
-
-  const id = result.insertId;
-
-  return getUser(id);
-}
+export default pool;

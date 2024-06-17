@@ -80,11 +80,13 @@ function Header() {
               style={{ width: "100px" }}
             />
           ) : (
-            <CustomButton
-              title="Войти"
-              onClick={() => signIn()}
-              style={{ width: "100px" }}
-            />
+            <Link href="/auth/signin">
+              <CustomButton
+                title="Войти"
+                // onClick={() => signIn()}
+                style={{ width: "100px" }}
+              />
+            </Link>
           )}
         </div>
       </div>
@@ -94,94 +96,6 @@ function Header() {
         onClickClose={handleCloseSearch}
         isOpenSearch={isOpenSearch}
       />
-
-      <Modal
-        open={isOpen}
-        onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      >
-        <Box sx={style}>
-          <Tabs>
-            <TabList>
-              <Tab style={{ marginRight: "20px" }}>
-                <Typography variant="h6" component="h2">
-                  Войти
-                </Typography>
-              </Tab>
-              <Tab>
-                <Typography variant="h6" component="h2">
-                  Регистрация
-                </Typography>
-              </Tab>
-            </TabList>
-
-            <TabPanel>
-              <Typography sx={{ mt: 2 }} style={{ textAlign: "center" }}>
-                <TextField
-                  id="outlined-helperText"
-                  label="Логин"
-                  placeholder="Ваш логин"
-                  InputProps={{
-                    style: {
-                      color: "white",
-                      background: "#1a1a1a",
-                    },
-                  }}
-                />
-              </Typography>
-              <Typography sx={{ mt: 2 }} style={{ textAlign: "center" }}>
-                <TextField
-                  id="outlined-helperText"
-                  label="Пароль"
-                  placeholder="Ваш пароль"
-                  InputProps={{
-                    style: { color: "white", background: "#1a1a1a" },
-                  }}
-                />
-              </Typography>
-              <Typography sx={{ mt: 2 }} style={{ textAlign: "right" }}>
-                <CustomButton title="Войти на сайт" />
-              </Typography>
-            </TabPanel>
-            <TabPanel>
-              <Typography sx={{ mt: 2 }} style={{ textAlign: "center" }}>
-                <TextField
-                  id="outlined-helperText"
-                  label="Email"
-                  placeholder="Ваш email"
-                  InputProps={{
-                    style: { color: "white", background: "#1a1a1a" },
-                  }}
-                />
-              </Typography>
-              <Typography sx={{ mt: 2 }} style={{ textAlign: "center" }}>
-                <TextField
-                  id="outlined-helperText"
-                  label="Логин"
-                  placeholder="Ваш логин"
-                  InputProps={{
-                    style: { color: "white", background: "#1a1a1a" },
-                  }}
-                />
-              </Typography>
-              <Typography sx={{ mt: 2 }} style={{ textAlign: "center" }}>
-                <TextField
-                  id="outlined-helperText"
-                  label="Пароль"
-                  placeholder="Ваш пароль"
-                  InputProps={{
-                    style: { color: "white", background: "#1a1a1a" },
-                  }}
-                />
-              </Typography>
-              <Typography sx={{ mt: 2 }} style={{ textAlign: "right" }}>
-                <CustomButton title="Зарегистрироваться" />
-              </Typography>
-            </TabPanel>
-          </Tabs>
-        </Box>
-      </Modal>
     </>
   );
 }

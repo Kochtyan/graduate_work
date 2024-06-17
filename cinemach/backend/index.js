@@ -1,49 +1,15 @@
 import Express from "express";
 import cors from "cors";
 
-import { getUsers, getUser, addUser } from "./DB/DB.js";
-
 import { ApolloServer } from "@apollo/server";
 import { startStandaloneServer } from "@apollo/server/standalone";
 
+import { getUsers, getUser } from "./DB/queries/queries.js";
+import { addUser } from "./DB/mutations/mutations.js";
+import { typeDefs } from "./graphql/schema/typeDefs.js";
+import { resolvers } from "./graphql/resolvers/resolvers.js";
+
 const PORT = process.env.PORT || 4000;
-
-const typeDefs = `#graphql
-  type Book {
-    title: String
-    author: String
-  }
-
-  type Query {
-    books: [Book]
-  }
-`;
-
-const books = [
-  {
-    title: "The Awakening",
-    author: "Kate Chopin",
-  },
-  {
-    title: "City of Glass",
-    author: "Paul Auster123",
-  },
-];
-
-const resolvers = {
-  Query: {
-    books: () => books,
-  },
-};
-
-const server = new ApolloServer({
-  typeDefs,
-  resolvers,
-});
-
-const { url } = await startStandaloneServer(server, {
-  listen: { port: 4444 },
-});
 
 const app = Express();
 app.use(cors());
@@ -64,9 +30,9 @@ app.get("/users", async (req, res) => {
   res.send(users);
 });
 
-app.get("/users/:id", async (req, res) => {
-  const id = req.params.id;
-  const user = await getUser(id);
+app.get("/users/:email", async (req, res) => {
+  const email = req.params.email;
+  const user = await getUser(email);
   res.send(user);
 });
 
@@ -79,4 +45,13 @@ app.post("/user", async (req, res) => {
 app.use((err, req, res, next) => {
   console.log(err.stack);
   res.status(500).send("Something go wrong");
+});
+
+const server = new ApolloServer({
+  typeDefs,
+  resolvers,
+});
+
+const { url } = await startStandaloneServer(server, {
+  listen: { port: 4444 },
 });

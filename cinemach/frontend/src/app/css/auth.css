@@ -1,0 +1,40 @@
+.signin__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.signin__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 30px;
+  border: 1px solid #6c29a3;
+  border-radius: 5px;
+  background: #111;
+}
+
+.register__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.register__input {
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.auth__error-container {
+  width: 100%;
+  text-align: center;
+}
+
+.auth__error-msg {
+  color: red;
+}
