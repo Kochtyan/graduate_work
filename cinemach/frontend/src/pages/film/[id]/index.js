@@ -7,8 +7,9 @@ import { getServerSession } from "next-auth/next";
 import { authOptions } from "../../api/auth/[...nextauth]";
 import Link from "next/link";
 
-import { useQuery } from "@apollo/client";
-import { MOVIE } from "@/app/apollo/queries";
+import { useQuery, useMutation } from "@apollo/client";
+import { MOVIE, IS_IN_WATCHLIST } from "@/app/apollo/queries";
+import { SET_RATING, ADD_TO_WATCHLIST } from "@/app/apollo/mutations";
 
 import { fetchMovieById } from "../../../app/api/kinopoisk";
 
@@ -19,6 +20,8 @@ import CustomList from "@/app/components/customList";
 import CustomSwiper from "@/app/components/customSwiper";
 import ModalRating from "@/app/components/modalRating";
 import Grid from "@mui/material/Grid";
+import Bookmark from "@mui/icons-material/BookmarkBorderOutlined";
+import BookmarkOutlined from "@mui/icons-material/BookmarkAddedOutlined";
 import FsLightbox from "fslightbox-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
@@ -38,6 +41,11 @@ function Movie({ session }) {
   const [trailerUrls, setTrailerUrls] = useState([]);
   const [userRating, setUserRating] = useState(null);
   const [userRatingModal, setUserRatingModal] = useState(null);
+  const [watchlistState, setWatchlistState] = useState(false);
+
+  const [title, setTitle] = useState("");
+  const [poster, setPoster] = useState("");
+  const [isSeries, setIsSeries] = useState(false);
 
   const [showVideos, setShowVideos] = useState(false);
   const [showRoles, setShowRoles] = useState(false);
@@ -52,6 +60,20 @@ function Movie({ session }) {
       movieId: parseInt(query.id),
     },
   });
+
+  const {
+    loading: loadingWatchlist,
+    error: errorWatchlist,
+    data: dataWatchlist,
+  } = useQuery(IS_IN_WATCHLIST, {
+    variables: {
+      userId: parseInt(session?.user?.id),
+      movieId: parseInt(query.id),
+    },
+  });
+
+  const [setRating] = useMutation(SET_RATING);
+  const [addToWatchlist] = useMutation(ADD_TO_WATCHLIST);
 
   const getYouTubeVideoId = (url) => {
     const regExp =
@@ -73,6 +95,10 @@ function Movie({ session }) {
         const movieDetails = film2;
 
         setMovie(movieDetails);
+        setTitle(movieDetails?.name ?? movieDetails?.alternativeName);
+        setPoster(movieDetails?.poster?.url);
+        setIsSeries(movieDetails?.isSeries);
+
         console.log(movieDetails);
 
         const _trailerUrls = movieDetails?.videos?.trailers
@@ -98,19 +124,23 @@ function Movie({ session }) {
       }
     };
 
-    if (data && data.movie.rating) {
+    if (data && data.movie?.rating) {
       setUserRating(data.movie.rating);
       setUserRatingModal(data.movie.rating);
     }
 
-    if (error) {
-      setErrorQuery(`Ошибка: ${error.message}`);
+    if (dataWatchlist && dataWatchlist.watchlist.exists) {
+      setWatchlistState(dataWatchlist.watchlist.exists);
+    }
+
+    if (error || errorWatchlist) {
+      setErrorQuery(`Ошибка: ${error.message ?? errorWatchlist.message}`);
     }
 
     fetchData();
-  }, [query.id, data]);
+  }, [query.id, data, dataWatchlist]);
 
-  if (loading) {
+  if (loading || loadingWatchlist) {
     return <Loader />;
   }
 
@@ -181,15 +211,70 @@ function Movie({ session }) {
     setUserRatingModal(newValue);
   };
 
-  const removeRating = () => {
+  const removeRating = async () => {
     setUserRatingModal(null);
     setUserRating(null);
+
+    try {
+      const result = await setRating({
+        variables: {
+          userId: parseInt(session?.user?.id),
+          movieId: parseInt(query.id),
+          isSeries: isSeries,
+          title: title,
+          poster: poster,
+          rating: null,
+        },
+      });
+
+      console.log("Оценка успешно изменена:", result);
+    } catch (error) {
+      console.log(error);
+    }
+
     handleClose();
   };
 
-  const handleApplyRating = () => {
+  const handleApplyRating = async () => {
     setUserRating(userRatingModal);
+
+    try {
+      const result = await setRating({
+        variables: {
+          userId: parseInt(session?.user?.id),
+          movieId: parseInt(query.id),
+          isSeries: isSeries,
+          title: title,
+          poster: poster,
+          rating: userRatingModal,
+        },
+      });
+
+      console.log("Оценка успешно изменена:", result);
+    } catch (error) {
+      console.log(error);
+    }
+
     handleClose();
+  };
+
+  const handleAddToWatchlist = async () => {
+    try {
+      const result = await addToWatchlist({
+        variables: {
+          userId: parseInt(session?.user?.id),
+          movieId: parseInt(query.id),
+          isSeries: isSeries,
+          title: title,
+          poster: poster,
+        },
+      });
+
+      console.log("Состояние вотчлиста изменено:", result);
+      setWatchlistState((prevState) => !prevState);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const handleOpen = () => setOpen(true);
@@ -241,9 +326,9 @@ function Movie({ session }) {
           </Grid>
 
           <Grid item xs={8}>
-            <h1 className="movie__name">{`${movie?.name ?? movie?.enName} ${
-              movie?.year ? `(${movie?.year})` : ""
-            }`}</h1>
+            <h1 className="movie__name">{`${
+              movie?.name ?? movie?.enName ?? movie?.alternativeName
+            } ${movie?.year ? `(${movie?.year})` : ""}`}</h1>
 
             <div className="movie__fast-info">
               <span className="movie__alternative-name">
@@ -265,14 +350,16 @@ function Movie({ session }) {
             </div>
 
             <div className="movie__ratings">
-              <span
-                className="movie__rating-column movie__user-rating"
-                style={{ cursor: "pointer" }}
-                onClick={handleOpen}
-              >
-                <p>Моя оценка:</p>
-                <span>{userRating ? userRating : "—"}</span>
-              </span>
+              {session?.user?.id && (
+                <span
+                  className="movie__rating-column movie__user-rating"
+                  style={{ cursor: "pointer" }}
+                  onClick={handleOpen}
+                >
+                  <p>Моя оценка:</p>
+                  <span>{userRating ? userRating : "—"}</span>
+                </span>
+              )}
               <span className="movie__rating-column">
                 <img src={kpLogo.src} alt="" style={{ width: "25px" }} />
                 <span>{movie?.rating?.kp.toFixed(1)}</span>
@@ -289,6 +376,23 @@ function Movie({ session }) {
                 />
                 <span>{movie?.rating?.filmCritics}</span>
               </span>
+              {session?.user?.id && (
+                <div className="movie__add-to-watchlist">
+                  {watchlistState ? (
+                    <BookmarkOutlined
+                      className="movie__add-to-watchlist-icon icon"
+                      sx={{ fontSize: 40 }}
+                      onClick={handleAddToWatchlist}
+                    />
+                  ) : (
+                    <Bookmark
+                      className="movie__add-to-watchlist-icon icon"
+                      sx={{ fontSize: 40 }}
+                      onClick={handleAddToWatchlist}
+                    />
+                  )}
+                </div>
+              )}
             </div>
             {errorQuery && <span>{errorQuery}</span>}
 

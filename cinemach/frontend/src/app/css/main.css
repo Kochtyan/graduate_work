@@ -12,6 +12,10 @@
   transition: all 0.3s;
 }
 
+.main__movie-wrapper {
+  width: fit-content;
+}
+
 .main__movie-wrapper:hover .main__name {
   color: rgba(108, 41, 163, 0.5);
 }

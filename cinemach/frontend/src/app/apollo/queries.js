@@ -35,3 +35,22 @@ export const MOVIE = gql`
     }
   }
 `;
+
+export const IS_IN_WATCHLIST = gql`
+  query ($userId: ID!, $movieId: ID!) {
+    watchlist(userId: $userId, movieId: $movieId) {
+      exists
+    }
+  }
+`;
+
+export const GET_WATCHLIST = gql`
+  query ($userId: ID!) {
+    getWatchlist(userId: $userId) {
+      movie_id
+      is_series
+      title
+      poster
+    }
+  }
+`;

@@ -3,19 +3,28 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
+import { getServerSession } from "next-auth/next";
+import { authOptions } from "../../api/auth/[...nextauth]";
 import Link from "next/link";
 
 import { fetchMovieById } from "@/app/api/kinopoisk";
 
 import Header from "@/app/components/header";
+import Loader from "@/app/components/loader";
 import CustomButton from "@/app/components/customButton";
 import CustomList from "@/app/components/customList";
 import CustomSwiper from "@/app/components/customSwiper";
 import ModalRating from "@/app/components/modalRating";
 import Grid from "@mui/material/Grid";
+import Bookmark from "@mui/icons-material/BookmarkBorderOutlined";
+import BookmarkOutlined from "@mui/icons-material/BookmarkAddedOutlined";
 import FsLightbox from "fslightbox-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
+
+import { useQuery, useMutation } from "@apollo/client";
+import { MOVIE, IS_IN_WATCHLIST } from "@/app/apollo/queries";
+import { SET_RATING, ADD_TO_WATCHLIST } from "@/app/apollo/mutations";
 
 import "../../../app/css/film.css";
 import "swiper/css";
@@ -27,17 +36,56 @@ import metacriticLogo from "../../../../src/assets/icon-metacritic.png";
 
 import { series1, series2, series3 } from "../../../app/query_data/queryData";
 
-function Series() {
+function Series({ session }) {
   const [series, setSeries] = useState([]);
   const [trailerUrls, setTrailerUrls] = useState([]);
   const [userRating, setUserRating] = useState(null);
   const [userRatingModal, setUserRatingModal] = useState(null);
+  const [watchlistState, setWatchlistState] = useState(false);
+
+  const [title, setTitle] = useState("");
+  const [poster, setPoster] = useState("");
 
   const [showVideos, setShowVideos] = useState(false);
   const [showRoles, setShowRoles] = useState(false);
   const [open, setOpen] = useState(false);
+  const [errorQuery, setErrorQuery] = useState("");
 
   const { query } = useRouter();
+
+  const { loading, error, data } = useQuery(MOVIE, {
+    variables: {
+      userId: parseInt(session?.user?.id),
+      movieId: parseInt(query.id),
+    },
+  });
+
+  const {
+    loading: loadingWatchlist,
+    error: errorWatchlist,
+    data: dataWatchlist,
+  } = useQuery(IS_IN_WATCHLIST, {
+    variables: {
+      userId: parseInt(session?.user?.id),
+      movieId: parseInt(query.id),
+    },
+  });
+
+  const [setRating] = useMutation(SET_RATING);
+  const [addToWatchlist] = useMutation(ADD_TO_WATCHLIST);
+
+  const getYouTubeVideoId = (url) => {
+    const regExp =
+      /^(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:[^/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
+
+    const match = url.toString().match(regExp);
+
+    if (match) {
+      return match[1];
+    }
+
+    return null;
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -46,6 +94,9 @@ function Series() {
         const seriesDetails = series3;
 
         setSeries(seriesDetails);
+        setTitle(seriesDetails?.name ?? movieDetails?.alternativeName);
+        setPoster(seriesDetails?.poster?.url);
+
         console.log(seriesDetails);
 
         const _trailerUrls = seriesDetails?.videos?.trailers
@@ -70,8 +121,26 @@ function Series() {
         setTrailerUrls(_trailerUrls);
       }
     };
+
+    if (data && data.movie?.rating) {
+      setUserRating(data.movie.rating);
+      setUserRatingModal(data.movie.rating);
+    }
+
+    if (dataWatchlist && dataWatchlist.watchlist.exists) {
+      setWatchlistState(dataWatchlist.watchlist.exists);
+    }
+
+    if (error || errorWatchlist) {
+      setErrorQuery(`Ошибка: ${error.message ?? errorWatchlist.message}`);
+    }
+
     fetchData();
   }, [query.id]);
+
+  if (loading || loadingWatchlist) {
+    return <Loader />;
+  }
 
   const handleMinutesToHours = (minutes) => {
     const hours = Math.floor(minutes / 60);
@@ -131,32 +200,70 @@ function Series() {
     return `${day} ${month} ${year}`;
   };
 
-  const getYouTubeVideoId = (url) => {
-    const regExp =
-      /^(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:[^/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
-
-    const match = url.toString().match(regExp);
-
-    if (match) {
-      return match[1];
-    }
-
-    return null;
-  };
-
   const handleRatingChange = (event, newValue) => {
     setUserRatingModal(newValue);
   };
 
-  const removeRating = () => {
+  const removeRating = async () => {
     setUserRatingModal(null);
     setUserRating(null);
+
+    try {
+      const result = await setRating({
+        variables: {
+          userId: parseInt(session?.user?.id),
+          movieId: parseInt(query.id),
+          title: title,
+          poster: poster,
+          rating: null,
+        },
+      });
+
+      console.log("Оценка успешно изменена:", result);
+    } catch (error) {
+      console.log(error);
+    }
     handleClose();
   };
 
-  const handleApplyRating = () => {
+  const handleApplyRating = async () => {
     setUserRating(userRatingModal);
+
+    try {
+      const result = await setRating({
+        variables: {
+          userId: parseInt(session?.user?.id),
+          movieId: parseInt(query.id),
+          title: title,
+          poster: poster,
+          rating: userRatingModal,
+        },
+      });
+
+      console.log("Оценка успешно изменена:", result);
+    } catch (error) {
+      console.log(error);
+    }
+
     handleClose();
+  };
+
+  const handleAddToWatchlist = async () => {
+    try {
+      const result = await addToWatchlist({
+        variables: {
+          userId: parseInt(session?.user?.id),
+          movieId: parseInt(query.id),
+          title: title,
+          poster: poster,
+        },
+      });
+
+      console.log("Состояние вотчлиста изменено:", result);
+      setWatchlistState((prevState) => !prevState);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const handleOpen = () => setOpen(true);
@@ -222,9 +329,11 @@ function Series() {
             </h1>
 
             <div className="movie__fast-info">
-              <span className="movie__alternative-name">
-                {series?.alternativeName}
-              </span>
+              {series?.alternativeName && (
+                <span className="movie__alternative-name">
+                  {series?.alternativeName}
+                </span>
+              )}
               <span>{series?.ageRating ? `+${series?.ageRating}` : ``}</span>
               <span>{handleMinutesToHours(series?.seriesLength)}</span>
             </div>
@@ -241,14 +350,16 @@ function Series() {
             </div>
 
             <div className="movie__ratings">
-              <span
-                className="movie__rating-column movie__user-rating"
-                style={{ cursor: "pointer" }}
-                onClick={handleOpen}
-              >
-                <p>Моя оценка:</p>
-                <span>{userRating ? userRating : "—"}</span>
-              </span>
+              {session?.user?.id && (
+                <span
+                  className="movie__rating-column movie__user-rating"
+                  style={{ cursor: "pointer" }}
+                  onClick={handleOpen}
+                >
+                  <p>Моя оценка:</p>
+                  <span>{userRating ? userRating : "—"}</span>
+                </span>
+              )}
               <span className="movie__rating-column">
                 <img src={kpLogo.src} alt="" style={{ width: "25px" }} />
                 <span>
@@ -278,6 +389,23 @@ function Series() {
                     : "—"}
                 </span>
               </span>
+              {session?.user?.id && (
+                <div className="movie__add-to-watchlist">
+                  {watchlistState ? (
+                    <BookmarkOutlined
+                      className="movie__add-to-watchlist-icon icon"
+                      sx={{ fontSize: 40 }}
+                      onClick={handleAddToWatchlist}
+                    />
+                  ) : (
+                    <Bookmark
+                      className="movie__add-to-watchlist-icon icon"
+                      sx={{ fontSize: 40 }}
+                      onClick={handleAddToWatchlist}
+                    />
+                  )}
+                </div>
+              )}
             </div>
 
             <div className="movie__description">
@@ -574,6 +702,16 @@ function Series() {
       />
     </>
   );
+}
+
+export async function getServerSideProps(context) {
+  const session = await getServerSession(context.req, context.res, authOptions);
+
+  return {
+    props: {
+      session,
+    },
+  };
 }
 
 export default Series;

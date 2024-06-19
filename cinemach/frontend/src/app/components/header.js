@@ -2,16 +2,11 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { useSession, signIn, signOut } from "next-auth/react";
+import { useSession, signOut } from "next-auth/react";
 
-import TextField from "@mui/material/TextField";
 import CustomButton from "./customButton";
 import SearchInput from "./searchInput";
-import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
-import Modal from "@mui/material/Modal";
 import SearchIcon from "@mui/icons-material/Search";
-import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 
 import { getPopularMovies } from "../api/tmdb";
 
@@ -32,16 +27,12 @@ const style = {
 };
 
 function Header() {
-  const [isOpen, setIsOpen] = useState(false);
   const [isOpenSearch, setIsOpenSearch] = useState(false);
 
   const session = useSession();
   console.log(session);
 
   useEffect(() => {}, []);
-
-  const handleOpen = () => setIsOpen(true);
-  const handleClose = () => setIsOpen(false);
 
   const handleOpenSearch = () => {
     setIsOpenSearch(true);
@@ -70,7 +61,9 @@ function Header() {
           />
         </div>
 
-        {session?.data && <Link href="/profile">Профиль</Link>}
+        {session?.data && (
+          <Link href="/profile">Профиль {session?.data?.user?.name}</Link>
+        )}
 
         <div className="header__login">
           {session?.data ? (
