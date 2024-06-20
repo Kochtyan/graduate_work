@@ -24,8 +24,8 @@ function Person() {
   useEffect(() => {
     const fetchData = async () => {
       if (query.id) {
-        // const movieDetails = await fetchPersonById(query.id);
-        const personDetails = name1;
+        const personDetails = await fetchPersonById(query.id);
+        // const personDetails = name1;
 
         setPerson(personDetails);
         console.log(personDetails);
@@ -107,7 +107,7 @@ function Person() {
             {person?.photo && (
               <img
                 src={person?.photo}
-                alt={`Постер ${person.name ?? person.enName}`}
+                alt={`Постер ${person?.name ?? person?.enName}`}
                 className="person__photo"
               />
             )}
@@ -115,13 +115,13 @@ function Person() {
           <Grid item xs={8}>
             {person?.name ? (
               <>
-                <h1 className="person__name">{person.name}</h1>
+                <h1 className="person__name">{person?.name}</h1>
                 <div>
                   <span className="person__enname">{person?.enName}</span>
                 </div>
               </>
             ) : (
-              <h1>{person.enName}</h1>
+              <h1>{person?.enName}</h1>
             )}
 
             <Grid style={{ margin: "30px 0" }} container spacing={1}>
@@ -140,7 +140,7 @@ function Person() {
                 </span>
               </Grid>
 
-              {person.death ? (
+              {person?.death ? (
                 <>
                   <Grid item xs={4}>
                     <span>
@@ -168,8 +168,8 @@ function Person() {
                 </span>
               </Grid>
               <Grid item xs={8}>
-                {person && person.birthPlace ? (
-                  person.birthPlace.map((place, index) => (
+                {person && person?.birthPlace ? (
+                  person?.birthPlace.map((place, index) => (
                     <React.Fragment key={index}>
                       {index > 0 && ", "}
                       {place.value}

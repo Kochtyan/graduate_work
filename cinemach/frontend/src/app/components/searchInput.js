@@ -23,10 +23,10 @@ export default function SearchInput({
 
   const fetchData = async () => {
     if (query) {
-      // const resultMovie = await fetchSearchMovie(query);
-      // const resultPerson = await fetchSearchPerson(query);
-      const resultMovie = search1.docs;
-      const resultPerson = search2.docs;
+      const resultMovie = await fetchSearchMovie(query);
+      const resultPerson = await fetchSearchPerson(query);
+      // const resultMovie = search1.docs;
+      // const resultPerson = search2.docs;
 
       setQueryResultMovie(resultMovie);
       setQueryResultPerson(resultPerson);
@@ -80,8 +80,13 @@ export default function SearchInput({
           <CloseIcon className="search__close-icon icon" />
         </IconButton>
       </div>
-      {queryResultMovie.length !== 0 && (
-        <CustomQueryList list={queryResultMovie} list2={queryResultPerson} />
+      {console.log(queryResultMovie?.docs?.length)}
+      {console.log(queryResultPerson?.docs?.length)}
+      {queryResultMovie?.length !== 0 && queryResultPerson?.length !== 0 && (
+        <CustomQueryList
+          list={queryResultMovie?.docs}
+          list2={queryResultPerson?.docs}
+        />
       )}
     </div>
   );

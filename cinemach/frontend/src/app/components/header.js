@@ -74,11 +74,7 @@ function Header() {
             />
           ) : (
             <Link href="/auth/signin">
-              <CustomButton
-                title="Войти"
-                // onClick={() => signIn()}
-                style={{ width: "100px" }}
-              />
+              <CustomButton title="Войти" style={{ width: "100px" }} />
             </Link>
           )}
         </div>

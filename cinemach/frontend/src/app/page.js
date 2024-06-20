@@ -9,8 +9,6 @@ import { fetchPopularMovies, fetchMovieById } from "./api/kinopoisk";
 import Header from "./components/header";
 import Loader from "./components/loader";
 import Grid from "@mui/material/Grid";
-import Bookmark from "@mui/icons-material/BookmarkBorderOutlined";
-import BookmarkOutlined from "@mui/icons-material/BookmarkAddedOutlined";
 
 import { popular } from "../app/query_data/queryData";
 
@@ -18,10 +16,10 @@ import "../app/css/main.css";
 
 import kpLogo from "../assets/icon-kp.svg";
 import imdbLogo from "../assets/icon-imdb.svg";
+import noPoster from "../assets/no-poster.svg";
 
 const MovieApp = () => {
   const [recentMovies, setRecentMovies] = useState([]);
-  const [watchlistState, setWatchlistState] = useState({});
 
   const [loading, setLoading] = useState(true);
 
@@ -43,15 +41,6 @@ const MovieApp = () => {
     setLoading(false);
   }, []);
 
-  const handleAddToWatchlist = (e, movieId) => {
-    e.preventDefault();
-
-    setWatchlistState((prevState) => ({
-      ...prevState,
-      [movieId]: !prevState[movieId],
-    }));
-  };
-
   if (loading) {
     return <Loader />;
   }
@@ -70,66 +59,50 @@ const MovieApp = () => {
           {recentMovies?.map((movie) => (
             <Grid item xs={2} sm={4} md={4} key={movie?.id}>
               <div className="main__movie-wrapper">
-                {movie?.poster && (
-                  <div className="main__movie-poster-wrapper">
-                    <Link
-                      href={
-                        movie.type == "movie" ? `/film/[id]` : `/series/[id]`
+                <div className="main__movie-poster-wrapper">
+                  <Link
+                    href={movie.type == "movie" ? `/film/[id]` : `/series/[id]`}
+                    as={
+                      movie.type == "movie"
+                        ? `/film/${movie.id}`
+                        : `/series/${movie.id}`
+                    }
+                  >
+                    <img
+                      src={
+                        movie.poster ? movie?.poster?.previewUrl : noPoster.src
                       }
-                      as={
-                        movie.type == "movie"
-                          ? `/film/${movie.id}`
-                          : `/series/${movie.id}`
-                      }
-                    >
-                      <img
-                        src={movie?.poster?.previewUrl}
-                        alt={`Постер ${movie?.name}`}
-                        className="main__poster"
-                      />
+                      alt={`Постер ${movie?.name}`}
+                      className="main__poster"
+                    />
 
-                      <div className="main__poster-overlay">
-                        <div className="main__add-to-watchlist">
-                          {watchlistState[movie.id] ? (
-                            <BookmarkOutlined
-                              className="main__add-to-watchlist-icon icon"
-                              sx={{ fontSize: 40 }}
-                              onClick={(e) => handleAddToWatchlist(e, movie.id)}
+                    <div className="main__poster-overlay">
+                      <div className="main__rating-wrapper">
+                        <div className="main__rating">
+                          <span className="main__rating-container">
+                            <img
+                              src={kpLogo.src}
+                              alt=""
+                              style={{ width: "30px" }}
                             />
-                          ) : (
-                            <Bookmark
-                              className="main__add-to-watchlist-icon icon"
-                              sx={{ fontSize: 40 }}
-                              onClick={(e) => handleAddToWatchlist(e, movie.id)}
-                            />
-                          )}
-                        </div>
-                        <div className="main__rating-wrapper">
-                          <div className="main__rating">
+                            {movie?.rating?.kp.toFixed(1)}
+                          </span>
+                          {movie?.rating?.imdb !== 0 && (
                             <span className="main__rating-container">
                               <img
-                                src={kpLogo.src}
+                                src={imdbLogo.src}
                                 alt=""
                                 style={{ width: "30px" }}
                               />
-                              {movie?.rating?.kp.toFixed(1)}
+                              {movie?.rating?.imdb}
                             </span>
-                            {movie?.rating?.imdb !== 0 && (
-                              <span className="main__rating-container">
-                                <img
-                                  src={imdbLogo.src}
-                                  alt=""
-                                  style={{ width: "30px" }}
-                                />
-                                {movie?.rating?.imdb}
-                              </span>
-                            )}
-                          </div>
+                          )}
                         </div>
                       </div>
-                    </Link>
-                  </div>
-                )}
+                    </div>
+                  </Link>
+                </div>
+
                 <Link
                   href={movie.type == "movie" ? `/film/[id]` : `/series/[id]`}
                   as={
@@ -138,7 +111,9 @@ const MovieApp = () => {
                       : `/series/${movie.id}`
                   }
                 >
-                  <h3 className="main__name">{movie?.name}</h3>
+                  <h3 className="main__name">
+                    {movie?.name ?? movie?.alternativeName}
+                  </h3>
                   <span
                     style={{ color: "rgba(255, 255, 255, 0.6)" }}
                     ref={(spanRef) => {

@@ -8,6 +8,7 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 
 import kpLogo from "../../assets/icon-kp.svg";
 import imdbLogo from "../../assets/icon-imdb.svg";
+import noPoster from "../../assets/no-poster.svg";
 import "../css/header.css";
 import "react-tabs/style/react-tabs.css";
 
@@ -22,7 +23,8 @@ export default function CustomQueryList({ list, list2 }) {
           </TabList>
           <TabPanel>
             <List className="queryList__list">
-              {list.length !== 0 &&
+              {list?.length !== 0 &&
+                list &&
                 list.map((result, index) => (
                   <>
                     <Link
@@ -41,7 +43,11 @@ export default function CustomQueryList({ list, list2 }) {
                           <img
                             className="queryList__item-poster"
                             style={{ width: "60px", height: "90px" }}
-                            src={result.poster.url}
+                            src={
+                              result?.poster?.url
+                                ? result?.poster?.url
+                                : noPoster.src
+                            }
                           />
                           <div className="queryList__item-info">
                             <div className="queryList__item-info-name">
@@ -115,7 +121,8 @@ export default function CustomQueryList({ list, list2 }) {
           </TabPanel>
           <TabPanel>
             <List className="queryList__list">
-              {list2.length !== 0 &&
+              {list2?.length !== 0 &&
+                list2 &&
                 list2.map((result, index) => (
                   <>
                     <ListItem className="queryList__item" key={result.id}>
@@ -124,7 +131,9 @@ export default function CustomQueryList({ list, list2 }) {
                           <img
                             className="queryList__item-poster"
                             style={{ width: "60px", height: "90px" }}
-                            src={result.photo}
+                            src={
+                              result?.photo != "" ? result?.photo : noPoster.src
+                            }
                           />
                           <div className="queryList__item-info">
                             <div className="queryList__item-info-name">

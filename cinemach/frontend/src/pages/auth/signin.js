@@ -71,24 +71,6 @@ const SignIn = ({ providers }) => {
     <div className="signin__container">
       <div className="signin__form">
         <h1>Войти</h1>
-        {/* {Object.values(providers).map((provider) => (
-          <div key={provider.name}>
-            {provider.id === "google" ? (
-              <CustomButton
-                onClick={() => signIn(provider.id)}
-                title={`Войти через ${provider.name}`}
-                style={{ minWidth: "215px" }}
-              />
-            ) : (
-              <CustomButton
-                onClick={() => signIn()}
-                title={`Войти через ${provider.name}`}
-                style={{ minWidth: "215px" }}
-              />
-            )}
-          </div>
-        ))} */}
-
         <form className="register__form">
           <input
             onChange={(e) => setEmail(e.target.value)}

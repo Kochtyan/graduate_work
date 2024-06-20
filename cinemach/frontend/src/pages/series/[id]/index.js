@@ -33,6 +33,7 @@ import "swiper/css/pagination";
 import kpLogo from "../../../../src/assets/icon-kp.png";
 import imdbLogo from "../../../../src/assets/icon-imdb.png";
 import metacriticLogo from "../../../../src/assets/icon-metacritic.png";
+import noPoster from "../../../../src/assets/no-poster.svg";
 
 import { series1, series2, series3 } from "../../../app/query_data/queryData";
 
@@ -45,6 +46,7 @@ function Series({ session }) {
 
   const [title, setTitle] = useState("");
   const [poster, setPoster] = useState("");
+  const [isSeries, setIsSeries] = useState(false);
 
   const [showVideos, setShowVideos] = useState(false);
   const [showRoles, setShowRoles] = useState(false);
@@ -90,12 +92,15 @@ function Series({ session }) {
   useEffect(() => {
     const fetchData = async () => {
       if (query.id) {
-        // const seriesDetails = await fetchMovieById(query.id);
-        const seriesDetails = series3;
+        const seriesDetails = await fetchMovieById(query.id);
+        // const seriesDetails = series3;
 
         setSeries(seriesDetails);
         setTitle(seriesDetails?.name ?? movieDetails?.alternativeName);
         setPoster(seriesDetails?.poster?.url);
+        setIsSeries(
+          seriesDetails?.poster ? seriesDetails?.poster?.url : noPoster.src
+        );
 
         console.log(seriesDetails);
 
@@ -136,7 +141,7 @@ function Series({ session }) {
     }
 
     fetchData();
-  }, [query.id]);
+  }, [query.id, data, dataWatchlist]);
 
   if (loading || loadingWatchlist) {
     return <Loader />;
@@ -213,6 +218,7 @@ function Series({ session }) {
         variables: {
           userId: parseInt(session?.user?.id),
           movieId: parseInt(query.id),
+          isSeries: isSeries,
           title: title,
           poster: poster,
           rating: null,
@@ -234,6 +240,7 @@ function Series({ session }) {
         variables: {
           userId: parseInt(session?.user?.id),
           movieId: parseInt(query.id),
+          isSeries: isSeries,
           title: title,
           poster: poster,
           rating: userRatingModal,
@@ -254,6 +261,7 @@ function Series({ session }) {
         variables: {
           userId: parseInt(session?.user?.id),
           movieId: parseInt(query.id),
+          isSeries: isSeries,
           title: title,
           poster: poster,
         },
@@ -278,13 +286,12 @@ function Series({ session }) {
       >
         <Grid container spacing={3}>
           <Grid item xs={4}>
-            {series?.poster && (
-              <img
-                src={series?.poster?.url}
-                alt={`Постер ${series?.name}`}
-                className="movie__poster"
-              />
-            )}
+            <img
+              src={series?.poster ? series?.poster?.url : noPoster.src}
+              alt={`Постер ${series?.name}`}
+              className="movie__poster"
+            />
+
             {series?.logo && (
               <div style={{ marginTop: "10px" }}>
                 <img
@@ -407,6 +414,8 @@ function Series({ session }) {
                 </div>
               )}
             </div>
+
+            {errorQuery && <span>{errorQuery}</span>}
 
             <div className="movie__description">
               <p>

@@ -1,5 +1,4 @@
 import {
-  getUsers,
   getUser,
   Login,
   getMovie,
@@ -14,7 +13,6 @@ import {
 
 export const resolvers = {
   Query: {
-    users: async () => await getUsers(),
     user: async (_, { email }) => await getUser(email),
     login: async (_, { email, password }) => await Login(email, password),
     movie: async (_, { userId, movieId }) => await getMovie(userId, movieId),

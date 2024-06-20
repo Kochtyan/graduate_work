@@ -1,12 +1,6 @@
 import pool from "../DB.js";
 import bcrypt from "bcrypt";
 
-export async function getUsers() {
-  const [rows] = await pool.query("SELECT * FROM Users");
-
-  return rows;
-}
-
 export async function getUser(email) {
   const [row] = await pool.query("SELECT * FROM Users WHERE email = ?", [
     email,

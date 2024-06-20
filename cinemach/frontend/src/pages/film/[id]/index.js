@@ -33,6 +33,7 @@ import "swiper/css/pagination";
 import kpLogo from "../../../../src/assets/icon-kp.png";
 import imdbLogo from "../../../../src/assets/icon-imdb.png";
 import metacriticLogo from "../../../../src/assets/icon-metacritic.png";
+import noPoster from "../../../../src/assets/no-poster.svg";
 
 import { film1, film2 } from "../../../app/query_data/queryData";
 
@@ -91,12 +92,14 @@ function Movie({ session }) {
   useEffect(() => {
     const fetchData = async () => {
       if (query.id) {
-        //const movieDetails = await fetchMovieById(query.id);
-        const movieDetails = film2;
+        const movieDetails = await fetchMovieById(query.id);
+        // const movieDetails = film1;
 
         setMovie(movieDetails);
         setTitle(movieDetails?.name ?? movieDetails?.alternativeName);
-        setPoster(movieDetails?.poster?.url);
+        setPoster(
+          movieDetails?.poster ? movieDetails?.poster?.url : noPoster.src
+        );
         setIsSeries(movieDetails?.isSeries);
 
         console.log(movieDetails);
@@ -289,13 +292,12 @@ function Movie({ session }) {
       >
         <Grid container spacing={3}>
           <Grid item xs={4}>
-            {movie?.poster && (
-              <img
-                src={movie?.poster?.url}
-                alt={`Постер ${movie?.name}`}
-                className="movie__poster"
-              />
-            )}
+            <img
+              src={movie?.poster ? movie?.poster?.url : noPoster.src}
+              alt={`Постер ${movie?.name}`}
+              className="movie__poster"
+            />
+
             {movie?.logo && (
               <div style={{ marginTop: "10px" }}>
                 <img
@@ -331,9 +333,11 @@ function Movie({ session }) {
             } ${movie?.year ? `(${movie?.year})` : ""}`}</h1>
 
             <div className="movie__fast-info">
-              <span className="movie__alternative-name">
-                {movie?.alternativeName}
-              </span>
+              {movie?.alternativeName && (
+                <span className="movie__alternative-name">
+                  {movie?.alternativeName}
+                </span>
+              )}
               <span>{movie?.ageRating ? `+${movie?.ageRating}` : ``}</span>
               <span>{handleMinutesToHours(movie?.movieLength)}</span>
             </div>
@@ -394,6 +398,7 @@ function Movie({ session }) {
                 </div>
               )}
             </div>
+
             {errorQuery && <span>{errorQuery}</span>}
 
             <div className="movie__description">
